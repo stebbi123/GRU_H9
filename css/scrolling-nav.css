@@ -71,3 +71,10 @@ ul{
 .strik{
   background-color: black;
 }
+
+img{
+  max-height: 523px;
+  top: 0;
+  position: relative;
+  width: 100%
+}
