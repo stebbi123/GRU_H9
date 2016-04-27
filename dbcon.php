@@ -1,14 +1,20 @@
 <?php
-$servername = "tsuts.tskoli.is";
-$username = "GRU_H9";
-$password = "mypassword";
+try{
 
-// Create connection
-$conn = new mysqli($servername, $username, $password);
+	$source = 'mysql:host=tsuts.tskoli.is;dbname=gru_h9_gru';
+	$user = 'GRU_H9';
+	$password = 'mypassword';
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+	$pdo = new PDO($source, $user, $password);
+
+	$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+	$pdo->exec('SET NAMES "utf8"');
+
 }
-echo "Tenging tókst";
-?> 
+catch (PDOException $e){
+	
+	echo "tenging tókst ekki". $e->getMessage();
+	
+}
+?>
