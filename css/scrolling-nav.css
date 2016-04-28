@@ -73,7 +73,7 @@ ul{
 }
 
 img{
-  max-height: 523px;
+  height: 100%;
   top: 0;
   position: relative;
   width: 100%
