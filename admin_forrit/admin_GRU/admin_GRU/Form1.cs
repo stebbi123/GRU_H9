@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace admin_GRU
 {
-    public partial class Form1 : Form
+    public partial class Adalform : Form
     {
         //Tenging við database klasann
         admin_GRU.Connection gagnagrunnur = new admin_GRU.Connection();
 
-        public Form1()
+        public Adalform()
         {
             InitializeComponent();
 
@@ -53,12 +53,13 @@ namespace admin_GRU
                 foreach (string lin in linur)
                 {
                     dataGridLeikir.Rows.Add();
-                    data = lin.Split(':');
+                    data = lin.Split('#');
                     dataGridLeikir.Rows[tala].Cells[0].Value = data[0];
                     dataGridLeikir.Rows[tala].Cells[1].Value = data[1];
                     dataGridLeikir.Rows[tala].Cells[2].Value = data[2];
                     dataGridLeikir.Rows[tala].Cells[3].Value = data[3];
                     dataGridLeikir.Rows[tala].Cells[4].Value = data[4];
+                    dataGridLeikir.Rows[tala].Cells[5].Value = data[5];
                     this.dataGridLeikir.ColumnHeadersHeight = 25;
                     tala++;
                 }
@@ -69,6 +70,62 @@ namespace admin_GRU
             }
         }
 
+        //BTN LEIKIR SKRÁ
+        private void btn_leikir_skra_Click(object sender, EventArgs e)
+        {
+            string leikir_skra_lid = txtbx_leikir_skra_lid.Text;
+            string leikir_skra_date = dateTime_leikir_skra.Text;
+            string leikir_skra_time = txtbx_leikir_skra_time.Text;
+            string leikir_skra_bo = txtbx_leikir_skra_bo.Text;
+            string leikir_skra_ridill = txtbx_leikir_skra_ridill.Text;
 
+            gagnagrunnur.AddNewLeikir(leikir_skra_lid, leikir_skra_date, leikir_skra_time, leikir_skra_bo, leikir_skra_ridill);
+            LoadLeikir();
+            txtbx_leikir_skra_lid.Clear();
+            txtbx_leikir_skra_bo.Clear();
+            txtbx_leikir_skra_ridill.Clear();
+            txtbx_leikir_skra_time.Clear();
+        }
+
+        private void dataGridLeikir_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dataGridLeikir.SelectedRows.Count <= 0)//ef engir dalkar eru valdir, gerist ekkert
+            {
+                return;
+            }
+            else
+            {
+                try
+                {
+                    if (dataGridLeikir.SelectedRows[0].Cells[0].Value.ToString() != null)
+                    {
+                         txtbx_leikir_update_lid.Text = dataGridLeikir.SelectedRows[0].Cells[1].Value.ToString();
+                    }
+                    if (dataGridLeikir.SelectedRows[0].Cells[2].Value.ToString() != null)
+                    {
+                        txtbx_leikir_update_time.Text = dataGridLeikir.SelectedRows[0].Cells[3].Value.ToString();
+                    }
+                    if (dataGridLeikir.SelectedRows[0].Cells[3].Value.ToString() != null)
+                    {
+                       txtbx_leikir_update_bo.Text = dataGridLeikir.SelectedRows[0].Cells[4].Value.ToString();
+                    }
+                    if (dataGridLeikir.SelectedRows[0].Cells[4].Value.ToString() != null)
+                    {
+                       txtbx_leikir_update_ridill.Text = dataGridLeikir.SelectedRows[0].Cells[5].Value.ToString();
+                    }
+
+                }
+                catch (Exception)
+                {
+                    txtbx_leikir_update_lid.Text = null;
+                    dateTime_leikir_update.Text = null;
+                    txtbx_leikir_update_time.Text = null;
+                    txtbx_leikir_update_bo.Text = null;
+                    txtbx_leikir_update_ridill.Text = null;
+                    txtbx_leikir_update_winner.Text = null;
+
+                }
+            }
+        }
     }
 }

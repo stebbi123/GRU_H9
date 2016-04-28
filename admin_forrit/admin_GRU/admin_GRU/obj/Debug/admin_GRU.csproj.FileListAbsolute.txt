@@ -3,8 +3,8 @@ H:\GRU\GRU_H9\admin_forrit\admin_GRU\admin_GRU\bin\Debug\admin_GRU.exe
 H:\GRU\GRU_H9\admin_forrit\admin_GRU\admin_GRU\bin\Debug\admin_GRU.pdb
 H:\GRU\GRU_H9\admin_forrit\admin_GRU\admin_GRU\bin\Debug\MySql.Data.dll
 H:\GRU\GRU_H9\admin_forrit\admin_GRU\admin_GRU\obj\Debug\admin_GRU.csprojResolveAssemblyReference.cache
-H:\GRU\GRU_H9\admin_forrit\admin_GRU\admin_GRU\obj\Debug\admin_GRU.Form1.resources
 H:\GRU\GRU_H9\admin_forrit\admin_GRU\admin_GRU\obj\Debug\admin_GRU.Properties.Resources.resources
 H:\GRU\GRU_H9\admin_forrit\admin_GRU\admin_GRU\obj\Debug\admin_GRU.csproj.GenerateResource.Cache
 H:\GRU\GRU_H9\admin_forrit\admin_GRU\admin_GRU\obj\Debug\admin_GRU.exe
 H:\GRU\GRU_H9\admin_forrit\admin_GRU\admin_GRU\obj\Debug\admin_GRU.pdb
+H:\GRU\GRU_H9\admin_forrit\admin_GRU\admin_GRU\obj\Debug\admin_GRU.Adalform.resources

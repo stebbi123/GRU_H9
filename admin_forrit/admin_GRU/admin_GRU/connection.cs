@@ -67,14 +67,14 @@ namespace admin_GRU
         }
 
         //Setur inní töfluna í gagnagrunninum
-        public void SettInnSQLToflu(string nafn, string skoli, string afangi, string einingar, string verd)
+        public void AddNewLeikir(string lid1lid2, string date, string time,  string bo, string ridill)
         {
 
             //tékka hvort tenging við gagnagrunninn sé ekki pottþétt opin
             if (OpenConnection() == true)
             {
                 //bý til fyrirspurnina sem er svo send í gagnagrunninn
-                fyrirspurn = "INSERT INTO tafla (nafn, skoli, afangi, einingar, verd) VALUES ('" + nafn + "','" + skoli + "','" + afangi + "','" + einingar + "','" + verd + "');";
+                fyrirspurn = "INSERT INTO leikir (lid1_lid2, date, time, bo, ridill) VALUES ('" + lid1lid2 + "','" + date + "','" + time + "','" + bo + "','" + ridill + "');";
 
                 //nySQLskipun er "constructor" og executar skipunina
                 nySQLskipun = new MySqlCommand(fyrirspurn, SQLtenging);
@@ -154,7 +154,7 @@ namespace admin_GRU
             string line = null;
             if (OpenConnection() == true)
             {
-                fyrirspurn = "SELECT ID, lid1_lid2, date, bo, ridill, winner FROM leikir";
+                fyrirspurn = "SELECT ID, lid1_lid2, date, time, bo, ridill, winner FROM leikir";
                 nySQLskipun = new MySqlCommand(fyrirspurn, SQLtenging);
 
                 //fær til sín feedback frá gagnagrunninum
@@ -164,7 +164,7 @@ namespace admin_GRU
                 {
                     for (int i = 0; i < SQLlesari.FieldCount; i++)
                     {
-                        line += (SQLlesari.GetValue(i).ToString()) + ":";
+                        line += (SQLlesari.GetValue(i).ToString()) + "#";
                     }
 
                     faerslur.Add(line);
@@ -176,13 +176,13 @@ namespace admin_GRU
             return faerslur;
         }
 
-        //Finnur ákveðinn einstakling og skilar öllu um hann
-        public string[] FinnaAkvedinnOgSkilaTilBaka(string nafn)
+        //Finnur info um ákveðinn leik
+        public string[] FinnaInfoUmLeik(string ID)
         {
-            string[] gogn = new string[5];
+            string[] gogn = new string[8];
             if (OpenConnection() == true)
             {
-                fyrirspurn = "SELECT nafn, skoli, afangi, einingar, verd FROM tafla where nafn ='" + nafn + "'";
+                fyrirspurn = "SELECT ID, lid1_lid2, date, time, bo, ridill, winner FROM leikir where ID ='" + ID + "'";
                 nySQLskipun = new MySqlCommand(fyrirspurn, SQLtenging);
                 SQLlesari = nySQLskipun.ExecuteReader();
                 while (SQLlesari.Read())
@@ -192,6 +192,10 @@ namespace admin_GRU
                     gogn[2] = SQLlesari.GetValue(2).ToString();
                     gogn[3] = SQLlesari.GetValue(3).ToString();
                     gogn[4] = SQLlesari.GetValue(4).ToString();
+                    gogn[5] = SQLlesari.GetValue(5).ToString();
+                    gogn[6] = SQLlesari.GetValue(6).ToString();
+                    gogn[7] = SQLlesari.GetValue(7).ToString();
+                    gogn[8] = SQLlesari.GetValue(8).ToString();
                 }
                 SQLlesari.Close();
                 CloseConnection();
