@@ -34,6 +34,7 @@ namespace admin_GRU
         private void Form1_Load(object sender, EventArgs e)
         {
             LoadLeikir();
+            LoadNotendur();
         }
 
 
@@ -61,6 +62,37 @@ namespace admin_GRU
                     dataGridLeikir.Rows[tala].Cells[4].Value = data[4];
                     dataGridLeikir.Rows[tala].Cells[5].Value = data[5];
                     this.dataGridLeikir.ColumnHeadersHeight = 25;
+                    tala++;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        //Loadar notendur
+        public void LoadNotendur()
+        {
+            //listinn sem er lesinn úr gagnagrunninum
+            List<string> linur = new List<string>();
+
+            try
+            {
+                dataGridNotendur.Rows.Clear();
+                dataGridNotendur.Refresh();
+                linur = gagnagrunnur.LesaNotendur();
+                string[] data;
+                int tala = 0;
+                foreach (string lin in linur)
+                {
+                    dataGridNotendur.Rows.Add();
+                    data = lin.Split('#');
+                    dataGridNotendur.Rows[tala].Cells[0].Value = data[0];
+                    dataGridNotendur.Rows[tala].Cells[1].Value = data[1];
+                    dataGridNotendur.Rows[tala].Cells[2].Value = data[2];
+                    dataGridNotendur.Rows[tala].Cells[3].Value = data[3];
+                    this.dataGridNotendur.ColumnHeadersHeight = 25;
                     tala++;
                 }
             }

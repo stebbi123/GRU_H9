@@ -30,6 +30,9 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageLeikir = new System.Windows.Forms.TabPage();
+            this.dateTime_leikir_update = new System.Windows.Forms.DateTimePicker();
+            this.label10 = new System.Windows.Forms.Label();
+            this.dateTime_leikir_skra = new System.Windows.Forms.DateTimePicker();
             this.btn_leikir_update = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.txtbx_leikir_update_winner = new System.Windows.Forms.TextBox();
@@ -51,12 +54,6 @@
             this.txtbx_leikir_update_lid = new System.Windows.Forms.TextBox();
             this.btn_leikir_skra = new System.Windows.Forms.Button();
             this.dataGridLeikir = new System.Windows.Forms.DataGridView();
-            this.tabPageNotendur = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tabPageBets = new System.Windows.Forms.TabPage();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dateTime_leikir_skra = new System.Windows.Forms.DateTimePicker();
-            this.label10 = new System.Windows.Forms.Label();
             this.ColumnID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnLid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,14 +61,39 @@
             this.ColumnBO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnRidill = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnWinner = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateTime_leikir_update = new System.Windows.Forms.DateTimePicker();
+            this.tabPageNotendur = new System.Windows.Forms.TabPage();
+            this.dataGridNotendur = new System.Windows.Forms.DataGridView();
+            this.tabPageBets = new System.Windows.Forms.TabPage();
+            this.dataGridBets = new System.Windows.Forms.DataGridView();
+            this.ColumnNotendurUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnNotendurPassword = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnNotendurEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnNotendurBalance = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtbx_notendur_skra_user = new System.Windows.Forms.TextBox();
+            this.txtbx_notendur_skra_password = new System.Windows.Forms.TextBox();
+            this.txtbx_notendur_skra_email = new System.Windows.Forms.TextBox();
+            this.txtbx_notendur_skra_balance = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.btn_notendur_skra = new System.Windows.Forms.Button();
+            this.btn_notendur_update = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.txtbx_notendur_update_balance = new System.Windows.Forms.TextBox();
+            this.txtbx_notendur_update_email = new System.Windows.Forms.TextBox();
+            this.txtbx_notendur_update_password = new System.Windows.Forms.TextBox();
+            this.txtbx_notendur_update_user = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPageLeikir.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridLeikir)).BeginInit();
             this.tabPageNotendur.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridNotendur)).BeginInit();
             this.tabPageBets.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridBets)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -119,9 +141,32 @@
             this.tabPageLeikir.Text = "Leikir";
             this.tabPageLeikir.UseVisualStyleBackColor = true;
             // 
+            // dateTime_leikir_update
+            // 
+            this.dateTime_leikir_update.Location = new System.Drawing.Point(123, 568);
+            this.dateTime_leikir_update.Name = "dateTime_leikir_update";
+            this.dateTime_leikir_update.Size = new System.Drawing.Size(130, 20);
+            this.dateTime_leikir_update.TabIndex = 33;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(282, 440);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(30, 13);
+            this.label10.TabIndex = 32;
+            this.label10.Text = "Time";
+            // 
+            // dateTime_leikir_skra
+            // 
+            this.dateTime_leikir_skra.Location = new System.Drawing.Point(123, 456);
+            this.dateTime_leikir_skra.Name = "dateTime_leikir_skra";
+            this.dateTime_leikir_skra.Size = new System.Drawing.Size(130, 20);
+            this.dateTime_leikir_skra.TabIndex = 30;
+            // 
             // btn_leikir_update
             // 
-            this.btn_leikir_update.Location = new System.Drawing.Point(582, 527);
+            this.btn_leikir_update.Location = new System.Drawing.Point(466, 561);
             this.btn_leikir_update.Name = "btn_leikir_update";
             this.btn_leikir_update.Size = new System.Drawing.Size(141, 38);
             this.btn_leikir_update.TabIndex = 29;
@@ -131,7 +176,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(458, 547);
+            this.label9.Location = new System.Drawing.Point(418, 547);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(41, 13);
             this.label9.TabIndex = 28;
@@ -139,7 +184,7 @@
             // 
             // txtbx_leikir_update_winner
             // 
-            this.txtbx_leikir_update_winner.Location = new System.Drawing.Point(461, 568);
+            this.txtbx_leikir_update_winner.Location = new System.Drawing.Point(421, 568);
             this.txtbx_leikir_update_winner.Name = "txtbx_leikir_update_winner";
             this.txtbx_leikir_update_winner.Size = new System.Drawing.Size(39, 20);
             this.txtbx_leikir_update_winner.TabIndex = 27;
@@ -210,7 +255,7 @@
             // 
             // txtbx_leikir_update_ridill
             // 
-            this.txtbx_leikir_update_ridill.Location = new System.Drawing.Point(413, 568);
+            this.txtbx_leikir_update_ridill.Location = new System.Drawing.Point(376, 568);
             this.txtbx_leikir_update_ridill.Name = "txtbx_leikir_update_ridill";
             this.txtbx_leikir_update_ridill.Size = new System.Drawing.Size(39, 20);
             this.txtbx_leikir_update_ridill.TabIndex = 18;
@@ -218,7 +263,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(410, 552);
+            this.label5.Location = new System.Drawing.Point(386, 552);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(29, 13);
             this.label5.TabIndex = 17;
@@ -227,7 +272,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(374, 552);
+            this.label6.Location = new System.Drawing.Point(337, 552);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(22, 13);
             this.label6.TabIndex = 16;
@@ -253,7 +298,7 @@
             // 
             // txtbx_leikir_update_bo
             // 
-            this.txtbx_leikir_update_bo.Location = new System.Drawing.Point(368, 568);
+            this.txtbx_leikir_update_bo.Location = new System.Drawing.Point(331, 568);
             this.txtbx_leikir_update_bo.Name = "txtbx_leikir_update_bo";
             this.txtbx_leikir_update_bo.Size = new System.Drawing.Size(39, 20);
             this.txtbx_leikir_update_bo.TabIndex = 13;
@@ -262,7 +307,7 @@
             // 
             this.txtbx_leikir_update_time.Location = new System.Drawing.Point(263, 568);
             this.txtbx_leikir_update_time.Name = "txtbx_leikir_update_time";
-            this.txtbx_leikir_update_time.Size = new System.Drawing.Size(99, 20);
+            this.txtbx_leikir_update_time.Size = new System.Drawing.Size(62, 20);
             this.txtbx_leikir_update_time.TabIndex = 11;
             // 
             // txtbx_leikir_update_lid
@@ -274,7 +319,7 @@
             // 
             // btn_leikir_skra
             // 
-            this.btn_leikir_skra.Location = new System.Drawing.Point(461, 447);
+            this.btn_leikir_skra.Location = new System.Drawing.Point(466, 451);
             this.btn_leikir_skra.Name = "btn_leikir_skra";
             this.btn_leikir_skra.Size = new System.Drawing.Size(126, 29);
             this.btn_leikir_skra.TabIndex = 9;
@@ -298,60 +343,6 @@
             this.dataGridLeikir.Size = new System.Drawing.Size(744, 404);
             this.dataGridLeikir.TabIndex = 0;
             this.dataGridLeikir.SelectionChanged += new System.EventHandler(this.dataGridLeikir_SelectionChanged);
-            // 
-            // tabPageNotendur
-            // 
-            this.tabPageNotendur.Controls.Add(this.dataGridView1);
-            this.tabPageNotendur.Location = new System.Drawing.Point(4, 22);
-            this.tabPageNotendur.Name = "tabPageNotendur";
-            this.tabPageNotendur.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageNotendur.Size = new System.Drawing.Size(1046, 624);
-            this.tabPageNotendur.TabIndex = 1;
-            this.tabPageNotendur.Text = "Notendur";
-            this.tabPageNotendur.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(296, 131);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(455, 363);
-            this.dataGridView1.TabIndex = 2;
-            // 
-            // tabPageBets
-            // 
-            this.tabPageBets.Controls.Add(this.dataGridView2);
-            this.tabPageBets.Location = new System.Drawing.Point(4, 22);
-            this.tabPageBets.Name = "tabPageBets";
-            this.tabPageBets.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageBets.Size = new System.Drawing.Size(1046, 624);
-            this.tabPageBets.TabIndex = 2;
-            this.tabPageBets.Text = "Bets";
-            this.tabPageBets.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(296, 131);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(455, 363);
-            this.dataGridView2.TabIndex = 2;
-            // 
-            // dateTime_leikir_skra
-            // 
-            this.dateTime_leikir_skra.Location = new System.Drawing.Point(123, 456);
-            this.dateTime_leikir_skra.Name = "dateTime_leikir_skra";
-            this.dateTime_leikir_skra.Size = new System.Drawing.Size(130, 20);
-            this.dateTime_leikir_skra.TabIndex = 30;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(282, 440);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(30, 13);
-            this.label10.TabIndex = 32;
-            this.label10.Text = "Time";
             // 
             // ColumnID
             // 
@@ -394,12 +385,240 @@
             this.ColumnWinner.HeaderText = "Winner";
             this.ColumnWinner.Name = "ColumnWinner";
             // 
-            // dateTime_leikir_update
+            // tabPageNotendur
             // 
-            this.dateTime_leikir_update.Location = new System.Drawing.Point(123, 568);
-            this.dateTime_leikir_update.Name = "dateTime_leikir_update";
-            this.dateTime_leikir_update.Size = new System.Drawing.Size(130, 20);
-            this.dateTime_leikir_update.TabIndex = 33;
+            this.tabPageNotendur.Controls.Add(this.label15);
+            this.tabPageNotendur.Controls.Add(this.label16);
+            this.tabPageNotendur.Controls.Add(this.label17);
+            this.tabPageNotendur.Controls.Add(this.label18);
+            this.tabPageNotendur.Controls.Add(this.txtbx_notendur_update_balance);
+            this.tabPageNotendur.Controls.Add(this.txtbx_notendur_update_email);
+            this.tabPageNotendur.Controls.Add(this.txtbx_notendur_update_password);
+            this.tabPageNotendur.Controls.Add(this.txtbx_notendur_update_user);
+            this.tabPageNotendur.Controls.Add(this.btn_notendur_update);
+            this.tabPageNotendur.Controls.Add(this.btn_notendur_skra);
+            this.tabPageNotendur.Controls.Add(this.label14);
+            this.tabPageNotendur.Controls.Add(this.label13);
+            this.tabPageNotendur.Controls.Add(this.label12);
+            this.tabPageNotendur.Controls.Add(this.label11);
+            this.tabPageNotendur.Controls.Add(this.txtbx_notendur_skra_balance);
+            this.tabPageNotendur.Controls.Add(this.txtbx_notendur_skra_email);
+            this.tabPageNotendur.Controls.Add(this.txtbx_notendur_skra_password);
+            this.tabPageNotendur.Controls.Add(this.txtbx_notendur_skra_user);
+            this.tabPageNotendur.Controls.Add(this.dataGridNotendur);
+            this.tabPageNotendur.Location = new System.Drawing.Point(4, 22);
+            this.tabPageNotendur.Name = "tabPageNotendur";
+            this.tabPageNotendur.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageNotendur.Size = new System.Drawing.Size(1046, 624);
+            this.tabPageNotendur.TabIndex = 1;
+            this.tabPageNotendur.Text = "Notendur";
+            this.tabPageNotendur.UseVisualStyleBackColor = true;
+            // 
+            // dataGridNotendur
+            // 
+            this.dataGridNotendur.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridNotendur.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnNotendurUser,
+            this.ColumnNotendurPassword,
+            this.ColumnNotendurEmail,
+            this.ColumnNotendurBalance});
+            this.dataGridNotendur.Location = new System.Drawing.Point(0, 3);
+            this.dataGridNotendur.Name = "dataGridNotendur";
+            this.dataGridNotendur.Size = new System.Drawing.Size(744, 404);
+            this.dataGridNotendur.TabIndex = 2;
+            // 
+            // tabPageBets
+            // 
+            this.tabPageBets.Controls.Add(this.dataGridBets);
+            this.tabPageBets.Location = new System.Drawing.Point(4, 22);
+            this.tabPageBets.Name = "tabPageBets";
+            this.tabPageBets.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageBets.Size = new System.Drawing.Size(1046, 624);
+            this.tabPageBets.TabIndex = 2;
+            this.tabPageBets.Text = "Bets";
+            this.tabPageBets.UseVisualStyleBackColor = true;
+            // 
+            // dataGridBets
+            // 
+            this.dataGridBets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridBets.Location = new System.Drawing.Point(0, 3);
+            this.dataGridBets.Name = "dataGridBets";
+            this.dataGridBets.Size = new System.Drawing.Size(744, 404);
+            this.dataGridBets.TabIndex = 2;
+            // 
+            // ColumnNotendurUser
+            // 
+            this.ColumnNotendurUser.HeaderText = "User";
+            this.ColumnNotendurUser.Name = "ColumnNotendurUser";
+            this.ColumnNotendurUser.ReadOnly = true;
+            this.ColumnNotendurUser.Width = 170;
+            // 
+            // ColumnNotendurPassword
+            // 
+            this.ColumnNotendurPassword.HeaderText = "Password";
+            this.ColumnNotendurPassword.Name = "ColumnNotendurPassword";
+            this.ColumnNotendurPassword.ReadOnly = true;
+            this.ColumnNotendurPassword.Width = 170;
+            // 
+            // ColumnNotendurEmail
+            // 
+            this.ColumnNotendurEmail.HeaderText = "Email";
+            this.ColumnNotendurEmail.Name = "ColumnNotendurEmail";
+            this.ColumnNotendurEmail.ReadOnly = true;
+            this.ColumnNotendurEmail.Width = 185;
+            // 
+            // ColumnNotendurBalance
+            // 
+            this.ColumnNotendurBalance.HeaderText = "Balance";
+            this.ColumnNotendurBalance.Name = "ColumnNotendurBalance";
+            this.ColumnNotendurBalance.ReadOnly = true;
+            this.ColumnNotendurBalance.Width = 170;
+            // 
+            // txtbx_notendur_skra_user
+            // 
+            this.txtbx_notendur_skra_user.Location = new System.Drawing.Point(92, 452);
+            this.txtbx_notendur_skra_user.Name = "txtbx_notendur_skra_user";
+            this.txtbx_notendur_skra_user.Size = new System.Drawing.Size(161, 20);
+            this.txtbx_notendur_skra_user.TabIndex = 20;
+            // 
+            // txtbx_notendur_skra_password
+            // 
+            this.txtbx_notendur_skra_password.Location = new System.Drawing.Point(92, 478);
+            this.txtbx_notendur_skra_password.Name = "txtbx_notendur_skra_password";
+            this.txtbx_notendur_skra_password.Size = new System.Drawing.Size(161, 20);
+            this.txtbx_notendur_skra_password.TabIndex = 21;
+            // 
+            // txtbx_notendur_skra_email
+            // 
+            this.txtbx_notendur_skra_email.Location = new System.Drawing.Point(92, 504);
+            this.txtbx_notendur_skra_email.Name = "txtbx_notendur_skra_email";
+            this.txtbx_notendur_skra_email.Size = new System.Drawing.Size(161, 20);
+            this.txtbx_notendur_skra_email.TabIndex = 22;
+            // 
+            // txtbx_notendur_skra_balance
+            // 
+            this.txtbx_notendur_skra_balance.Location = new System.Drawing.Point(92, 530);
+            this.txtbx_notendur_skra_balance.Name = "txtbx_notendur_skra_balance";
+            this.txtbx_notendur_skra_balance.Size = new System.Drawing.Size(161, 20);
+            this.txtbx_notendur_skra_balance.TabIndex = 23;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(29, 455);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(29, 13);
+            this.label11.TabIndex = 24;
+            this.label11.Text = "User";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(29, 481);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(53, 13);
+            this.label12.TabIndex = 25;
+            this.label12.Text = "Password";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(29, 507);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(32, 13);
+            this.label13.TabIndex = 26;
+            this.label13.Text = "Email";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(29, 533);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(46, 13);
+            this.label14.TabIndex = 27;
+            this.label14.Text = "Balance";
+            // 
+            // btn_notendur_skra
+            // 
+            this.btn_notendur_skra.Location = new System.Drawing.Point(92, 556);
+            this.btn_notendur_skra.Name = "btn_notendur_skra";
+            this.btn_notendur_skra.Size = new System.Drawing.Size(161, 35);
+            this.btn_notendur_skra.TabIndex = 28;
+            this.btn_notendur_skra.Text = "Nýskrá";
+            this.btn_notendur_skra.UseVisualStyleBackColor = true;
+            // 
+            // btn_notendur_update
+            // 
+            this.btn_notendur_update.Location = new System.Drawing.Point(461, 556);
+            this.btn_notendur_update.Name = "btn_notendur_update";
+            this.btn_notendur_update.Size = new System.Drawing.Size(161, 35);
+            this.btn_notendur_update.TabIndex = 29;
+            this.btn_notendur_update.Text = "Uppfæra";
+            this.btn_notendur_update.UseVisualStyleBackColor = true;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(398, 533);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(46, 13);
+            this.label15.TabIndex = 37;
+            this.label15.Text = "Balance";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(398, 507);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(32, 13);
+            this.label16.TabIndex = 36;
+            this.label16.Text = "Email";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(398, 481);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(53, 13);
+            this.label17.TabIndex = 35;
+            this.label17.Text = "Password";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(398, 455);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(29, 13);
+            this.label18.TabIndex = 34;
+            this.label18.Text = "User";
+            // 
+            // txtbx_notendur_update_balance
+            // 
+            this.txtbx_notendur_update_balance.Location = new System.Drawing.Point(461, 530);
+            this.txtbx_notendur_update_balance.Name = "txtbx_notendur_update_balance";
+            this.txtbx_notendur_update_balance.Size = new System.Drawing.Size(161, 20);
+            this.txtbx_notendur_update_balance.TabIndex = 33;
+            // 
+            // txtbx_notendur_update_email
+            // 
+            this.txtbx_notendur_update_email.Location = new System.Drawing.Point(461, 504);
+            this.txtbx_notendur_update_email.Name = "txtbx_notendur_update_email";
+            this.txtbx_notendur_update_email.Size = new System.Drawing.Size(161, 20);
+            this.txtbx_notendur_update_email.TabIndex = 32;
+            // 
+            // txtbx_notendur_update_password
+            // 
+            this.txtbx_notendur_update_password.Location = new System.Drawing.Point(461, 478);
+            this.txtbx_notendur_update_password.Name = "txtbx_notendur_update_password";
+            this.txtbx_notendur_update_password.Size = new System.Drawing.Size(161, 20);
+            this.txtbx_notendur_update_password.TabIndex = 31;
+            // 
+            // txtbx_notendur_update_user
+            // 
+            this.txtbx_notendur_update_user.Location = new System.Drawing.Point(461, 452);
+            this.txtbx_notendur_update_user.Name = "txtbx_notendur_update_user";
+            this.txtbx_notendur_update_user.Size = new System.Drawing.Size(161, 20);
+            this.txtbx_notendur_update_user.TabIndex = 30;
             // 
             // Adalform
             // 
@@ -415,9 +634,10 @@
             this.tabPageLeikir.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridLeikir)).EndInit();
             this.tabPageNotendur.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabPageNotendur.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridNotendur)).EndInit();
             this.tabPageBets.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridBets)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -429,7 +649,7 @@
         private System.Windows.Forms.DataGridView dataGridLeikir;
         private System.Windows.Forms.TabPage tabPageNotendur;
         private System.Windows.Forms.TabPage tabPageBets;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dataGridBets;
         private System.Windows.Forms.Button btn_leikir_update;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtbx_leikir_update_winner;
@@ -450,7 +670,7 @@
         private System.Windows.Forms.TextBox txtbx_leikir_update_time;
         private System.Windows.Forms.TextBox txtbx_leikir_update_lid;
         private System.Windows.Forms.Button btn_leikir_skra;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridNotendur;
         private System.Windows.Forms.DateTimePicker dateTime_leikir_skra;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnID;
@@ -461,6 +681,28 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnRidill;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnWinner;
         private System.Windows.Forms.DateTimePicker dateTime_leikir_update;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox txtbx_notendur_update_balance;
+        private System.Windows.Forms.TextBox txtbx_notendur_update_email;
+        private System.Windows.Forms.TextBox txtbx_notendur_update_password;
+        private System.Windows.Forms.TextBox txtbx_notendur_update_user;
+        private System.Windows.Forms.Button btn_notendur_update;
+        private System.Windows.Forms.Button btn_notendur_skra;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtbx_notendur_skra_balance;
+        private System.Windows.Forms.TextBox txtbx_notendur_skra_email;
+        private System.Windows.Forms.TextBox txtbx_notendur_skra_password;
+        private System.Windows.Forms.TextBox txtbx_notendur_skra_user;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNotendurUser;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNotendurPassword;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNotendurEmail;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNotendurBalance;
 
     }
 }

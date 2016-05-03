@@ -147,7 +147,7 @@ namespace admin_GRU
             return faerslur;
         }
 
-        //Les úr gagnagrunninum og skilar Lista með öllum færslunum
+        //Les allt úr Leikir töflunni og skilar svo að DataGrid getur displayað það
         public List<string> LesaLeiki()
         {
             List<string> faerslur = new List<string>();
@@ -176,6 +176,35 @@ namespace admin_GRU
             return faerslur;
         }
 
+
+        //Les allt úr Notendur töflunni og skilar svo að DataGrid getur displayað það
+        public List<string> LesaNotendur()
+        {
+            List<string> faerslur = new List<string>();
+            string line = null;
+            if (OpenConnection() == true)
+            {
+                fyrirspurn = "SELECT user, password, email, balance FROM notendur";
+                nySQLskipun = new MySqlCommand(fyrirspurn, SQLtenging);
+
+                //fær til sín feedback frá gagnagrunninum
+                SQLlesari = nySQLskipun.ExecuteReader();
+
+                while (SQLlesari.Read())
+                {
+                    for (int i = 0; i < SQLlesari.FieldCount; i++)
+                    {
+                        line += (SQLlesari.GetValue(i).ToString()) + "#";
+                    }
+
+                    faerslur.Add(line);
+                    line = null;
+                }
+                CloseConnection();
+                return faerslur;
+            }
+            return faerslur;
+        }
         //Finnur info um ákveðinn leik
         public string[] FinnaInfoUmLeik(string ID)
         {
