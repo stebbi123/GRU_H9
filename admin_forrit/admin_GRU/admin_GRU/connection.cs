@@ -42,7 +42,7 @@ namespace admin_GRU
         public void TengingVidGagnagrunn()
         {
 
-            server = "10.200.10.24";
+            server = "tsuts.tskoli.is";//"10.200.10.24";
             database = "gru_h9_gru";
             uid = "GRU_H9";
             password = "mypassword";

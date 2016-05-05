@@ -8,3 +8,12 @@ H:\GRU\GRU_H9\admin_forrit\admin_GRU\admin_GRU\obj\Debug\admin_GRU.csproj.Genera
 H:\GRU\GRU_H9\admin_forrit\admin_GRU\admin_GRU\obj\Debug\admin_GRU.exe
 H:\GRU\GRU_H9\admin_forrit\admin_GRU\admin_GRU\obj\Debug\admin_GRU.pdb
 H:\GRU\GRU_H9\admin_forrit\admin_GRU\admin_GRU\obj\Debug\admin_GRU.Adalform.resources
+C:\GRU\GRU_H9\admin_forrit\admin_GRU\admin_GRU\bin\Debug\admin_GRU.exe.config
+C:\GRU\GRU_H9\admin_forrit\admin_GRU\admin_GRU\obj\Debug\admin_GRU.exe
+C:\GRU\GRU_H9\admin_forrit\admin_GRU\admin_GRU\obj\Debug\admin_GRU.pdb
+C:\GRU\GRU_H9\admin_forrit\admin_GRU\admin_GRU\bin\Debug\admin_GRU.exe
+C:\GRU\GRU_H9\admin_forrit\admin_GRU\admin_GRU\bin\Debug\admin_GRU.pdb
+C:\GRU\GRU_H9\admin_forrit\admin_GRU\admin_GRU\obj\Debug\admin_GRU.csprojResolveAssemblyReference.cache
+C:\GRU\GRU_H9\admin_forrit\admin_GRU\admin_GRU\obj\Debug\admin_GRU.Adalform.resources
+C:\GRU\GRU_H9\admin_forrit\admin_GRU\admin_GRU\obj\Debug\admin_GRU.Properties.Resources.resources
+C:\GRU\GRU_H9\admin_forrit\admin_GRU\admin_GRU\obj\Debug\admin_GRU.csproj.GenerateResource.Cache
