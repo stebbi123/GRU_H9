@@ -15,7 +15,6 @@ namespace AdminGRU
         public login()
         {
             InitializeComponent();
-
             //Prófa tengingu við gagnagrunn
             try
             {
@@ -26,10 +25,11 @@ namespace AdminGRU
                 MessageBox.Show(ex.ToString());
             }
         }
-
         //tenging við Connection Klasa
         Connection connection = new Connection();
 
+
+        //BTN login
         private void btn_login_Click(object sender, EventArgs e)
         {
             string login_username = txtbx_login_username.Text;
@@ -47,7 +47,17 @@ namespace AdminGRU
                 }
                 else
                 {
-                    MessageBox.Show("Username exists!");
+                    if (connection.Authenticate_password(login_username, login_password) == true)
+                    {
+                        Adalform adalform = new Adalform();
+                        this.Close();
+                        adalform.Show();
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Incorrect password!");
+                    }
                 }
             }
         }

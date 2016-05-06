@@ -98,6 +98,40 @@ namespace AdminGRU
             return username_exists;
         }
 
+        //Authenticate - Tékkar hvort password passi usernamei
+        public bool Authenticate_password(string username, string password)
+        {
+            bool correct_password = false;
+            string reader_output = "";
+            if (OpenConnection() == true)
+            {
+                fyrirspurn = "SELECT password FROM program_notendur WHERE username = '" + username + "';";
+                nySQLskipun = new MySqlCommand(fyrirspurn, SQLtenging);
+
+                //fær til sín feedback frá gagnagrunninum
+                SQLlesari = nySQLskipun.ExecuteReader();
+
+                while (SQLlesari.Read())
+                {
+                    for (int i = 0; i < SQLlesari.FieldCount; i++)
+                    {
+                        reader_output = (SQLlesari.GetValue(i).ToString());
+                    }
+                }
+                CloseConnection();
+            }
+
+            if (reader_output == password)
+            {
+                correct_password = true;
+            }
+            else
+            {
+                correct_password = false;
+            }
+            return correct_password;
+        }
+
         //Setur inní töfluna í gagnagrunninum
         public void AddNewLeikir(string lid1lid2, string date, string time, string bo, string ridill)
         {
