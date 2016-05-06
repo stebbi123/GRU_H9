@@ -132,6 +132,40 @@ namespace AdminGRU
             return correct_password;
         }
 
+        //Recovery - does username and email match??
+        public bool Recovery_verification(string username, string email)
+        {
+            bool matching = false;
+            string reader_output = "";
+            if (OpenConnection() == true)
+            {
+                fyrirspurn = "SELECT email FROM program_notendur WHERE username = '" + username + "';";
+                nySQLskipun = new MySqlCommand(fyrirspurn, SQLtenging);
+
+                //fær til sín feedback frá gagnagrunninum
+                SQLlesari = nySQLskipun.ExecuteReader();
+
+                while (SQLlesari.Read())
+                {
+                    for (int i = 0; i < SQLlesari.FieldCount; i++)
+                    {
+                        reader_output = (SQLlesari.GetValue(i).ToString());
+                    }
+                }
+                CloseConnection();
+            }
+
+            if (reader_output == email)
+            {
+                matching = true;
+            }
+            else
+            {
+                matching = false;
+            }
+            return matching;
+        }
+
         //Setur inní töfluna í gagnagrunninum
         public void AddNewLeikir(string lid1lid2, string date, string time, string bo, string ridill)
         {

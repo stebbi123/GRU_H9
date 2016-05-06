@@ -78,29 +78,39 @@ namespace AdminGRU
             string recovery_username = txtbx_recovery_username.Text;
             string recovery_email = txtbx_recovery_email.Text;
 
-            var fromAddress = new MailAddress("csgojunglebets@gmail.com", "CSGOJungle");
-            var toAddress = new MailAddress(recovery_email.ToString(), "To name");
-            const string fromPassword = "Junglebets";
-            const string subject = "CSGOJungle account recovery";
-            string body = "You requested a CSGOJungle account recovery. Ignore this email if you did not make this request.\n Your username is: " + recovery_email + ".\nYour password is: " + recovery_email + ".\n\nHave a nice day!\nCSGOJungle team.";
 
-            var smtp = new SmtpClient
+            if (connection.Recovery_verification(recovery_username, recovery_email) == true)
             {
-                Host = "smtp.gmail.com",
-                Port = 587,
-                EnableSsl = true,
-                DeliveryMethod = SmtpDeliveryMethod.Network,
-                UseDefaultCredentials = false,
-                Credentials = new NetworkCredential(fromAddress.Address, fromPassword)
-            };
+                var fromAddress = new MailAddress("csgojunglebets@gmail.com", "CSGOJungle");
+                var toAddress = new MailAddress(recovery_email.ToString(), "To name");
+                const string fromPassword = "Junglebets";
+                const string subject = "CSGOJungle account recovery";
+                string body = "You requested a CSGOJungle account recovery. Ignore this email if you did not make this request.\nUsername: " + recovery_email + ".\n\nPassword: " + recovery_email + ".\n\nHave a nice day!\nCSGOJungle team.";
 
-            using (var message = new MailMessage(fromAddress, toAddress)
+                var smtp = new SmtpClient
+                {
+                    Host = "smtp.gmail.com",
+                    Port = 587,
+                    EnableSsl = true,
+                    DeliveryMethod = SmtpDeliveryMethod.Network,
+                    UseDefaultCredentials = false,
+                    Credentials = new NetworkCredential(fromAddress.Address, fromPassword)
+                };
+
+                using (var message = new MailMessage(fromAddress, toAddress)
+                {
+                    Subject = subject,
+                    Body = body
+                })
+                {
+                    smtp.Send(message);
+                }
+
+                MessageBox.Show("Mail sent!");
+            }
+            else
             {
-                Subject = subject,
-                Body = body
-            })
-            {
-                smtp.Send(message);
+                MessageBox.Show("didnt work =(");
             }
         }
     }
