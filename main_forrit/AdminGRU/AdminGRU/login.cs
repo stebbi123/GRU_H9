@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net.Mail;
+using System.Net;
 
 namespace AdminGRU
 {
@@ -50,7 +52,7 @@ namespace AdminGRU
                     if (connection.Authenticate_password(login_username, login_password) == true)
                     {
                         Adalform adalform = new Adalform();
-                        this.Close();
+                        this.Hide();
                         adalform.Show();
 
                     }
@@ -59,6 +61,46 @@ namespace AdminGRU
                         MessageBox.Show("Incorrect password!");
                     }
                 }
+            }
+        }
+
+
+        //Forgot credentials link
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            tabControl1.SelectedIndex = 1;
+        }
+
+
+        //send recovery email
+        private void btn_login_recovery_Click(object sender, EventArgs e)
+        {
+            string recovery_username = txtbx_recovery_username.Text;
+            string recovery_email = txtbx_recovery_email.Text;
+
+            var fromAddress = new MailAddress("csgojunglebets@gmail.com", "CSGOJungle");
+            var toAddress = new MailAddress(recovery_email.ToString(), "To name");
+            const string fromPassword = "Junglebets";
+            const string subject = "CSGOJungle account recovery";
+            string body = "You requested a CSGOJungle account recovery. Ignore this email if you did not make this request.\n Your username is: " + recovery_email + ".\nYour password is: " + recovery_email + ".\n\nHave a nice day!\nCSGOJungle team.";
+
+            var smtp = new SmtpClient
+            {
+                Host = "smtp.gmail.com",
+                Port = 587,
+                EnableSsl = true,
+                DeliveryMethod = SmtpDeliveryMethod.Network,
+                UseDefaultCredentials = false,
+                Credentials = new NetworkCredential(fromAddress.Address, fromPassword)
+            };
+
+            using (var message = new MailMessage(fromAddress, toAddress)
+            {
+                Subject = subject,
+                Body = body
+            })
+            {
+                smtp.Send(message);
             }
         }
     }

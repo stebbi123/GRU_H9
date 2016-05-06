@@ -16,7 +16,7 @@ namespace AdminGRU
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Adalform());
+            Application.Run(new login());
         }
     }
 }

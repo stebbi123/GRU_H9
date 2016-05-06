@@ -16,16 +16,9 @@ namespace AdminGRU
         {
             InitializeComponent();
         }
-
-        login loginform = new login();
-        Adalform adalform = new Adalform();
-
         private void Adalform_Load(object sender, EventArgs e)
         {
-            loginform = new login();
-            loginform.Show();
-            this.Hide();
-            loginform.Focus();
+
         }
     }
 }
