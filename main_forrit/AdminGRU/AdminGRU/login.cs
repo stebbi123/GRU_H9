@@ -30,6 +30,11 @@ namespace AdminGRU
         //tenging við Connection Klasa
         Connection connection = new Connection();
 
+        //LOAD
+        private void login_Load(object sender, EventArgs e)
+        {
+            this.ActiveControl = txtbx_login_username;
+        }
 
         //BTN login
         private void btn_login_Click(object sender, EventArgs e)
@@ -69,49 +74,159 @@ namespace AdminGRU
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             tabControl1.SelectedIndex = 1;
+            linkLabelRecoveryFailed.Hide();
+            labelRecoveryFailure.Hide();
+            labelRecovery1.Show();
+            labelRecovery2.Show();
+            txtbx_recovery_email.Show();
+            txtbx_recovery_username.Show();
+            txtbx_recovery_email.Clear();
+            txtbx_recovery_username.Clear();
+            txtbx_recovery_username.Focus();
+            btn_login_recovery.Show();
+            labelRecoverySuccess.Hide();
+            linkLabelRecovery_Back.Show();
+            linkLabelRecovery_back1.Hide();
         }
 
 
         //send recovery email
         private void btn_login_recovery_Click(object sender, EventArgs e)
         {
-            string recovery_username = txtbx_recovery_username.Text;
-            string recovery_email = txtbx_recovery_email.Text;
-
-
-            if (connection.Recovery_verification(recovery_username, recovery_email) == true)
+            try
             {
-                var fromAddress = new MailAddress("csgojunglebets@gmail.com", "CSGOJungle");
-                var toAddress = new MailAddress(recovery_email.ToString(), "To name");
-                const string fromPassword = "Junglebets";
-                const string subject = "CSGOJungle account recovery";
-                string body = "You requested a CSGOJungle account recovery. Ignore this email if you did not make this request.\nUsername: " + recovery_email + ".\n\nPassword: " + recovery_email + ".\n\nHave a nice day!\nCSGOJungle team.";
+                string recovery_username = txtbx_recovery_username.Text;
+                string recovery_email = txtbx_recovery_email.Text;
 
-                var smtp = new SmtpClient
-                {
-                    Host = "smtp.gmail.com",
-                    Port = 587,
-                    EnableSsl = true,
-                    DeliveryMethod = SmtpDeliveryMethod.Network,
-                    UseDefaultCredentials = false,
-                    Credentials = new NetworkCredential(fromAddress.Address, fromPassword)
-                };
 
-                using (var message = new MailMessage(fromAddress, toAddress)
+                if (connection.Recovery_verification(recovery_username, recovery_email) == true)
                 {
-                    Subject = subject,
-                    Body = body
-                })
-                {
-                    smtp.Send(message);
+                    var fromAddress = new MailAddress("csgojunglebets@gmail.com", "CSGOJungle");
+                    var toAddress = new MailAddress(recovery_email.ToString(), "To name");
+                    const string fromPassword = "Junglebets";
+                    const string subject = "CSGOJungle account recovery";
+                    string body = "You requested a CSGOJungle account recovery. Ignore this email if you did not make this request.\nUsername: " + recovery_email + ".\n\nPassword: " + recovery_email + ".\n\nHave a nice day!\nCSGOJungle team.";
+
+                    var smtp = new SmtpClient
+                    {
+                        Host = "smtp.gmail.com",
+                        Port = 587,
+                        EnableSsl = true,
+                        DeliveryMethod = SmtpDeliveryMethod.Network,
+                        UseDefaultCredentials = false,
+                        Credentials = new NetworkCredential(fromAddress.Address, fromPassword)
+                    };
+
+                    using (var message = new MailMessage(fromAddress, toAddress)
+                    {
+                        Subject = subject,
+                        Body = body
+                    })
+                    {
+                        smtp.Send(message);
+                    }
+
+                    labelRecovery1.Hide();
+                    labelRecovery2.Hide();
+                    txtbx_recovery_email.Hide();
+                    txtbx_recovery_username.Hide();
+                    btn_login_recovery.Hide();
+                    labelRecoverySuccess.Show();
+                    linkLabelRecovery_Back.Hide();
+                    linkLabelRecovery_back1.Show();
                 }
-
-                MessageBox.Show("Mail sent!");
+                else
+                {
+                    labelRecovery1.Hide();
+                    labelRecovery2.Hide();
+                    txtbx_recovery_email.Hide();
+                    txtbx_recovery_username.Hide();
+                    btn_login_recovery.Hide();
+                    labelRecoveryFailure.Show();
+                    linkLabelRecoveryFailed.Show();
+                }
             }
-            else
+            catch (Exception)
             {
-                MessageBox.Show("didnt work =(");
+                MessageBox.Show("Please enter your username and email.");
             }
         }
+
+        //Recovery failed - Try again
+        private void linkLabelRecoveryFailed_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            linkLabelRecoveryFailed.Hide();
+            labelRecoveryFailure.Hide();
+            labelRecovery1.Show();
+            labelRecovery2.Show();
+            txtbx_recovery_email.Show();
+            txtbx_recovery_username.Show();
+            txtbx_recovery_email.Clear();
+            txtbx_recovery_username.Clear();
+            txtbx_recovery_username.Focus();
+            btn_login_recovery.Show();
+        }
+
+        //Recovery - Back button
+        private void linkLabelRecovery_back1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            tabControl1.SelectedIndex = 0;
+        }
+
+        //Recovery - Back button
+        private void linkLabelRecovery_Back_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            tabControl1.SelectedIndex = 0;
+        }
+
+        //Keypress event - Enter on login
+        private void txtbx_login_password_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                btn_login.PerformClick();
+            }
+        }
+
+        //Keypress event - Enter on login
+        private void txtbx_login_username_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                btn_login.PerformClick();
+            }
+        }
+
+        //Keypress event
+        private void txtbx_recovery_username_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //Enter - to login
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                btn_login_recovery.PerformClick();
+            }
+            //ESC - to go back
+            if (e.KeyChar == (char)Keys.Escape)
+            {
+                tabControl1.SelectedIndex = 0;
+            }
+        }
+
+        //Keypress event
+        private void txtbx_recovery_email_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //Enter - to login
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                btn_login_recovery.PerformClick();
+            }
+            //ESC - to go back
+            if (e.KeyChar == (char)Keys.Escape)
+            {
+                tabControl1.SelectedIndex = 0;
+            }
+        }
+
+
     }
 }
