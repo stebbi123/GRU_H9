@@ -26,8 +26,22 @@ html {
     .top-nav-collapse {
         padding: 0;
     }
-}
 
+    .collogo{
+      visibility: hidden;
+      height: 60px;
+      width: 90px;
+      flow-into: none;
+    }
+}
+@media (max-width:768px) {
+  .logo{
+    visibility: hidden;
+    height: 60px;
+    width: 90px;
+    margin-right: auto;
+  }
+}
 
 .intro-section {
     height: 100%;
@@ -83,5 +97,17 @@ body{
 .logo{
   height: 60px;
   width: 90px;
-  margin-left: -105px
+  margin-right: auto;
+}
+
+.active a{
+  background-color: #1c262a !important;
+  height: 60px;
+
+}
+
+.collogo{
+  height: 60px;
+  width: 90px;
+  flow-into: none;
 }
