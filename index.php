@@ -69,12 +69,12 @@
     <section id="intro" class="intro-section">
         <div class="container">
             <div class="row">
-                <div class="col-lg-12">
+                <div class="">
                     <div class="carousel slide" data-ride="carousel" id="myCarousel">
                       <ol class="carousel-indicators">
                         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                         <li data-target="#myCarousel" data-slide-to="1"></li>
-                        <li data-target="#myCarousel" data-slide-to="2"></li>
+
                       </ol>
 
                       <div class="carousel-inner" role="listbox">
@@ -85,9 +85,6 @@
                           </div>
                         </div>
 
-                        <div class="item">
-                          <img src="myndir/placeholder_2.jpg" alt="" class="myCarouselImg" />
-                        </div>
 
                         <div class="item">
                           <img src="myndir/csgo1.jpg" alt="" class="myCarouselImg" />
@@ -124,6 +121,9 @@
 					<i class="fa fa-crosshairs"></i>
 						MSI vs BAT(Test)
 					</a>
+                    <?php 
+
+                    ?>
 				</div>
 
 	              </div>

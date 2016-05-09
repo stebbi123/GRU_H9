@@ -2,8 +2,12 @@
 $(window).scroll(function() {
     if ($(".navbar").offset().top > 50) {
         $(".navbar-fixed-top").addClass("top-nav-collapse");
+        $(".logo").width(90);
+        $(".logo").height(60);
     } else {
         $(".navbar-fixed-top").removeClass("top-nav-collapse");
+        $(".logo").width(100);
+        $(".logo").height(70);
     }
 });
 
