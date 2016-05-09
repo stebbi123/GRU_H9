@@ -166,77 +166,63 @@ namespace AdminGRU
             return matching;
         }
 
-        //Setur inní töfluna í gagnagrunninum
-        public void AddNewLeikir(string lid1lid2, string date, string time, string bo, string ridill)
+        //ADD MATCH
+        public void AddNewLeikir(string lid1, string lid2, string date, string time, string bo, string ridill)
         {
-
-            //tékka hvort tenging við gagnagrunninn sé ekki pottþétt opin
-            if (OpenConnection() == true)
+            try
             {
-                //bý til fyrirspurnina sem er svo send í gagnagrunninn
-                fyrirspurn = "INSERT INTO leikir (lid1_lid2, date, time, bo, ridill) VALUES ('" + lid1lid2 + "','" + date + "','" + time + "','" + bo + "','" + ridill + "');";
-
-                //nySQLskipun er "constructor" og executar skipunina
-                nySQLskipun = new MySqlCommand(fyrirspurn, SQLtenging);
-                nySQLskipun.ExecuteNonQuery();
-
-                //loka tengingu
-                CloseConnection();
-            }
-        }
-
-        //Eyðir ákveðinni færslu
-        public void Eyda(string id)
-        {
-            if (OpenConnection() == true)
-            {
-                fyrirspurn = "DELETE FROM tafla WHERE nafn='" + id + "'";
-                nySQLskipun = new MySqlCommand(fyrirspurn, SQLtenging);
-                nySQLskipun.ExecuteNonQuery();
-                CloseConnection();
-            }
-        }
-
-
-        //Uppfærir færslu
-        public void Uppfaera(string nafn, string skoli, string afangi, string einingar, string verd)
-        {
-            if (OpenConnection() == true)
-            {
-                fyrirspurn = "UPDATE tafla SET nafn='" + nafn + "', skoli='" + skoli + "', afangi='" + afangi + "', einingar='" + einingar + "', verd='" + verd + "' where nafn='" + nafn + "'";
-                nySQLskipun = new MySqlCommand(fyrirspurn, SQLtenging);
-                nySQLskipun.ExecuteNonQuery();
-                CloseConnection();
-            }
-        }
-
-        //Les úr gagnagrunninum og skilar Lista með öllum færslunum
-        public List<string> LesaurSQLtoflu()
-        {
-            List<string> faerslur = new List<string>();
-            string line = null;
-            if (OpenConnection() == true)
-            {
-                fyrirspurn = "SELECT nafn, skoli, afangi, einingar, verd FROM tafla";
-                nySQLskipun = new MySqlCommand(fyrirspurn, SQLtenging);
-
-                //fær til sín feedback frá gagnagrunninum
-                SQLlesari = nySQLskipun.ExecuteReader();
-
-                while (SQLlesari.Read())
+                //tékka hvort tenging við gagnagrunninn sé ekki pottþétt opin
+                if (OpenConnection() == true)
                 {
-                    for (int i = 0; i < SQLlesari.FieldCount; i++)
-                    {
-                        line += (SQLlesari.GetValue(i).ToString()) + ":";
-                    }
+                    //Set lid1 og lid2 saman í streng(Bæti " v " við)
+                    string lid1lid2 = lid1 + " v " + lid2;
 
-                    faerslur.Add(line);
-                    line = null;
+                    //bý til fyrirspurnina sem er svo send í gagnagrunninn
+                    fyrirspurn = "INSERT INTO leikir (lid1_lid2, date, time, bo, ridill) VALUES ('" + lid1lid2 + "','" + date + "','" + time + "','" + bo + "','" + ridill + "');";
+
+                    //nySQLskipun er "constructor" og executar skipunina
+                    nySQLskipun = new MySqlCommand(fyrirspurn, SQLtenging);
+                    nySQLskipun.ExecuteNonQuery();
+
+                    //loka tengingu
+                    CloseConnection();
                 }
-                CloseConnection();
-                return faerslur;
             }
-            return faerslur;
+            catch (Exception)
+            {
+                CloseConnection();
+                throw;
+            }
+        }
+
+        //UPDATE MATCH
+        public void UpdateLeikir(string lid1, string lid2, string date, string time, string bo, string ridill, int id)
+        {
+            try
+            {
+                //tékka hvort tenging við gagnagrunninn sé ekki pottþétt opin
+                if (OpenConnection() == true)
+                {
+                    //Set lid1 og lid2 saman í streng(Bæti " v " við)
+                    string lid1lid2 = lid1 + " v " + lid2;
+
+                    //bý til fyrirspurnina sem er svo send í gagnagrunninn
+                    fyrirspurn = "UPDATE leikir SET lid1_lid2 = '" + lid1lid2 + "', date='" + date + "', time='" + time + "', bo='" + bo + "', ridill='" + ridill + "' where ID='" + id + "'";
+
+                    //nySQLskipun er "constructor" og executar skipunina
+                    nySQLskipun = new MySqlCommand(fyrirspurn, SQLtenging);
+                    nySQLskipun.ExecuteNonQuery();
+
+                    //loka tengingu
+                    CloseConnection();
+                }
+            }
+            catch (Exception)
+            {
+                CloseConnection();
+                throw;
+            }
+
         }
 
         //Les allt úr Leikir töflunni og skilar svo að DataGrid getur displayað það
@@ -267,36 +253,18 @@ namespace AdminGRU
             }
             return faerslur;
         }
-
-
-        //Les allt úr Notendur töflunni og skilar svo að DataGrid getur displayað það
-        public List<string> LesaNotendur()
+        //Eyðir ákveðinni færslu
+        public void Eyda(string id)
         {
-            List<string> faerslur = new List<string>();
-            string line = null;
             if (OpenConnection() == true)
             {
-                fyrirspurn = "SELECT user, password, email, balance FROM notendur";
+                fyrirspurn = "DELETE FROM tafla WHERE nafn='" + id + "'";
                 nySQLskipun = new MySqlCommand(fyrirspurn, SQLtenging);
-
-                //fær til sín feedback frá gagnagrunninum
-                SQLlesari = nySQLskipun.ExecuteReader();
-
-                while (SQLlesari.Read())
-                {
-                    for (int i = 0; i < SQLlesari.FieldCount; i++)
-                    {
-                        line += (SQLlesari.GetValue(i).ToString()) + "#";
-                    }
-
-                    faerslur.Add(line);
-                    line = null;
-                }
+                nySQLskipun.ExecuteNonQuery();
                 CloseConnection();
-                return faerslur;
             }
-            return faerslur;
         }
+
         //Finnur info um ákveðinn leik
         public string[] FinnaInfoUmLeik(string ID)
         {
@@ -324,7 +292,6 @@ namespace AdminGRU
             }
             return gogn;
         }
-
         //Reynir að loka tengingunni
         private bool CloseConnection()
         {

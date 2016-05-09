@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace AdminGRU
 {
@@ -28,12 +29,20 @@ namespace AdminGRU
         }
         //tenging við Connection Klasa
         Connection connection = new Connection();
+        //Tooltip method
+        ToolTip tooltip = new ToolTip();
 
 
         //LOAD
         private void Adalform_Load(object sender, EventArgs e)
         {
+            //Sækir upplýisngar
             LoadLeikir();
+
+            //Setur tooltip drasl
+            tabPageLeikir.ToolTipText = "Here you can add upcomming matches or update past ones. Winners of matches are registered here aswell.";
+            tabPageNotendur.ToolTipText = "Here you can add new users or update information about current users.";
+            tabPageBets.ToolTipText = "Here you can view and update bets that users have placed on certain matches.";
         }
 
         //Method - Loadar upplýsingar inní Leikir DataGridið
@@ -68,5 +77,134 @@ namespace AdminGRU
                 MessageBox.Show(ex.ToString());
             }
         }
+
+
+        //PictureBox - Logoff - Hover
+        private void pictureBoxLogoff_MouseHover(object sender, EventArgs e)
+        {
+            pictureBoxLogoff.Image = Image.FromFile("../Debug/logoffhover.png");
+
+            tooltip.SetToolTip(pictureBoxLogoff, "Logout of CS:GO Jungle");
+        }
+        //PictureBox - Logoff - Leave
+        private void pictureBoxLogoff_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBoxLogoff.Image = Image.FromFile("../Debug/logoff.png");
+        }
+        //Hover - tooltip
+        private void pictureBoxCSGOJungle_MouseHover(object sender, EventArgs e)
+        {
+            tooltip.SetToolTip(pictureBoxCSGOJungle, "Welcome to the CS:GO Jungle admin environment!");
+        }
+
+
+        //BTN - Skrá leik
+        private void btn_leikir_skra_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string leikir_skra_lid = txtbx_leikir_skra_lid.Text;
+                string leikir_skra_lid2 = txtbx_leikir_skra_lid2.Text;
+                string leikir_skra_date = dateTime_leikir_skra.Text;
+                string leikir_skra_time = txtbx_leikir_skra_time.Text;
+                string leikir_skra_bo = txtbx_leikir_skra_bo.Text;
+                string leikir_skra_ridill = txtbx_leikir_skra_ridill.Text;
+
+                connection.AddNewLeikir(leikir_skra_lid, leikir_skra_lid2, leikir_skra_date, leikir_skra_time, leikir_skra_bo, leikir_skra_ridill);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error registering match info. Check your connection and try again.");
+            }
+            LoadLeikir();
+            txtbx_leikir_skra_lid.Clear();
+            txtbx_leikir_skra_lid2.Clear();
+            txtbx_leikir_skra_bo.Clear();
+            txtbx_leikir_skra_ridill.Clear();
+            txtbx_leikir_skra_time.Clear();
+        }
+
+        //BTN - Update leik
+        private void btn_leikir_update_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int leikir_update_id = Convert.ToInt32(txtbx_leikir_update_ID.Text);
+                string leikir_update_lid = txtbx_leikir_update_lid.Text;
+                string leikir_update_lid2 = txtbx_leikir_update_lid2.Text;
+                string leikir_update_date = dateTime_leikir_update.Text;
+                string leikir_update_time = txtbx_leikir_update_time.Text;
+                string leikir_update_bo = txtbx_leikir_update_bo.Text;
+                string leikir_update_ridill = txtbx_leikir_update_ridill.Text;
+
+                connection.UpdateLeikir(leikir_update_lid, leikir_update_lid2, leikir_update_date, leikir_update_time, leikir_update_bo, leikir_update_ridill, leikir_update_id);
+                LoadLeikir();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error updating match info. Check your connection and try again.");
+            }
+            LoadLeikir();
+            txtbx_leikir_skra_lid.Clear();
+            txtbx_leikir_skra_lid2.Clear();
+            txtbx_leikir_skra_bo.Clear();
+            txtbx_leikir_skra_ridill.Clear();
+            txtbx_leikir_skra_time.Clear();
+        }
+
+        //Setur upplýsingar í Update þegar notandi smellir á eitthvern dálk í datagridinu.
+        private void dataGridLeikir_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dataGridLeikir.SelectedRows.Count <= 0)//ef engir dalkar eru valdir, gerist ekkert
+            {
+                return;
+            }
+            else
+            {
+                try
+                {
+                    if (dataGridLeikir.SelectedRows[0].Cells[0].Value.ToString() != null)
+                    {
+                        //Sækir orðið til að splitta
+                        string word_to_split = dataGridLeikir.SelectedRows[0].Cells[1].Value.ToString();
+                        //Splittar því á " v " með Regex
+                        string[] both_teams = Regex.Split(word_to_split, " v ");
+
+                        //Setur splittaða strengin í rétt textbox
+                        txtbx_leikir_update_lid.Text = both_teams[0];
+                        txtbx_leikir_update_lid2.Text = both_teams[1];
+                        //ID txtbox
+                        txtbx_leikir_update_ID.Text = dataGridLeikir.SelectedRows[0].Cells[0].Value.ToString();
+
+
+                    }
+                    if (dataGridLeikir.SelectedRows[0].Cells[2].Value.ToString() != null)
+                    {
+                        txtbx_leikir_update_time.Text = dataGridLeikir.SelectedRows[0].Cells[3].Value.ToString();
+                    }
+                    if (dataGridLeikir.SelectedRows[0].Cells[3].Value.ToString() != null)
+                    {
+                        txtbx_leikir_update_bo.Text = dataGridLeikir.SelectedRows[0].Cells[4].Value.ToString();
+                    }
+                    if (dataGridLeikir.SelectedRows[0].Cells[4].Value.ToString() != null)
+                    {
+                        txtbx_leikir_update_ridill.Text = dataGridLeikir.SelectedRows[0].Cells[5].Value.ToString();
+                    }
+
+                }
+                catch (Exception)
+                {
+                    txtbx_leikir_update_lid.Text = null;
+                    dateTime_leikir_update.Text = null;
+                    txtbx_leikir_update_time.Text = null;
+                    txtbx_leikir_update_bo.Text = null;
+                    txtbx_leikir_update_ridill.Text = null;
+                    txtbx_leikir_update_winner.Text = null;
+
+                }
+            }
+        }
+
+
     }
 }

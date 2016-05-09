@@ -31,6 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Adalform));
             this.tabControlAdalform = new System.Windows.Forms.TabControl();
             this.tabPageLeikir = new System.Windows.Forms.TabPage();
+            this.txtbx_leikir_update_ID = new System.Windows.Forms.TextBox();
+            this.txtbx_leikir_update_lid2 = new System.Windows.Forms.TextBox();
+            this.txtbx_leikir_skra_lid2 = new System.Windows.Forms.TextBox();
+            this.label_Leikir_Update_Time = new System.Windows.Forms.Label();
             this.dateTime_leikir_update = new System.Windows.Forms.DateTimePicker();
             this.label_Leikir_Skra_Time = new System.Windows.Forms.Label();
             this.dateTime_leikir_skra = new System.Windows.Forms.DateTimePicker();
@@ -88,8 +92,13 @@
             this.ColumnNotendurBalance = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPageBets = new System.Windows.Forms.TabPage();
             this.dataGridBets = new System.Windows.Forms.DataGridView();
-            this.label_Leikir_Update_Time = new System.Windows.Forms.Label();
             this.pictureBoxCSGOJungle = new System.Windows.Forms.PictureBox();
+            this.pictureBoxLogoff = new System.Windows.Forms.PictureBox();
+            this.txtbx_leikir_update_versus = new System.Windows.Forms.TextBox();
+            this.txtbx_leikir_skra_versus = new System.Windows.Forms.TextBox();
+            this.label_leikir_update_id = new System.Windows.Forms.Label();
+            this.label_leikir_update_lid2 = new System.Windows.Forms.Label();
+            this.label_Leikir_skra_lid2 = new System.Windows.Forms.Label();
             this.tabControlAdalform.SuspendLayout();
             this.tabPageLeikir.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridLeikir)).BeginInit();
@@ -98,6 +107,7 @@
             this.tabPageBets.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridBets)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCSGOJungle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogoff)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControlAdalform
@@ -108,11 +118,20 @@
             this.tabControlAdalform.Location = new System.Drawing.Point(1, 72);
             this.tabControlAdalform.Name = "tabControlAdalform";
             this.tabControlAdalform.SelectedIndex = 0;
+            this.tabControlAdalform.ShowToolTips = true;
             this.tabControlAdalform.Size = new System.Drawing.Size(756, 505);
             this.tabControlAdalform.TabIndex = 1;
             // 
             // tabPageLeikir
             // 
+            this.tabPageLeikir.Controls.Add(this.label_Leikir_skra_lid2);
+            this.tabPageLeikir.Controls.Add(this.label_leikir_update_lid2);
+            this.tabPageLeikir.Controls.Add(this.label_leikir_update_id);
+            this.tabPageLeikir.Controls.Add(this.txtbx_leikir_skra_versus);
+            this.tabPageLeikir.Controls.Add(this.txtbx_leikir_update_versus);
+            this.tabPageLeikir.Controls.Add(this.txtbx_leikir_update_ID);
+            this.tabPageLeikir.Controls.Add(this.txtbx_leikir_update_lid2);
+            this.tabPageLeikir.Controls.Add(this.txtbx_leikir_skra_lid2);
             this.tabPageLeikir.Controls.Add(this.label_Leikir_Update_Time);
             this.tabPageLeikir.Controls.Add(this.dateTime_leikir_update);
             this.tabPageLeikir.Controls.Add(this.label_Leikir_Skra_Time);
@@ -146,9 +165,40 @@
             this.tabPageLeikir.Text = "Leikir";
             this.tabPageLeikir.UseVisualStyleBackColor = true;
             // 
+            // txtbx_leikir_update_ID
+            // 
+            this.txtbx_leikir_update_ID.Enabled = false;
+            this.txtbx_leikir_update_ID.Location = new System.Drawing.Point(52, 421);
+            this.txtbx_leikir_update_ID.Name = "txtbx_leikir_update_ID";
+            this.txtbx_leikir_update_ID.Size = new System.Drawing.Size(26, 20);
+            this.txtbx_leikir_update_ID.TabIndex = 37;
+            // 
+            // txtbx_leikir_update_lid2
+            // 
+            this.txtbx_leikir_update_lid2.Location = new System.Drawing.Point(172, 421);
+            this.txtbx_leikir_update_lid2.Name = "txtbx_leikir_update_lid2";
+            this.txtbx_leikir_update_lid2.Size = new System.Drawing.Size(59, 20);
+            this.txtbx_leikir_update_lid2.TabIndex = 36;
+            // 
+            // txtbx_leikir_skra_lid2
+            // 
+            this.txtbx_leikir_skra_lid2.Location = new System.Drawing.Point(172, 351);
+            this.txtbx_leikir_skra_lid2.Name = "txtbx_leikir_skra_lid2";
+            this.txtbx_leikir_skra_lid2.Size = new System.Drawing.Size(61, 20);
+            this.txtbx_leikir_skra_lid2.TabIndex = 35;
+            // 
+            // label_Leikir_Update_Time
+            // 
+            this.label_Leikir_Update_Time.AutoSize = true;
+            this.label_Leikir_Update_Time.Location = new System.Drawing.Point(413, 400);
+            this.label_Leikir_Update_Time.Name = "label_Leikir_Update_Time";
+            this.label_Leikir_Update_Time.Size = new System.Drawing.Size(30, 13);
+            this.label_Leikir_Update_Time.TabIndex = 34;
+            this.label_Leikir_Update_Time.Text = "Time";
+            // 
             // dateTime_leikir_update
             // 
-            this.dateTime_leikir_update.Location = new System.Drawing.Point(122, 424);
+            this.dateTime_leikir_update.Location = new System.Drawing.Point(254, 421);
             this.dateTime_leikir_update.Name = "dateTime_leikir_update";
             this.dateTime_leikir_update.Size = new System.Drawing.Size(130, 20);
             this.dateTime_leikir_update.TabIndex = 33;
@@ -156,7 +206,7 @@
             // label_Leikir_Skra_Time
             // 
             this.label_Leikir_Skra_Time.AutoSize = true;
-            this.label_Leikir_Skra_Time.Location = new System.Drawing.Point(281, 338);
+            this.label_Leikir_Skra_Time.Location = new System.Drawing.Point(413, 338);
             this.label_Leikir_Skra_Time.Name = "label_Leikir_Skra_Time";
             this.label_Leikir_Skra_Time.Size = new System.Drawing.Size(30, 13);
             this.label_Leikir_Skra_Time.TabIndex = 32;
@@ -164,24 +214,25 @@
             // 
             // dateTime_leikir_skra
             // 
-            this.dateTime_leikir_skra.Location = new System.Drawing.Point(122, 354);
+            this.dateTime_leikir_skra.Location = new System.Drawing.Point(254, 354);
             this.dateTime_leikir_skra.Name = "dateTime_leikir_skra";
             this.dateTime_leikir_skra.Size = new System.Drawing.Size(130, 20);
             this.dateTime_leikir_skra.TabIndex = 30;
             // 
             // btn_leikir_update
             // 
-            this.btn_leikir_update.Location = new System.Drawing.Point(465, 417);
+            this.btn_leikir_update.Location = new System.Drawing.Point(597, 414);
             this.btn_leikir_update.Name = "btn_leikir_update";
             this.btn_leikir_update.Size = new System.Drawing.Size(141, 38);
             this.btn_leikir_update.TabIndex = 29;
             this.btn_leikir_update.Text = "Update";
             this.btn_leikir_update.UseVisualStyleBackColor = true;
+            this.btn_leikir_update.Click += new System.EventHandler(this.btn_leikir_update_Click);
             // 
             // label_Leikir_Update_Winner
             // 
             this.label_Leikir_Update_Winner.AutoSize = true;
-            this.label_Leikir_Update_Winner.Location = new System.Drawing.Point(417, 403);
+            this.label_Leikir_Update_Winner.Location = new System.Drawing.Point(549, 400);
             this.label_Leikir_Update_Winner.Name = "label_Leikir_Update_Winner";
             this.label_Leikir_Update_Winner.Size = new System.Drawing.Size(41, 13);
             this.label_Leikir_Update_Winner.TabIndex = 28;
@@ -189,14 +240,14 @@
             // 
             // txtbx_leikir_update_winner
             // 
-            this.txtbx_leikir_update_winner.Location = new System.Drawing.Point(420, 424);
+            this.txtbx_leikir_update_winner.Location = new System.Drawing.Point(552, 421);
             this.txtbx_leikir_update_winner.Name = "txtbx_leikir_update_winner";
             this.txtbx_leikir_update_winner.Size = new System.Drawing.Size(39, 20);
             this.txtbx_leikir_update_winner.TabIndex = 27;
             // 
             // txtbx_leikir_skra_ridill
             // 
-            this.txtbx_leikir_skra_ridill.Location = new System.Drawing.Point(375, 354);
+            this.txtbx_leikir_skra_ridill.Location = new System.Drawing.Point(507, 354);
             this.txtbx_leikir_skra_ridill.Name = "txtbx_leikir_skra_ridill";
             this.txtbx_leikir_skra_ridill.Size = new System.Drawing.Size(39, 20);
             this.txtbx_leikir_skra_ridill.TabIndex = 26;
@@ -204,7 +255,7 @@
             // label_Leikir_Skra_Ridill
             // 
             this.label_Leikir_Skra_Ridill.AutoSize = true;
-            this.label_Leikir_Skra_Ridill.Location = new System.Drawing.Point(385, 338);
+            this.label_Leikir_Skra_Ridill.Location = new System.Drawing.Point(517, 338);
             this.label_Leikir_Skra_Ridill.Name = "label_Leikir_Skra_Ridill";
             this.label_Leikir_Skra_Ridill.Size = new System.Drawing.Size(29, 13);
             this.label_Leikir_Skra_Ridill.TabIndex = 25;
@@ -213,7 +264,7 @@
             // label_Leikir_Skra_BO
             // 
             this.label_Leikir_Skra_BO.AutoSize = true;
-            this.label_Leikir_Skra_BO.Location = new System.Drawing.Point(336, 338);
+            this.label_Leikir_Skra_BO.Location = new System.Drawing.Point(468, 338);
             this.label_Leikir_Skra_BO.Name = "label_Leikir_Skra_BO";
             this.label_Leikir_Skra_BO.Size = new System.Drawing.Size(22, 13);
             this.label_Leikir_Skra_BO.TabIndex = 24;
@@ -222,7 +273,7 @@
             // label_Leikir_Skra_Date
             // 
             this.label_Leikir_Skra_Date.AutoSize = true;
-            this.label_Leikir_Skra_Date.Location = new System.Drawing.Point(170, 338);
+            this.label_Leikir_Skra_Date.Location = new System.Drawing.Point(302, 338);
             this.label_Leikir_Skra_Date.Name = "label_Leikir_Skra_Date";
             this.label_Leikir_Skra_Date.Size = new System.Drawing.Size(30, 13);
             this.label_Leikir_Skra_Date.TabIndex = 23;
@@ -231,7 +282,7 @@
             // label_Leikir_Skra_Lid
             // 
             this.label_Leikir_Skra_Lid.AutoSize = true;
-            this.label_Leikir_Skra_Lid.Location = new System.Drawing.Point(55, 338);
+            this.label_Leikir_Skra_Lid.Location = new System.Drawing.Point(95, 335);
             this.label_Leikir_Skra_Lid.Name = "label_Leikir_Skra_Lid";
             this.label_Leikir_Skra_Lid.Size = new System.Drawing.Size(21, 13);
             this.label_Leikir_Skra_Lid.TabIndex = 22;
@@ -239,28 +290,28 @@
             // 
             // txtbx_leikir_skra_bo
             // 
-            this.txtbx_leikir_skra_bo.Location = new System.Drawing.Point(330, 354);
+            this.txtbx_leikir_skra_bo.Location = new System.Drawing.Point(462, 354);
             this.txtbx_leikir_skra_bo.Name = "txtbx_leikir_skra_bo";
             this.txtbx_leikir_skra_bo.Size = new System.Drawing.Size(39, 20);
             this.txtbx_leikir_skra_bo.TabIndex = 21;
             // 
             // txtbx_leikir_skra_time
             // 
-            this.txtbx_leikir_skra_time.Location = new System.Drawing.Point(258, 354);
+            this.txtbx_leikir_skra_time.Location = new System.Drawing.Point(390, 354);
             this.txtbx_leikir_skra_time.Name = "txtbx_leikir_skra_time";
             this.txtbx_leikir_skra_time.Size = new System.Drawing.Size(66, 20);
             this.txtbx_leikir_skra_time.TabIndex = 20;
             // 
             // txtbx_leikir_skra_lid
             // 
-            this.txtbx_leikir_skra_lid.Location = new System.Drawing.Point(17, 354);
+            this.txtbx_leikir_skra_lid.Location = new System.Drawing.Point(84, 351);
             this.txtbx_leikir_skra_lid.Name = "txtbx_leikir_skra_lid";
-            this.txtbx_leikir_skra_lid.Size = new System.Drawing.Size(99, 20);
+            this.txtbx_leikir_skra_lid.Size = new System.Drawing.Size(59, 20);
             this.txtbx_leikir_skra_lid.TabIndex = 19;
             // 
             // txtbx_leikir_update_ridill
             // 
-            this.txtbx_leikir_update_ridill.Location = new System.Drawing.Point(375, 424);
+            this.txtbx_leikir_update_ridill.Location = new System.Drawing.Point(507, 421);
             this.txtbx_leikir_update_ridill.Name = "txtbx_leikir_update_ridill";
             this.txtbx_leikir_update_ridill.Size = new System.Drawing.Size(39, 20);
             this.txtbx_leikir_update_ridill.TabIndex = 18;
@@ -268,7 +319,7 @@
             // label_Leikir_Update_Ridill
             // 
             this.label_Leikir_Update_Ridill.AutoSize = true;
-            this.label_Leikir_Update_Ridill.Location = new System.Drawing.Point(385, 408);
+            this.label_Leikir_Update_Ridill.Location = new System.Drawing.Point(517, 405);
             this.label_Leikir_Update_Ridill.Name = "label_Leikir_Update_Ridill";
             this.label_Leikir_Update_Ridill.Size = new System.Drawing.Size(29, 13);
             this.label_Leikir_Update_Ridill.TabIndex = 17;
@@ -277,7 +328,7 @@
             // label_Leikir_Update_BO
             // 
             this.label_Leikir_Update_BO.AutoSize = true;
-            this.label_Leikir_Update_BO.Location = new System.Drawing.Point(336, 408);
+            this.label_Leikir_Update_BO.Location = new System.Drawing.Point(468, 405);
             this.label_Leikir_Update_BO.Name = "label_Leikir_Update_BO";
             this.label_Leikir_Update_BO.Size = new System.Drawing.Size(22, 13);
             this.label_Leikir_Update_BO.TabIndex = 16;
@@ -286,7 +337,7 @@
             // label_Leikir_Update_Date
             // 
             this.label_Leikir_Update_Date.AutoSize = true;
-            this.label_Leikir_Update_Date.Location = new System.Drawing.Point(170, 403);
+            this.label_Leikir_Update_Date.Location = new System.Drawing.Point(302, 405);
             this.label_Leikir_Update_Date.Name = "label_Leikir_Update_Date";
             this.label_Leikir_Update_Date.Size = new System.Drawing.Size(30, 13);
             this.label_Leikir_Update_Date.TabIndex = 15;
@@ -295,7 +346,7 @@
             // label_Leikir_Update_Lid
             // 
             this.label_Leikir_Update_Lid.AutoSize = true;
-            this.label_Leikir_Update_Lid.Location = new System.Drawing.Point(41, 403);
+            this.label_Leikir_Update_Lid.Location = new System.Drawing.Point(95, 405);
             this.label_Leikir_Update_Lid.Name = "label_Leikir_Update_Lid";
             this.label_Leikir_Update_Lid.Size = new System.Drawing.Size(21, 13);
             this.label_Leikir_Update_Lid.TabIndex = 14;
@@ -303,33 +354,34 @@
             // 
             // txtbx_leikir_update_bo
             // 
-            this.txtbx_leikir_update_bo.Location = new System.Drawing.Point(330, 424);
+            this.txtbx_leikir_update_bo.Location = new System.Drawing.Point(462, 421);
             this.txtbx_leikir_update_bo.Name = "txtbx_leikir_update_bo";
             this.txtbx_leikir_update_bo.Size = new System.Drawing.Size(39, 20);
             this.txtbx_leikir_update_bo.TabIndex = 13;
             // 
             // txtbx_leikir_update_time
             // 
-            this.txtbx_leikir_update_time.Location = new System.Drawing.Point(262, 424);
+            this.txtbx_leikir_update_time.Location = new System.Drawing.Point(394, 421);
             this.txtbx_leikir_update_time.Name = "txtbx_leikir_update_time";
             this.txtbx_leikir_update_time.Size = new System.Drawing.Size(62, 20);
             this.txtbx_leikir_update_time.TabIndex = 11;
             // 
             // txtbx_leikir_update_lid
             // 
-            this.txtbx_leikir_update_lid.Location = new System.Drawing.Point(17, 424);
+            this.txtbx_leikir_update_lid.Location = new System.Drawing.Point(84, 421);
             this.txtbx_leikir_update_lid.Name = "txtbx_leikir_update_lid";
-            this.txtbx_leikir_update_lid.Size = new System.Drawing.Size(99, 20);
+            this.txtbx_leikir_update_lid.Size = new System.Drawing.Size(59, 20);
             this.txtbx_leikir_update_lid.TabIndex = 10;
             // 
             // btn_leikir_skra
             // 
-            this.btn_leikir_skra.Location = new System.Drawing.Point(465, 349);
+            this.btn_leikir_skra.Location = new System.Drawing.Point(597, 349);
             this.btn_leikir_skra.Name = "btn_leikir_skra";
             this.btn_leikir_skra.Size = new System.Drawing.Size(126, 29);
             this.btn_leikir_skra.TabIndex = 9;
             this.btn_leikir_skra.Text = "Skrá nýtt lið";
             this.btn_leikir_skra.UseVisualStyleBackColor = true;
+            this.btn_leikir_skra.Click += new System.EventHandler(this.btn_leikir_skra_Click);
             // 
             // dataGridLeikir
             // 
@@ -346,6 +398,7 @@
             this.dataGridLeikir.Name = "dataGridLeikir";
             this.dataGridLeikir.Size = new System.Drawing.Size(745, 303);
             this.dataGridLeikir.TabIndex = 0;
+            this.dataGridLeikir.SelectionChanged += new System.EventHandler(this.dataGridLeikir_SelectionChanged);
             // 
             // ColumnID
             // 
@@ -412,7 +465,7 @@
             this.tabPageNotendur.Location = new System.Drawing.Point(4, 22);
             this.tabPageNotendur.Name = "tabPageNotendur";
             this.tabPageNotendur.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageNotendur.Size = new System.Drawing.Size(812, 493);
+            this.tabPageNotendur.Size = new System.Drawing.Size(748, 479);
             this.tabPageNotendur.TabIndex = 1;
             this.tabPageNotendur.Text = "Notendur";
             this.tabPageNotendur.UseVisualStyleBackColor = true;
@@ -610,7 +663,7 @@
             this.tabPageBets.Location = new System.Drawing.Point(4, 22);
             this.tabPageBets.Name = "tabPageBets";
             this.tabPageBets.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageBets.Size = new System.Drawing.Size(812, 493);
+            this.tabPageBets.Size = new System.Drawing.Size(748, 479);
             this.tabPageBets.TabIndex = 2;
             this.tabPageBets.Text = "Bets";
             this.tabPageBets.UseVisualStyleBackColor = true;
@@ -623,15 +676,6 @@
             this.dataGridBets.Size = new System.Drawing.Size(745, 300);
             this.dataGridBets.TabIndex = 2;
             // 
-            // label_Leikir_Update_Time
-            // 
-            this.label_Leikir_Update_Time.AutoSize = true;
-            this.label_Leikir_Update_Time.Location = new System.Drawing.Point(281, 403);
-            this.label_Leikir_Update_Time.Name = "label_Leikir_Update_Time";
-            this.label_Leikir_Update_Time.Size = new System.Drawing.Size(30, 13);
-            this.label_Leikir_Update_Time.TabIndex = 34;
-            this.label_Leikir_Update_Time.Text = "Time";
-            // 
             // pictureBoxCSGOJungle
             // 
             this.pictureBoxCSGOJungle.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxCSGOJungle.Image")));
@@ -640,17 +684,75 @@
             this.pictureBoxCSGOJungle.Size = new System.Drawing.Size(104, 70);
             this.pictureBoxCSGOJungle.TabIndex = 2;
             this.pictureBoxCSGOJungle.TabStop = false;
+            this.pictureBoxCSGOJungle.MouseHover += new System.EventHandler(this.pictureBoxCSGOJungle_MouseHover);
+            // 
+            // pictureBoxLogoff
+            // 
+            this.pictureBoxLogoff.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogoff.Image")));
+            this.pictureBoxLogoff.Location = new System.Drawing.Point(701, 24);
+            this.pictureBoxLogoff.Name = "pictureBoxLogoff";
+            this.pictureBoxLogoff.Size = new System.Drawing.Size(56, 64);
+            this.pictureBoxLogoff.TabIndex = 3;
+            this.pictureBoxLogoff.TabStop = false;
+            this.pictureBoxLogoff.MouseLeave += new System.EventHandler(this.pictureBoxLogoff_MouseLeave);
+            this.pictureBoxLogoff.MouseHover += new System.EventHandler(this.pictureBoxLogoff_MouseHover);
+            // 
+            // txtbx_leikir_update_versus
+            // 
+            this.txtbx_leikir_update_versus.Enabled = false;
+            this.txtbx_leikir_update_versus.Location = new System.Drawing.Point(149, 421);
+            this.txtbx_leikir_update_versus.Name = "txtbx_leikir_update_versus";
+            this.txtbx_leikir_update_versus.Size = new System.Drawing.Size(19, 20);
+            this.txtbx_leikir_update_versus.TabIndex = 39;
+            this.txtbx_leikir_update_versus.Text = " V";
+            // 
+            // txtbx_leikir_skra_versus
+            // 
+            this.txtbx_leikir_skra_versus.Enabled = false;
+            this.txtbx_leikir_skra_versus.Location = new System.Drawing.Point(149, 351);
+            this.txtbx_leikir_skra_versus.Name = "txtbx_leikir_skra_versus";
+            this.txtbx_leikir_skra_versus.Size = new System.Drawing.Size(19, 20);
+            this.txtbx_leikir_skra_versus.TabIndex = 40;
+            this.txtbx_leikir_skra_versus.Text = " V";
+            // 
+            // label_leikir_update_id
+            // 
+            this.label_leikir_update_id.AutoSize = true;
+            this.label_leikir_update_id.Location = new System.Drawing.Point(49, 405);
+            this.label_leikir_update_id.Name = "label_leikir_update_id";
+            this.label_leikir_update_id.Size = new System.Drawing.Size(18, 13);
+            this.label_leikir_update_id.TabIndex = 41;
+            this.label_leikir_update_id.Text = "ID";
+            // 
+            // label_leikir_update_lid2
+            // 
+            this.label_leikir_update_lid2.AutoSize = true;
+            this.label_leikir_update_lid2.Location = new System.Drawing.Point(169, 405);
+            this.label_leikir_update_lid2.Name = "label_leikir_update_lid2";
+            this.label_leikir_update_lid2.Size = new System.Drawing.Size(21, 13);
+            this.label_leikir_update_lid2.TabIndex = 42;
+            this.label_leikir_update_lid2.Text = "Lið";
+            // 
+            // label_Leikir_skra_lid2
+            // 
+            this.label_Leikir_skra_lid2.AutoSize = true;
+            this.label_Leikir_skra_lid2.Location = new System.Drawing.Point(169, 335);
+            this.label_Leikir_skra_lid2.Name = "label_Leikir_skra_lid2";
+            this.label_Leikir_skra_lid2.Size = new System.Drawing.Size(21, 13);
+            this.label_Leikir_skra_lid2.TabIndex = 43;
+            this.label_Leikir_skra_lid2.Text = "Lið";
             // 
             // Adalform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(753, 575);
+            this.Controls.Add(this.pictureBoxLogoff);
             this.Controls.Add(this.pictureBoxCSGOJungle);
             this.Controls.Add(this.tabControlAdalform);
             this.Name = "Adalform";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Adalform";
+            this.Text = "CS:GO Jungle";
             this.Load += new System.EventHandler(this.Adalform_Load);
             this.tabControlAdalform.ResumeLayout(false);
             this.tabPageLeikir.ResumeLayout(false);
@@ -662,6 +764,7 @@
             this.tabPageBets.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridBets)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCSGOJungle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogoff)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -729,5 +832,14 @@
         private System.Windows.Forms.DataGridView dataGridBets;
         private System.Windows.Forms.Label label_Leikir_Update_Time;
         private System.Windows.Forms.PictureBox pictureBoxCSGOJungle;
+        private System.Windows.Forms.PictureBox pictureBoxLogoff;
+        private System.Windows.Forms.TextBox txtbx_leikir_update_lid2;
+        private System.Windows.Forms.TextBox txtbx_leikir_skra_lid2;
+        private System.Windows.Forms.TextBox txtbx_leikir_update_ID;
+        private System.Windows.Forms.Label label_Leikir_skra_lid2;
+        private System.Windows.Forms.Label label_leikir_update_lid2;
+        private System.Windows.Forms.Label label_leikir_update_id;
+        private System.Windows.Forms.TextBox txtbx_leikir_skra_versus;
+        private System.Windows.Forms.TextBox txtbx_leikir_update_versus;
     }
 }
