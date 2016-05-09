@@ -36,7 +36,6 @@ namespace AdminGRU
         //Nota þetta til að passa username sem notandi loggaði sig inn með til Adalformsins(Fyrir labelið "you are signed in as...")
         public string Pass_username_to_adalform { get; set; }
 
-
         //LOAD
         private void Adalform_Load(object sender, EventArgs e)
         {
@@ -49,9 +48,16 @@ namespace AdminGRU
             tabPageBets.ToolTipText = "Here you can view and update bets that users have placed on certain matches.";
 
             //Setur label "you are signed in as"
-            label_signed_in_as.Text = "You are signed in as " + Pass_username_to_adalform;
-            //Signed in at XX:XX
-            label_date_and_time.Text = "Signed in at " + DateTime.Now.ToString();
+            label_signed_in_as.Text = Pass_username_to_adalform;
+            //Z-Index fyrir datagrid
+            dataGridLeikir.BringToFront();
+            dataGridNotendur.BringToFront();
+        }
+
+        //LABEL - SHOW TIME
+        private void timer_clock_Tick(object sender, EventArgs e)
+        {
+            label_date_and_time.Text = DateTime.Now.ToString();
         }
 
         //Method - Loadar upplýsingar inní Leikir DataGridið
@@ -87,26 +93,26 @@ namespace AdminGRU
             }
         }
 
-
         //PictureBox - Logoff - Hover
         private void pictureBoxLogoff_MouseHover(object sender, EventArgs e)
         {
             pictureBoxLogoff.Image = Image.FromFile("../Debug/logoffhover.png");
 
             tooltip.SetToolTip(pictureBoxLogoff, "Logout of CS:GO Jungle");
-            
+
         }
+
         //PictureBox - Logoff - Leave
         private void pictureBoxLogoff_MouseLeave(object sender, EventArgs e)
         {
             pictureBoxLogoff.Image = Image.FromFile("../Debug/logoff.png");
         }
+
         //Hover - tooltip
         private void pictureBoxCSGOJungle_MouseHover(object sender, EventArgs e)
         {
             tooltip.SetToolTip(pictureBoxCSGOJungle, "Welcome to the CS:GO Jungle admin environment!");
         }
-           
 
         //BTN - Skrá leik
         private void btn_leikir_skra_Click(object sender, EventArgs e)
@@ -215,12 +221,85 @@ namespace AdminGRU
             }
         }
 
-
         //LOGOFF
         private void pictureBoxLogoff_Click(object sender, EventArgs e)
         {
             this.Hide();
-            log.Show(); 
+            log.Show();
         }
+
+        //PicBox Click - NEW MATCH
+        private void pictureBox_add_match_Click(object sender, EventArgs e)
+        {
+            tabControlMatches.SelectedIndex = 1;
+        }
+
+        //PicBox Click - UPDATE MATCH
+        private void pictureBox_update_match_Click(object sender, EventArgs e)
+        {
+            tabControlMatches.SelectedIndex = 2;
+        }
+
+        //PicBox Click - DELETE MATCH
+        private void pictureBox_delete_match_Click(object sender, EventArgs e)
+        {
+            tabControlMatches.SelectedIndex = 3;
+        }
+
+        //PicBox Click - NEW USER
+        private void pictureBox_add_user_Click(object sender, EventArgs e)
+        {
+            tabControlNotendur.SelectedIndex = 1;
+        }
+
+        //PicBox Click - UPDATE USER
+        private void pictureBox_update_user_Click(object sender, EventArgs e)
+        {
+            tabControlNotendur.SelectedIndex = 2;
+        }
+
+        //PicBox Click - DELETE USER
+        private void pictureBox_delete_user_Click(object sender, EventArgs e)
+        {
+            tabControlNotendur.SelectedIndex = 3;
+        }
+
+        //LinkLabel - BACK
+        private void linkLabel_Matches_Back_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            tabControlMatches.SelectedIndex = 0;
+        }
+
+        //LinkLabel - BACK
+        private void linkLabel_Matches_Back1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            tabControlMatches.SelectedIndex = 0;
+        }
+
+        //LinkLabel - BACK
+        private void linkLabel_Matches_Back2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            tabControlMatches.SelectedIndex = 0;
+        }
+
+        //LinkLabel - BACK
+        private void linkLabel_Users_Back_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            tabControlNotendur.SelectedIndex = 0;
+        }
+
+        //LinkLabel - BACK
+        private void linkLabel_Users_Back1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            tabControlNotendur.SelectedIndex = 0;
+        }
+
+        //LinkLabel - BACK
+        private void linkLabel_Users_Back2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            tabControlNotendur.SelectedIndex = 0;
+        }
+
+
     }
 }
