@@ -52,6 +52,7 @@ namespace AdminGRU
             //Z-Index fyrir datagrid
             dataGridLeikir.BringToFront();
             dataGridNotendur.BringToFront();
+            dataGridBets.BringToFront();
         }
 
         //LABEL - SHOW TIME
@@ -168,8 +169,8 @@ namespace AdminGRU
             txtbx_leikir_skra_time.Clear();
         }
 
-        //Setur upplýsingar í Update þegar notandi smellir á eitthvern dálk í datagridinu.
-        private void dataGridLeikir_SelectionChanged(object sender, EventArgs e)
+        //SELECTION CHANGED - MATCHES
+        private void dataGridLeikir_SelectionChanged_1(object sender, EventArgs e)
         {
             if (dataGridLeikir.SelectedRows.Count <= 0)//ef engir dalkar eru valdir, gerist ekkert
             {
@@ -298,6 +299,48 @@ namespace AdminGRU
         private void linkLabel_Users_Back2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             tabControlNotendur.SelectedIndex = 0;
+        }
+
+        //HOVER - NEW MATCH
+        private void pictureBox_add_match_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox_add_match.Image = Image.FromFile("../Debug/button_new_hover.png");
+
+            tooltip.SetToolTip(pictureBox_add_match, "Create a new match.");
+        }
+
+        //HOVER LEAVE - ADD MATCH
+        private void pictureBox_add_match_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox_add_match.Image = Image.FromFile("../Debug/button_new.png");
+        }
+
+        //HOVER - UPDATE MATCH
+        private void pictureBox_update_match_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox_update_match.Image = Image.FromFile("../Debug/button_update_hover.png");
+
+            tooltip.SetToolTip(pictureBox_update_match, "Update information about a match.");
+        }
+
+        //HOVER LEAVE - UPDATE MATCH
+        private void pictureBox_update_match_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox_update_match.Image = Image.FromFile("../Debug/button_update.png");
+        }
+
+        //HOVER - DELETE MATCH
+        private void pictureBox_delete_match_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox_delete_match.Image = Image.FromFile("../Debug/button_delete_hover.png");
+
+            tooltip.SetToolTip(pictureBox_delete_match, "Delete a match.");
+        }
+
+        //HOVER LEAVE - DELETE MATCH
+        private void pictureBox_delete_match_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox_delete_match.Image = Image.FromFile("../Debug/button_delete.png");
         }
 
 

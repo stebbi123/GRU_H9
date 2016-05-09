@@ -60,54 +60,64 @@
             // 
             // txtbx_login_username
             // 
-            this.txtbx_login_username.BackColor = System.Drawing.Color.OldLace;
-            this.txtbx_login_username.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtbx_login_username.BackColor = System.Drawing.Color.Gray;
+            this.txtbx_login_username.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtbx_login_username.Font = new System.Drawing.Font("Lucida Sans Unicode", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbx_login_username.ForeColor = System.Drawing.Color.White;
             this.txtbx_login_username.Location = new System.Drawing.Point(86, 255);
+            this.txtbx_login_username.Multiline = true;
             this.txtbx_login_username.Name = "txtbx_login_username";
-            this.txtbx_login_username.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtbx_login_username.Size = new System.Drawing.Size(148, 20);
             this.txtbx_login_username.TabIndex = 0;
+            this.txtbx_login_username.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtbx_login_username.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtbx_login_username_KeyPress);
             // 
             // txtbx_login_password
             // 
-            this.txtbx_login_password.BackColor = System.Drawing.Color.OldLace;
+            this.txtbx_login_password.BackColor = System.Drawing.Color.Gray;
+            this.txtbx_login_password.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtbx_login_password.Font = new System.Drawing.Font("Lucida Sans Unicode", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbx_login_password.ForeColor = System.Drawing.Color.White;
             this.txtbx_login_password.Location = new System.Drawing.Point(86, 303);
+            this.txtbx_login_password.Multiline = true;
             this.txtbx_login_password.Name = "txtbx_login_password";
             this.txtbx_login_password.PasswordChar = '*';
             this.txtbx_login_password.Size = new System.Drawing.Size(148, 20);
             this.txtbx_login_password.TabIndex = 1;
+            this.txtbx_login_password.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtbx_login_password.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtbx_login_password_KeyPress);
             // 
             // labelLoginUsername
             // 
             this.labelLoginUsername.AutoSize = true;
-            this.labelLoginUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.labelLoginUsername.Location = new System.Drawing.Point(83, 239);
+            this.labelLoginUsername.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLoginUsername.ForeColor = System.Drawing.Color.White;
+            this.labelLoginUsername.Location = new System.Drawing.Point(117, 234);
             this.labelLoginUsername.Name = "labelLoginUsername";
-            this.labelLoginUsername.Size = new System.Drawing.Size(73, 17);
+            this.labelLoginUsername.Size = new System.Drawing.Size(80, 18);
             this.labelLoginUsername.TabIndex = 2;
             this.labelLoginUsername.Text = "Username";
             // 
             // labelLoginPassword
             // 
             this.labelLoginPassword.AutoSize = true;
-            this.labelLoginPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.labelLoginPassword.Location = new System.Drawing.Point(83, 287);
+            this.labelLoginPassword.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLoginPassword.ForeColor = System.Drawing.Color.White;
+            this.labelLoginPassword.Location = new System.Drawing.Point(117, 282);
             this.labelLoginPassword.Name = "labelLoginPassword";
-            this.labelLoginPassword.Size = new System.Drawing.Size(69, 17);
+            this.labelLoginPassword.Size = new System.Drawing.Size(77, 18);
             this.labelLoginPassword.TabIndex = 3;
             this.labelLoginPassword.Text = "Password";
             // 
             // btn_login
             // 
-            this.btn_login.BackColor = System.Drawing.Color.ForestGreen;
+            this.btn_login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(143)))), ((int)(((byte)(42)))));
             this.btn_login.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btn_login.FlatAppearance.BorderSize = 2;
             this.btn_login.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_login.Font = new System.Drawing.Font("Sitka Small", 10F);
+            this.btn_login.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_login.ForeColor = System.Drawing.Color.White;
-            this.btn_login.Location = new System.Drawing.Point(86, 338);
+            this.btn_login.Location = new System.Drawing.Point(86, 335);
             this.btn_login.Name = "btn_login";
             this.btn_login.Size = new System.Drawing.Size(148, 28);
             this.btn_login.TabIndex = 7;
@@ -118,11 +128,12 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Lucida Sans Unicode", 9F);
             this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel1.LinkColor = System.Drawing.Color.Ivory;
-            this.linkLabel1.Location = new System.Drawing.Point(101, 369);
+            this.linkLabel1.Location = new System.Drawing.Point(89, 366);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(120, 13);
+            this.linkLabel1.Size = new System.Drawing.Size(145, 16);
             this.linkLabel1.TabIndex = 8;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Forgot your credentials?";
@@ -141,7 +152,7 @@
             // 
             // tabPageLogin
             // 
-            this.tabPageLogin.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.tabPageLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.tabPageLogin.Controls.Add(this.pictureBoxLogo);
             this.tabPageLogin.Controls.Add(this.txtbx_login_username);
             this.tabPageLogin.Controls.Add(this.linkLabel1);
@@ -168,7 +179,7 @@
             // 
             // tabPageRecovery
             // 
-            this.tabPageRecovery.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.tabPageRecovery.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.tabPageRecovery.Controls.Add(this.labelRecoveryFailure);
             this.tabPageRecovery.Controls.Add(this.linkLabelRecoveryFailed);
             this.tabPageRecovery.Controls.Add(this.linkLabelRecovery_back1);
