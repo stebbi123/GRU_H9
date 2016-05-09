@@ -29,8 +29,12 @@ namespace AdminGRU
         }
         //tenging við Connection Klasa
         Connection connection = new Connection();
-        //Tooltip method
+        //Tooltip object
         ToolTip tooltip = new ToolTip();
+        //Login object
+        login log = new login();
+        //Nota þetta til að passa username sem notandi loggaði sig inn með til Adalformsins(Fyrir labelið "you are signed in as...")
+        public string Pass_username_to_adalform { get; set; }
 
 
         //LOAD
@@ -43,6 +47,11 @@ namespace AdminGRU
             tabPageLeikir.ToolTipText = "Here you can add upcomming matches or update past ones. Winners of matches are registered here aswell.";
             tabPageNotendur.ToolTipText = "Here you can add new users or update information about current users.";
             tabPageBets.ToolTipText = "Here you can view and update bets that users have placed on certain matches.";
+
+            //Setur label "you are signed in as"
+            label_signed_in_as.Text = "You are signed in as " + Pass_username_to_adalform;
+            //Signed in at XX:XX
+            label_date_and_time.Text = "Signed in at " + DateTime.Now.ToString();
         }
 
         //Method - Loadar upplýsingar inní Leikir DataGridið
@@ -85,6 +94,7 @@ namespace AdminGRU
             pictureBoxLogoff.Image = Image.FromFile("../Debug/logoffhover.png");
 
             tooltip.SetToolTip(pictureBoxLogoff, "Logout of CS:GO Jungle");
+            
         }
         //PictureBox - Logoff - Leave
         private void pictureBoxLogoff_MouseLeave(object sender, EventArgs e)
@@ -96,7 +106,7 @@ namespace AdminGRU
         {
             tooltip.SetToolTip(pictureBoxCSGOJungle, "Welcome to the CS:GO Jungle admin environment!");
         }
-
+           
 
         //BTN - Skrá leik
         private void btn_leikir_skra_Click(object sender, EventArgs e)
@@ -206,5 +216,11 @@ namespace AdminGRU
         }
 
 
+        //LOGOFF
+        private void pictureBoxLogoff_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            log.Show(); 
+        }
     }
 }

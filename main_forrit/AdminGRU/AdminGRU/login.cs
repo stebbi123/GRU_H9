@@ -56,7 +56,9 @@ namespace AdminGRU
                 {
                     if (connection.Authenticate_password(login_username, login_password) == true)
                     {
+                        //tenging við adalform
                         Adalform adalform = new Adalform();
+                        adalform.Pass_username_to_adalform = login_username;
                         this.Hide();
                         adalform.Show();
 
