@@ -111,7 +111,7 @@
         <div class="container">
             <div class="row">
 
-                    <h1>Leikir</h1>
+                    <h1>Uppkomandi Leikir</h1>
 				<div class="col-lg-6" id="leikir">
 				<div class="panel panel-leikir">
 					<div class="panel-heading">
@@ -122,7 +122,7 @@
                     if ($result->num_rows > 0) {
                         
                         while($row = $result->fetch_assoc()) {
-                            echo '<a href="" class="list-group-item">' . $row["lid1_lid2"]. ' | ' . $row["date"]. ' | Best Of ' . $row["bo"]. '</a>';
+                            echo '<a href="#" class="list-group-item">' . $row["lid1_lid2"]. ' | ' . $row["date"]. ' | Best Of ' . $row["bo"]. '</a>';
                         }
                       } else {
                           echo "0 results";

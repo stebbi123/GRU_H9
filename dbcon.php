@@ -11,7 +11,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "SELECT lid1_lid2, date, bo FROM leikir";
+$sql = "SELECT lid1_lid2, date, bo FROM leikir WHERE winner IS NULL";
 $result = $conn->query($sql);
 
 
