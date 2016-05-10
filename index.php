@@ -140,7 +140,7 @@
                     if ($result2->num_rows > 0) {
                         
                         while($row = $result2->fetch_assoc()) {
-                            echo '<a href="#" class="list-group-item">'. "<i class='fa fa-check'>  </i>" . $row["lid1_lid2"]. ' | ' . $row["date"]. ' | Best Of ' . $row["bo"]. ' | Sigurvegari ' . $row["winner"].  '</a>';
+                            echo '<a href="#" class="list-group-item">'. "<i class='fa fa-check'>  </i>" . $row["lid1_lid2"]. ' | ' . $row["date"]. ' | Best Of ' . $row["bo"]. ' | Sigurvegarar ' . $row["winner"].  '</a>';
                         }
                       } else {
                           echo "0 results";
