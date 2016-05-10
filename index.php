@@ -32,7 +32,7 @@
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header page-scroll">
-                <a href="#" class="pull-left logo"><img src="csgojungle.png" alt="" /></a>
+                <a href="#" class="pull-left logo"><img src="csgojungle.png" class="img-responsive" alt="" /></a>
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
@@ -41,7 +41,7 @@
                 </button>
               <!--  <a href="#" class="pull-left logo"><img src="csgojungle.png" alt="" /></a>-->
                 <a class="navbar-brand page-scroll pull-right" href="#page-top">  Heim</a>
-                <img class="collogo" src="csgojungle.png" alt="" />
+                <img class="collogo img-responsive" src="csgojungle.png" alt="" />
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->

@@ -6,8 +6,9 @@ $(window).scroll(function() {
         $(".logo").height(60);
     } else {
         $(".navbar-fixed-top").removeClass("top-nav-collapse");
-        $(".logo").width(100);
-        $(".logo").height(70);
+        $(".logo").width(110);
+        $(".logo").height(75);
+        $(".navbar").fontSize = "xx-large";
     }
 });
 
