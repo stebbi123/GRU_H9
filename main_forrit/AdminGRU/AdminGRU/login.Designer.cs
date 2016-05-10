@@ -37,6 +37,9 @@
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageLogin = new System.Windows.Forms.TabPage();
+            this.linkLabel_Help_app = new System.Windows.Forms.LinkLabel();
+            this.linkLabel_Mini_app = new System.Windows.Forms.LinkLabel();
+            this.linkLabel_Exit_app = new System.Windows.Forms.LinkLabel();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.tabPageRecovery = new System.Windows.Forms.TabPage();
             this.labelRecoveryFailure = new System.Windows.Forms.Label();
@@ -51,9 +54,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtbx_recovery_username = new System.Windows.Forms.TextBox();
             this.labelRecovery1 = new System.Windows.Forms.Label();
-            this.linkLabel_Help_app = new System.Windows.Forms.LinkLabel();
-            this.linkLabel_Mini_app = new System.Windows.Forms.LinkLabel();
-            this.linkLabel_Exit_app = new System.Windows.Forms.LinkLabel();
             this.tabControl1.SuspendLayout();
             this.tabPageLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
@@ -175,6 +175,48 @@
             this.tabPageLogin.TabIndex = 0;
             this.tabPageLogin.Text = "tabLogin";
             // 
+            // linkLabel_Help_app
+            // 
+            this.linkLabel_Help_app.AutoSize = true;
+            this.linkLabel_Help_app.Font = new System.Drawing.Font("Webdings", 13F);
+            this.linkLabel_Help_app.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.linkLabel_Help_app.LinkColor = System.Drawing.Color.Ivory;
+            this.linkLabel_Help_app.Location = new System.Drawing.Point(229, 6);
+            this.linkLabel_Help_app.Name = "linkLabel_Help_app";
+            this.linkLabel_Help_app.Size = new System.Drawing.Size(28, 21);
+            this.linkLabel_Help_app.TabIndex = 14;
+            this.linkLabel_Help_app.TabStop = true;
+            this.linkLabel_Help_app.Text = "s";
+            this.linkLabel_Help_app.VisitedLinkColor = System.Drawing.Color.Ivory;
+            // 
+            // linkLabel_Mini_app
+            // 
+            this.linkLabel_Mini_app.AutoSize = true;
+            this.linkLabel_Mini_app.Font = new System.Drawing.Font("Webdings", 13F);
+            this.linkLabel_Mini_app.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.linkLabel_Mini_app.LinkColor = System.Drawing.Color.Ivory;
+            this.linkLabel_Mini_app.Location = new System.Drawing.Point(263, 6);
+            this.linkLabel_Mini_app.Name = "linkLabel_Mini_app";
+            this.linkLabel_Mini_app.Size = new System.Drawing.Size(28, 21);
+            this.linkLabel_Mini_app.TabIndex = 13;
+            this.linkLabel_Mini_app.TabStop = true;
+            this.linkLabel_Mini_app.Text = "0";
+            this.linkLabel_Mini_app.VisitedLinkColor = System.Drawing.Color.Ivory;
+            // 
+            // linkLabel_Exit_app
+            // 
+            this.linkLabel_Exit_app.AutoSize = true;
+            this.linkLabel_Exit_app.Font = new System.Drawing.Font("Webdings", 13F);
+            this.linkLabel_Exit_app.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.linkLabel_Exit_app.LinkColor = System.Drawing.Color.Ivory;
+            this.linkLabel_Exit_app.Location = new System.Drawing.Point(297, 6);
+            this.linkLabel_Exit_app.Name = "linkLabel_Exit_app";
+            this.linkLabel_Exit_app.Size = new System.Drawing.Size(28, 21);
+            this.linkLabel_Exit_app.TabIndex = 12;
+            this.linkLabel_Exit_app.TabStop = true;
+            this.linkLabel_Exit_app.Text = "r";
+            this.linkLabel_Exit_app.VisitedLinkColor = System.Drawing.Color.Ivory;
+            // 
             // pictureBoxLogo
             // 
             this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
@@ -203,7 +245,7 @@
             this.tabPageRecovery.Location = new System.Drawing.Point(4, 22);
             this.tabPageRecovery.Name = "tabPageRecovery";
             this.tabPageRecovery.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageRecovery.Size = new System.Drawing.Size(321, 393);
+            this.tabPageRecovery.Size = new System.Drawing.Size(331, 437);
             this.tabPageRecovery.TabIndex = 1;
             this.tabPageRecovery.Text = "tabRecovery";
             // 
@@ -369,48 +411,6 @@
             this.labelRecovery1.Size = new System.Drawing.Size(66, 16);
             this.labelRecovery1.TabIndex = 0;
             this.labelRecovery1.Text = "Username";
-            // 
-            // linkLabel_Help_app
-            // 
-            this.linkLabel_Help_app.AutoSize = true;
-            this.linkLabel_Help_app.Font = new System.Drawing.Font("Webdings", 13F);
-            this.linkLabel_Help_app.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.linkLabel_Help_app.LinkColor = System.Drawing.Color.Ivory;
-            this.linkLabel_Help_app.Location = new System.Drawing.Point(229, 6);
-            this.linkLabel_Help_app.Name = "linkLabel_Help_app";
-            this.linkLabel_Help_app.Size = new System.Drawing.Size(28, 21);
-            this.linkLabel_Help_app.TabIndex = 14;
-            this.linkLabel_Help_app.TabStop = true;
-            this.linkLabel_Help_app.Text = "s";
-            this.linkLabel_Help_app.VisitedLinkColor = System.Drawing.Color.Ivory;
-            // 
-            // linkLabel_Mini_app
-            // 
-            this.linkLabel_Mini_app.AutoSize = true;
-            this.linkLabel_Mini_app.Font = new System.Drawing.Font("Webdings", 13F);
-            this.linkLabel_Mini_app.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.linkLabel_Mini_app.LinkColor = System.Drawing.Color.Ivory;
-            this.linkLabel_Mini_app.Location = new System.Drawing.Point(263, 6);
-            this.linkLabel_Mini_app.Name = "linkLabel_Mini_app";
-            this.linkLabel_Mini_app.Size = new System.Drawing.Size(28, 21);
-            this.linkLabel_Mini_app.TabIndex = 13;
-            this.linkLabel_Mini_app.TabStop = true;
-            this.linkLabel_Mini_app.Text = "0";
-            this.linkLabel_Mini_app.VisitedLinkColor = System.Drawing.Color.Ivory;
-            // 
-            // linkLabel_Exit_app
-            // 
-            this.linkLabel_Exit_app.AutoSize = true;
-            this.linkLabel_Exit_app.Font = new System.Drawing.Font("Webdings", 13F);
-            this.linkLabel_Exit_app.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.linkLabel_Exit_app.LinkColor = System.Drawing.Color.Ivory;
-            this.linkLabel_Exit_app.Location = new System.Drawing.Point(297, 6);
-            this.linkLabel_Exit_app.Name = "linkLabel_Exit_app";
-            this.linkLabel_Exit_app.Size = new System.Drawing.Size(28, 21);
-            this.linkLabel_Exit_app.TabIndex = 12;
-            this.linkLabel_Exit_app.TabStop = true;
-            this.linkLabel_Exit_app.Text = "r";
-            this.linkLabel_Exit_app.VisitedLinkColor = System.Drawing.Color.Ivory;
             // 
             // login
             // 
