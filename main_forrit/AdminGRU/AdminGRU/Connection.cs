@@ -196,7 +196,7 @@ namespace AdminGRU
         }
 
         //UPDATE MATCH
-        public void UpdateLeikir(string lid1, string lid2, string date, string time, string bo, string ridill, int id)
+        public void UpdateLeikir(string lid1, string lid2, string date, string time, string bo, string ridill, int id, string winner)
         {
             try
             {
@@ -207,7 +207,7 @@ namespace AdminGRU
                     string lid1lid2 = lid1 + " v " + lid2;
 
                     //bý til fyrirspurnina sem er svo send í gagnagrunninn
-                    fyrirspurn = "UPDATE leikir SET lid1_lid2 = '" + lid1lid2 + "', date='" + date + "', time='" + time + "', bo='" + bo + "', ridill='" + ridill + "' where ID='" + id + "'";
+                    fyrirspurn = "UPDATE leikir SET lid1_lid2 = '" + lid1lid2 + "', date='" + date + "', time='" + time + "', bo='" + bo + "', ridill='" + ridill + "', winner= '" + winner + "'  where ID='" + id + "'";
 
                     //nySQLskipun er "constructor" og executar skipunina
                     nySQLskipun = new MySqlCommand(fyrirspurn, SQLtenging);
@@ -225,7 +225,7 @@ namespace AdminGRU
 
         }
 
-        //Les allt úr Leikir töflunni og skilar svo að DataGrid getur displayað það
+        //LESA LEIKI ÚR DATABASE FYRIR DATAGRIDIÐ
         public List<string> LesaLeiki()
         {
             List<string> faerslur = new List<string>();
@@ -253,6 +253,36 @@ namespace AdminGRU
             }
             return faerslur;
         }
+
+        //LESA NOTENDUR ÚR DATABASE FYRIR DATAGRIDIÐ
+        public List<string> LesaNotendur()
+        {
+            List<string> faerslur = new List<string>();
+            string line = null;
+            if (OpenConnection() == true)
+            {
+                fyrirspurn = "SELECT user, password, email, balance FROM notendur";
+                nySQLskipun = new MySqlCommand(fyrirspurn, SQLtenging);
+
+                //fær til sín feedback frá gagnagrunninum
+                SQLlesari = nySQLskipun.ExecuteReader();
+
+                while (SQLlesari.Read())
+                {
+                    for (int i = 0; i < SQLlesari.FieldCount; i++)
+                    {
+                        line += (SQLlesari.GetValue(i).ToString()) + "#";
+                    }
+
+                    faerslur.Add(line);
+                    line = null;
+                }
+                CloseConnection();
+                return faerslur;
+            }
+            return faerslur;
+        }
+
         //Eyðir ákveðinni færslu
         public void Eyda(string id)
         {

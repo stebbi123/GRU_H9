@@ -41,6 +41,7 @@ namespace AdminGRU
         {
             //Sækir upplýisngar
             LoadLeikir();
+            LoadNotendur();
 
             //Setur tooltip drasl
             tabPageLeikir.ToolTipText = "Here you can add upcomming matches or update past ones. Winners of matches are registered here aswell.";
@@ -61,7 +62,7 @@ namespace AdminGRU
             label_date_and_time.Text = DateTime.Now.ToString();
         }
 
-        //Method - Loadar upplýsingar inní Leikir DataGridið
+        //LOAD LEIKIR - INNÍ DATAGRID
         public void LoadLeikir()
         {
             //listinn sem er lesinn úr gagnagrunninum
@@ -84,7 +85,39 @@ namespace AdminGRU
                     dataGridLeikir.Rows[tala].Cells[3].Value = data[3];
                     dataGridLeikir.Rows[tala].Cells[4].Value = data[4];
                     dataGridLeikir.Rows[tala].Cells[5].Value = data[5];
+                    dataGridLeikir.Rows[tala].Cells[6].Value = data[6];
                     this.dataGridLeikir.ColumnHeadersHeight = 25;
+                    tala++;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+        //LOAD NOTENDUR - INNÍ DATAGRID
+        public void LoadNotendur()
+        {
+            //listinn sem er lesinn úr gagnagrunninum
+            List<string> linur = new List<string>();
+
+            try
+            {
+                dataGridNotendur.Rows.Clear();
+                dataGridNotendur.Refresh();
+                linur = connection.LesaNotendur();
+                string[] data;
+                int tala = 0;
+                foreach (string lin in linur)
+                {
+                    dataGridNotendur.Rows.Add();
+                    data = lin.Split('#');
+                    dataGridNotendur.Rows[tala].Cells[0].Value = data[0];
+                    dataGridNotendur.Rows[tala].Cells[1].Value = data[1];
+                    dataGridNotendur.Rows[tala].Cells[2].Value = data[2];
+                    dataGridNotendur.Rows[tala].Cells[3].Value = data[3];
+                    this.dataGridNotendur.ColumnHeadersHeight = 25;
                     tala++;
                 }
             }
@@ -153,8 +186,9 @@ namespace AdminGRU
                 string leikir_update_time = txtbx_leikir_update_time.Text;
                 string leikir_update_bo = txtbx_leikir_update_bo.Text;
                 string leikir_update_ridill = txtbx_leikir_update_ridill.Text;
+                string leikir_update_winner = txtbx_leikir_update_winner.Text;
 
-                connection.UpdateLeikir(leikir_update_lid, leikir_update_lid2, leikir_update_date, leikir_update_time, leikir_update_bo, leikir_update_ridill, leikir_update_id);
+                connection.UpdateLeikir(leikir_update_lid, leikir_update_lid2, leikir_update_date, leikir_update_time, leikir_update_bo, leikir_update_ridill, leikir_update_id, leikir_update_winner);
                 LoadLeikir();
             }
             catch (Exception)
