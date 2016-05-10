@@ -117,15 +117,12 @@
 					<div class="panel-heading">
 						Leikir
 					</div>
-					<a href="" class="list-group-item">
-					<i class="fa fa-crosshairs"></i>
-						MSI vs BAT(Test)
-					</a>
+
                     <?php
                     if ($result->num_rows > 0) {
-                        // output data of each row
+                        
                         while($row = $result->fetch_assoc()) {
-                            echo "id: " . $row["lid1_lid2"]. " - Name: " . $row["date"]. " " . $row["bo"]. "<br>";
+                            echo '<a href="" class="list-group-item">' . $row["lid1_lid2"]. ' | ' . $row["date"]. ' | Best Of ' . $row["bo"]. '</a>';
                         }
                       } else {
                           echo "0 results";
