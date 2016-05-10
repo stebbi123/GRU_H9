@@ -229,6 +229,55 @@ namespace AdminGRU
             }
         }
 
+        //ENTER EVENT - Color changes
+        private void txtbx_recovery_username_Enter(object sender, EventArgs e)
+        {
+            txtbx_recovery_username.BackColor = Color.LightGray;
+            txtbx_recovery_username.ForeColor = Color.Black;
+        }
 
+        //LEAVE EVENT - Color changes
+        private void txtbx_recovery_username_Leave(object sender, EventArgs e)
+        {
+            txtbx_recovery_username.BackColor = Color.Gray;
+            txtbx_recovery_username.ForeColor = Color.White;
+        }
+
+        //ENTER EVENT - Color changes
+        private void txtbx_recovery_email_Enter(object sender, EventArgs e)
+        {
+            txtbx_recovery_email.BackColor = Color.LightGray;
+            txtbx_recovery_email.ForeColor = Color.Black;
+        }
+        //LEAVE EVENT - Color changes
+        private void txtbx_recovery_email_Leave(object sender, EventArgs e)
+        {
+            txtbx_recovery_email.BackColor = Color.Gray;
+            txtbx_recovery_email.ForeColor = Color.White;
+        }
+        //ENTER EVENT - Color changes
+        private void txtbx_login_username_Enter(object sender, EventArgs e)
+        {
+            txtbx_login_username.BackColor = Color.LightGray;
+            txtbx_login_username.ForeColor = Color.Black;
+        }
+        //LEAVE EVENT - Color changes
+        private void txtbx_login_username_Leave(object sender, EventArgs e)
+        {
+            txtbx_login_username.BackColor = Color.Gray;
+            txtbx_login_username.ForeColor = Color.White;
+        }
+        //ENTER EVENT - Color changes
+        private void txtbx_login_password_Enter(object sender, EventArgs e)
+        {
+            txtbx_login_password.BackColor = Color.LightGray;
+            txtbx_login_password.ForeColor = Color.Black;
+        }
+        //LEAVE EVENT - Color changes
+        private void txtbx_login_password_Leave(object sender, EventArgs e)
+        {
+            txtbx_login_password.BackColor = Color.Gray;
+            txtbx_login_password.ForeColor = Color.White;
+        }
     }
 }

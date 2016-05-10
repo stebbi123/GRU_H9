@@ -56,6 +56,31 @@ namespace AdminGRU
             dataGridBets.BringToFront();
         }
 
+        //LINK LABEL - EXIT APPLICATION
+        private void linkLabel_Exit_app_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        //LINK LABEL - MINIMIZE APPLICATION
+        private void linkLabel_Mini_app_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        //LINK LABEL - HELP
+        private void linkLabel_Help_app_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        //PICBOX - LOGOFF APPLICATION
+        private void pictureBoxLogoff_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            log.Show();
+        }
+
         //LABEL - SHOW TIME
         private void timer_clock_Tick(object sender, EventArgs e)
         {
@@ -125,21 +150,6 @@ namespace AdminGRU
             {
                 MessageBox.Show(ex.ToString());
             }
-        }
-
-        //PictureBox - Logoff - Hover
-        private void pictureBoxLogoff_MouseHover(object sender, EventArgs e)
-        {
-            pictureBoxLogoff.Image = Image.FromFile("../Debug/logoffhover.png");
-
-            tooltip.SetToolTip(pictureBoxLogoff, "Logout of CS:GO Jungle");
-
-        }
-
-        //PictureBox - Logoff - Leave
-        private void pictureBoxLogoff_MouseLeave(object sender, EventArgs e)
-        {
-            pictureBoxLogoff.Image = Image.FromFile("../Debug/logoff.png");
         }
 
         //Hover - tooltip
@@ -256,13 +266,6 @@ namespace AdminGRU
             }
         }
 
-        //LOGOFF
-        private void pictureBoxLogoff_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            log.Show();
-        }
-
         //PicBox Click - NEW MATCH
         private void pictureBox_add_match_Click(object sender, EventArgs e)
         {
@@ -377,6 +380,58 @@ namespace AdminGRU
             pictureBox_delete_match.Image = Image.FromFile("../Debug/button_delete.png");
         }
 
+        //PictureBox - Logoff - Hover
+        private void pictureBoxLogoff_MouseHover(object sender, EventArgs e)
+        {
+            pictureBoxLogoff.Image = Image.FromFile("../Debug/logoff_hover.png");
 
+            tooltip.SetToolTip(pictureBoxLogoff, "Logout of CS:GO Jungle");
+
+        }
+
+        //PictureBox - Logoff - Leave
+        private void pictureBoxLogoff_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBoxLogoff.Image = Image.FromFile("../Debug/logoff.png");
+        }
+
+        //LinkLabel - Exit App - Hover
+        private void linkLabel_Exit_app_MouseHover(object sender, EventArgs e)
+        {
+            linkLabel_Exit_app.LinkColor = Color.ForestGreen;
+            tooltip.SetToolTip(linkLabel_Exit_app, "Exit");
+        }
+
+        //LinkLabel - Exit App - Leave
+        private void linkLabel_Exit_app_MouseLeave(object sender, EventArgs e)
+        {
+            linkLabel_Exit_app.LinkColor = Color.Ivory;
+        }
+
+        //LinkLabel - Mini App - Hover
+        private void linkLabel_Mini_app_MouseHover(object sender, EventArgs e)
+        {
+            linkLabel_Mini_app.LinkColor = Color.ForestGreen;
+            tooltip.SetToolTip(linkLabel_Mini_app, "Minimize");
+        }
+
+        //LinkLabel - Mini App - Leave
+        private void linkLabel_Mini_app_MouseLeave(object sender, EventArgs e)
+        {
+            linkLabel_Mini_app.LinkColor = Color.Ivory;
+        }
+
+        //LinkLabel - Help App - Hover
+        private void linkLabel_Help_app_MouseHover(object sender, EventArgs e)
+        {
+            linkLabel_Help_app.LinkColor = Color.ForestGreen;
+            tooltip.SetToolTip(linkLabel_Help_app, "Help");
+        }
+
+        //LinkLabel - Help App - Leave
+        private void linkLabel_Help_app_MouseLeave(object sender, EventArgs e)
+        {
+            linkLabel_Help_app.LinkColor = Color.Ivory;
+        }
     }
 }
