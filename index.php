@@ -121,8 +121,15 @@
 					<i class="fa fa-crosshairs"></i>
 						MSI vs BAT(Test)
 					</a>
-                    <?php 
-
+                    <?php
+                    if ($result->num_rows > 0) {
+                        // output data of each row
+                        while($row = $result->fetch_assoc()) {
+                            echo "id: " . $row["lid1_lid2"]. " - Name: " . $row["date"]. " " . $row["bo"]. "<br>";
+                        }
+                      } else {
+                          echo "0 results";
+                      }
                     ?>
 				</div>
 
