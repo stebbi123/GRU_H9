@@ -131,11 +131,29 @@
 				</div>
 
 	              </div>
+                  <h1>Búnir leikir</h1>
 	            <div class="col-lg-6">
-	            <h2>Riðlar</h2>
-	            	<p>Hér verða riðlarnir</p>
-	            </div>
+                
+                <div class="panel panel-bunirleikir" id="leikir">
+                    <div class="panel-heading">
+                        Leikir
+                    </div>
+
+                    <?php
+                    if ($result2->num_rows > 0) {
+                        
+                        while($row = $result2->fetch_assoc()) {
+                            echo '<a href="#" class="list-group-item">'. "<i class='fa fa-check'>  </i>" . $row["lid1_lid2"]. ' | ' . $row["date"]. ' | Best Of ' . $row["bo"]. ' | Sigurvegari ' . $row["winner"].  '</a>';
+                        }
+                      } else {
+                          echo "0 results";
+                      }
+                      
+                    ?>
+                </div>
 	             </div>
+                    </div>
+                    </div>
 
         </div>
     </section>
