@@ -110,14 +110,12 @@
     <section id="contact" class="contact-section">
         <div class="container">
             <div class="row">
-
-                    <h1>Uppkomandi Leikir</h1>
-				<div class="col-lg-6" id="leikir">
+				<div class="col-lg-6 vcenter" id="leikir">
+                <h1>Uppkomandi Leikir</h1>
 				<div class="panel panel-leikir">
 					<div class="panel-heading">
 						Leikir
 					</div>
-
                     <?php
                     if ($result->num_rows > 0) {
                         
@@ -129,11 +127,10 @@
                       }
                     ?>
 				</div>
-
-	              </div>
-                  <h1>Búnir leikir</h1>
-	            <div class="col-lg-6">
-                
+	              </div><!--
+                  -->
+	            <div class="col-lg-6 vcenter">
+                <h1>Búnir leikir</h1>
                 <div class="panel panel-bunirleikir" id="leikir">
                     <div class="panel-heading">
                         Leikir
@@ -154,8 +151,7 @@
 	             </div>
                     </div>
                     </div>
-
-        </div>
+                    </div>
     </section>
 
     <!-- jQuery -->
