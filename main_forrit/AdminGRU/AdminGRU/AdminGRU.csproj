@@ -57,6 +57,12 @@
       <DependentUpon>Adalform.cs</DependentUpon>
     </Compile>
     <Compile Include="Connection.cs" />
+    <Compile Include="Help.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Help.Designer.cs">
+      <DependentUpon>Help.cs</DependentUpon>
+    </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +73,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Adalform.resx">
       <DependentUpon>Adalform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Help.resx">
+      <DependentUpon>Help.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
