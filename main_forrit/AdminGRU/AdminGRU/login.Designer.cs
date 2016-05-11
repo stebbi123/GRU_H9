@@ -188,6 +188,7 @@
             this.linkLabel_Help_app.TabStop = true;
             this.linkLabel_Help_app.Text = "s";
             this.linkLabel_Help_app.VisitedLinkColor = System.Drawing.Color.Ivory;
+            this.linkLabel_Help_app.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_Help_app_LinkClicked);
             // 
             // linkLabel_Mini_app
             // 
@@ -202,6 +203,7 @@
             this.linkLabel_Mini_app.TabStop = true;
             this.linkLabel_Mini_app.Text = "0";
             this.linkLabel_Mini_app.VisitedLinkColor = System.Drawing.Color.Ivory;
+            this.linkLabel_Mini_app.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_Mini_app_LinkClicked);
             // 
             // linkLabel_Exit_app
             // 
@@ -216,6 +218,7 @@
             this.linkLabel_Exit_app.TabStop = true;
             this.linkLabel_Exit_app.Text = "r";
             this.linkLabel_Exit_app.VisitedLinkColor = System.Drawing.Color.Ivory;
+            this.linkLabel_Exit_app.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_Exit_app_LinkClicked);
             // 
             // pictureBoxLogo
             // 
@@ -378,11 +381,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Exostencil", 22.25F);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.25F);
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(30, 224);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(266, 36);
+            this.label4.Size = new System.Drawing.Size(247, 36);
             this.label4.TabIndex = 2;
             this.label4.Text = "Account recovery";
             // 

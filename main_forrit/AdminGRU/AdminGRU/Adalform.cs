@@ -71,7 +71,9 @@ namespace AdminGRU
         //LINK LABEL - HELP
         private void linkLabel_Help_app_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            Help help = new Help();
+            help.Show();
+            this.WindowState = FormWindowState.Minimized;
         }
 
         //PICBOX - LOGOFF APPLICATION
@@ -341,7 +343,7 @@ namespace AdminGRU
         //HOVER - NEW MATCH
         private void pictureBox_add_match_MouseHover(object sender, EventArgs e)
         {
-            pictureBox_add_match.Image = Image.FromFile("../Debug/button_new_hover.png");
+            //pictureBox_add_match.Image = Image.FromFile("../Debug/button_new_hover.png");
 
             tooltip.SetToolTip(pictureBox_add_match, "Create a new match.");
         }
