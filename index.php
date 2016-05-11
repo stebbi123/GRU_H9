@@ -98,7 +98,8 @@
                       </a>
 
                 </div>
-                <p>Hér er hægt að sjá hvernig nýlegir leikir hafa farið og uppkomandi leiki.</p>
+                <br>
+                <p>Hér er hægt að sjá hvernig nýlegir leikir hafa farið og uppkomandi leiki í Counter-Strike: Global Offensive.</p>
             </div>
         </div>
     </section>
@@ -152,6 +153,16 @@
                     </div>
     </section>
 
+    <section id="fela">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 slidedown">
+                    
+                </div>
+                <p>Hvor heldur þú að muni vinna</p>
+            </div>
+        </div>
+    </section>
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 

@@ -17,3 +17,6 @@ C:\GRU\GRU_H9\admin_forrit\admin_GRU\admin_GRU\obj\Debug\admin_GRU.csprojResolve
 C:\GRU\GRU_H9\admin_forrit\admin_GRU\admin_GRU\obj\Debug\admin_GRU.Adalform.resources
 C:\GRU\GRU_H9\admin_forrit\admin_GRU\admin_GRU\obj\Debug\admin_GRU.Properties.Resources.resources
 C:\GRU\GRU_H9\admin_forrit\admin_GRU\admin_GRU\obj\Debug\admin_GRU.csproj.GenerateResource.Cache
+H:\GRU_H9\admin_forrit\admin_GRU\admin_GRU\bin\Debug\admin_GRU.exe.config
+H:\GRU_H9\admin_forrit\admin_GRU\admin_GRU\obj\Debug\admin_GRU.exe
+H:\GRU_H9\admin_forrit\admin_GRU\admin_GRU\obj\Debug\admin_GRU.pdb

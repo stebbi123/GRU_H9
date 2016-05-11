@@ -55,6 +55,7 @@ html {
 }
 #fela{
   display: none;
+  text-align: center;
 }
 
 ul{
@@ -126,4 +127,8 @@ body{
 
 .panel-heading{
   color: black;
+}
+
+.slidedown{
+  text-align: center;
 }
