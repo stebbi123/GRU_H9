@@ -44,18 +44,16 @@
                 <img class="collogo img-responsive" src="csgojungle.png" alt="" />
             </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
 
                 <ul class="nav navbar-nav">
                   <li>
                     <!--<a href="#" class="pull-left logo"><img src="csgojungle.png" alt="" /></a></li>-->
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                     <li class="hidden">
                         <a class="page-scroll" href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Leikir</a>
+                        <a class="page-scroll" href="#leikir">Leikir</a>
                     </li>
 
                 </ul>
@@ -107,7 +105,7 @@
 
 
 
-    <section id="contact" class="contact-section">
+    <section id="leikir" class="leikir-section">
         <div class="container">
             <div class="row">
 				<div class="col-lg-6 vcenter" id="leikir">
