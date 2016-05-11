@@ -7,6 +7,8 @@ $('document').ready(function(){
     $('.jsdate').text(array[2]);
     $('.btnlid1').text(array[0]);
     $('.btnlid2').text(array[1]);
+    $('.chcklid2').prop('checked', false)
+    $('.chcklid1').prop('checked', false)
   });
   $('.btnlid1').click(function(){
   	$('.chcklid1').trigger('click');
