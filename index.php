@@ -100,7 +100,7 @@
                       </a>
 
                 </div>
-                <p>Hér getur þú lagt pening undir hvor þú heldur að muni vinna.</p>
+                <p>Hér er hægt að sjá hvernig nýlegir leikir hafa farið og uppkomandi leiki.</p>
             </div>
         </div>
     </section>
