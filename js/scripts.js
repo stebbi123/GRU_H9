@@ -8,6 +8,12 @@ $('document').ready(function(){
     $('.btnlid1').text(array[0]);
     $('.btnlid2').text(array[1]);
   });
+  $('.btnlid1').click(function(){
+  	alert("Val móttekið");
+  });
+    $('.btnlid2').click(function(){
+  	alert("Val móttekið");
+  });
 });
 
 $('.list-group-item').click(function(e){
