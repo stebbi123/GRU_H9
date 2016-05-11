@@ -32,7 +32,7 @@
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header page-scroll">
-                <a href="#" class="pull-left logo"><img src="csgojungle.png" alt="" /></a>
+                <a href="#" class="pull-left logo"><img src="csgojungle.png" class="img-responsive" alt="" /></a>
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
@@ -41,21 +41,19 @@
                 </button>
               <!--  <a href="#" class="pull-left logo"><img src="csgojungle.png" alt="" /></a>-->
                 <a class="navbar-brand page-scroll pull-right" href="#page-top">  Heim</a>
-                <img class="collogo" src="csgojungle.png" alt="" />
+                <img class="collogo img-responsive" src="csgojungle.png" alt="" />
             </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
 
                 <ul class="nav navbar-nav">
                   <li>
                     <!--<a href="#" class="pull-left logo"><img src="csgojungle.png" alt="" /></a></li>-->
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                     <li class="hidden">
                         <a class="page-scroll" href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Leikir</a>
+                        <a class="page-scroll" href="#leikir">Leikir</a>
                     </li>
 
                 </ul>
@@ -100,14 +98,14 @@
                       </a>
 
                 </div>
-                <p>Hér getur þú lagt pening undir hvor þú heldur að muni vinna.</p>
+                <p>Hér er hægt að sjá hvernig nýlegir leikir hafa farið og uppkomandi leiki.</p>
             </div>
         </div>
     </section>
 
 
 
-    <section id="contact" class="contact-section">
+    <section id="leikir" class="leikir-section">
         <div class="container">
             <div class="row">
 				<div class="col-lg-6 vcenter" id="leikir">
