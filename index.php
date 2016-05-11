@@ -101,7 +101,7 @@
 
                       <div class="carousel-inner" role="listbox">
                         <div class="item active">
-                          <img src="myndir/csgo1.jpg" alt="" class="myCarouselImg"/>
+                          <img src="myndir/website_background.jpg" alt="" class="myCarouselImg"/>
                           <div class="carousel-caption">
                           	<h2>CS:GO</h2>
                           </div>
@@ -123,7 +123,8 @@
 
                 </div>
                 <br>
-                <p>Hér er hægt að sjá hvernig nýlegir leikir hafa farið og uppkomandi leiki í Counter-Strike: Global Offensive.</p>
+                <p>Hér er hægt að sjá hvernig nýlegir leikir hafa farið og uppkomandi leiki í Counter-Strike: Global Offensive</p>
+                <p>og kosið um hvernig þeir munu fara.</p>
             </div>
         </div>
     </section>
