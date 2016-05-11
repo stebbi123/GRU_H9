@@ -19,21 +19,31 @@ namespace AdminGRU
             InitializeComponent();
         }
 
+        //ERROR OBJECT
+        ErrorProvider errorpro = new ErrorProvider();
+
         //LINK LABEL - EXIT
         private void linkLabel_Help_Exit_app_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
         }
 
-
         //BTN SEND MESSAGE
         private void btn_send_message_Click(object sender, EventArgs e)
         {
             try
             {
-                if (txtbx_help_name.Text == "" || txtbx_help_email.Text == "" && richtxtbx_help_message.Text == "")
+                if (txtbx_help_name.Text == "")
                 {
-                    MessageBox.Show("Please enter your name and email. And forget the message ;)");
+                    errorpro.SetError(txtbx_help_name, "Please enter your name");
+                }
+                else if (txtbx_help_email.Text == "")
+                {
+                    errorpro.SetError(txtbx_help_email, "Please enter your email");
+                }
+                else if (richtxtbx_help_message.Text == "")
+                {
+                    errorpro.SetError(richtxtbx_help_message, "Please include a message");
                 }
                 else
                 {
@@ -81,9 +91,33 @@ namespace AdminGRU
             }
             catch (Exception)
             {
-                MessageBox.Show("Error");
+                txtbx_help_email.Hide();
+                txtbx_help_name.Hide();
+                label_help_email.Hide();
+                label_help_1.Hide();
+                label_help_2.Hide();
+                label_help_3.Hide();
+                label_help_4.Hide();
+                label_help_succesful.Show();
+                btn_send_message.Hide();
+                richtxtbx_help_message.Hide();
+                label_help_failure.Show();
+                linkLabel_retry.Show();
+                linkLabel_retry_1.Show();
                 throw;
             }
+        }
+
+        //LINK RETRY
+        private void linkLabel_retry_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        //LINK RETRY
+        private void linkLabel_retry_1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
         }
     }
 }

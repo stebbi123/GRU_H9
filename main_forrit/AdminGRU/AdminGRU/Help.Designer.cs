@@ -43,6 +43,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label_help_succesful = new System.Windows.Forms.Label();
             this.label_help_check = new System.Windows.Forms.Label();
+            this.label_help_failure = new System.Windows.Forms.Label();
+            this.linkLabel_retry_1 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel_retry = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,9 +70,9 @@
             this.richtxtbx_help_message.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richtxtbx_help_message.Font = new System.Drawing.Font("Lucida Sans Unicode", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richtxtbx_help_message.ForeColor = System.Drawing.Color.White;
-            this.richtxtbx_help_message.Location = new System.Drawing.Point(3, 362);
+            this.richtxtbx_help_message.Location = new System.Drawing.Point(29, 362);
             this.richtxtbx_help_message.Name = "richtxtbx_help_message";
-            this.richtxtbx_help_message.Size = new System.Drawing.Size(436, 155);
+            this.richtxtbx_help_message.Size = new System.Drawing.Size(388, 155);
             this.richtxtbx_help_message.TabIndex = 16;
             this.richtxtbx_help_message.Text = "";
             // 
@@ -81,9 +84,9 @@
             this.btn_send_message.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_send_message.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_send_message.ForeColor = System.Drawing.Color.White;
-            this.btn_send_message.Location = new System.Drawing.Point(3, 548);
+            this.btn_send_message.Location = new System.Drawing.Point(29, 548);
             this.btn_send_message.Name = "btn_send_message";
-            this.btn_send_message.Size = new System.Drawing.Size(436, 41);
+            this.btn_send_message.Size = new System.Drawing.Size(388, 41);
             this.btn_send_message.TabIndex = 17;
             this.btn_send_message.Text = "Send";
             this.btn_send_message.UseVisualStyleBackColor = false;
@@ -93,9 +96,9 @@
             // 
             this.txtbx_help_name.BackColor = System.Drawing.Color.Gray;
             this.txtbx_help_name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtbx_help_name.Location = new System.Drawing.Point(3, 217);
+            this.txtbx_help_name.Location = new System.Drawing.Point(29, 217);
             this.txtbx_help_name.Name = "txtbx_help_name";
-            this.txtbx_help_name.Size = new System.Drawing.Size(436, 20);
+            this.txtbx_help_name.Size = new System.Drawing.Size(388, 20);
             this.txtbx_help_name.TabIndex = 18;
             // 
             // labelLoginUsername
@@ -124,9 +127,9 @@
             // 
             this.txtbx_help_email.BackColor = System.Drawing.Color.Gray;
             this.txtbx_help_email.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtbx_help_email.Location = new System.Drawing.Point(3, 293);
+            this.txtbx_help_email.Location = new System.Drawing.Point(29, 293);
             this.txtbx_help_email.Name = "txtbx_help_email";
-            this.txtbx_help_email.Size = new System.Drawing.Size(436, 20);
+            this.txtbx_help_email.Size = new System.Drawing.Size(388, 20);
             this.txtbx_help_email.TabIndex = 20;
             // 
             // label_help_4
@@ -206,12 +209,59 @@
             this.label_help_check.Text = "a";
             this.label_help_check.Visible = false;
             // 
+            // label_help_failure
+            // 
+            this.label_help_failure.AutoSize = true;
+            this.label_help_failure.Font = new System.Drawing.Font("Lucida Sans Unicode", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_help_failure.ForeColor = System.Drawing.Color.Red;
+            this.label_help_failure.Location = new System.Drawing.Point(41, 155);
+            this.label_help_failure.Name = "label_help_failure";
+            this.label_help_failure.Size = new System.Drawing.Size(364, 75);
+            this.label_help_failure.TabIndex = 29;
+            this.label_help_failure.Text = "We couldnt send your message =(\r\n\r\n       Check your connection.";
+            this.label_help_failure.Visible = false;
+            // 
+            // linkLabel_retry_1
+            // 
+            this.linkLabel_retry_1.AutoSize = true;
+            this.linkLabel_retry_1.Font = new System.Drawing.Font("Webdings", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.linkLabel_retry_1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.linkLabel_retry_1.LinkColor = System.Drawing.Color.Red;
+            this.linkLabel_retry_1.Location = new System.Drawing.Point(152, 387);
+            this.linkLabel_retry_1.Name = "linkLabel_retry_1";
+            this.linkLabel_retry_1.Size = new System.Drawing.Size(138, 97);
+            this.linkLabel_retry_1.TabIndex = 31;
+            this.linkLabel_retry_1.TabStop = true;
+            this.linkLabel_retry_1.Text = "q";
+            this.linkLabel_retry_1.Visible = false;
+            this.linkLabel_retry_1.VisitedLinkColor = System.Drawing.Color.Red;
+            this.linkLabel_retry_1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_retry_1_LinkClicked);
+            // 
+            // linkLabel_retry
+            // 
+            this.linkLabel_retry.AutoSize = true;
+            this.linkLabel_retry.Font = new System.Drawing.Font("Lucida Sans Unicode", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel_retry.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.linkLabel_retry.LinkColor = System.Drawing.Color.Red;
+            this.linkLabel_retry.Location = new System.Drawing.Point(139, 326);
+            this.linkLabel_retry.Name = "linkLabel_retry";
+            this.linkLabel_retry.Size = new System.Drawing.Size(165, 59);
+            this.linkLabel_retry.TabIndex = 32;
+            this.linkLabel_retry.TabStop = true;
+            this.linkLabel_retry.Text = "Retry?";
+            this.linkLabel_retry.Visible = false;
+            this.linkLabel_retry.VisitedLinkColor = System.Drawing.Color.Red;
+            this.linkLabel_retry.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_retry_LinkClicked);
+            // 
             // Help
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.ClientSize = new System.Drawing.Size(442, 593);
+            this.Controls.Add(this.linkLabel_retry);
+            this.Controls.Add(this.linkLabel_retry_1);
+            this.Controls.Add(this.label_help_failure);
             this.Controls.Add(this.label_help_check);
             this.Controls.Add(this.label_help_succesful);
             this.Controls.Add(this.pictureBox1);
@@ -251,5 +301,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label_help_succesful;
         private System.Windows.Forms.Label label_help_check;
+        private System.Windows.Forms.Label label_help_failure;
+        private System.Windows.Forms.LinkLabel linkLabel_retry_1;
+        private System.Windows.Forms.LinkLabel linkLabel_retry;
     }
 }
