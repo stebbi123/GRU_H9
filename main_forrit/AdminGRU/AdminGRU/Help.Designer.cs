@@ -34,13 +34,15 @@
             this.btn_send_message = new System.Windows.Forms.Button();
             this.txtbx_help_name = new System.Windows.Forms.TextBox();
             this.labelLoginUsername = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label_help_email = new System.Windows.Forms.Label();
             this.txtbx_help_email = new System.Windows.Forms.TextBox();
             this.label_help_4 = new System.Windows.Forms.Label();
             this.label_help_1 = new System.Windows.Forms.Label();
             this.label_help_2 = new System.Windows.Forms.Label();
             this.label_help_3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label_help_succesful = new System.Windows.Forms.Label();
+            this.label_help_check = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,6 +87,7 @@
             this.btn_send_message.TabIndex = 17;
             this.btn_send_message.Text = "Send";
             this.btn_send_message.UseVisualStyleBackColor = false;
+            this.btn_send_message.Click += new System.EventHandler(this.btn_send_message_Click);
             // 
             // txtbx_help_name
             // 
@@ -106,16 +109,16 @@
             this.labelLoginUsername.TabIndex = 19;
             this.labelLoginUsername.Text = "Your Name";
             // 
-            // label1
+            // label_help_email
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(175, 263);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 18);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "Your Email";
+            this.label_help_email.AutoSize = true;
+            this.label_help_email.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_help_email.ForeColor = System.Drawing.Color.White;
+            this.label_help_email.Location = new System.Drawing.Point(175, 263);
+            this.label_help_email.Name = "label_help_email";
+            this.label_help_email.Size = new System.Drawing.Size(85, 18);
+            this.label_help_email.TabIndex = 21;
+            this.label_help_email.Text = "Your Email";
             // 
             // txtbx_help_email
             // 
@@ -179,18 +182,44 @@
             this.pictureBox1.TabIndex = 26;
             this.pictureBox1.TabStop = false;
             // 
+            // label_help_succesful
+            // 
+            this.label_help_succesful.AutoSize = true;
+            this.label_help_succesful.Font = new System.Drawing.Font("Lucida Sans Unicode", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_help_succesful.ForeColor = System.Drawing.Color.LimeGreen;
+            this.label_help_succesful.Location = new System.Drawing.Point(24, 155);
+            this.label_help_succesful.Name = "label_help_succesful";
+            this.label_help_succesful.Size = new System.Drawing.Size(415, 50);
+            this.label_help_succesful.TabIndex = 27;
+            this.label_help_succesful.Text = "       Thank you for contacting us\r\nWe will reply to you as soon as we can!";
+            this.label_help_succesful.Visible = false;
+            // 
+            // label_help_check
+            // 
+            this.label_help_check.AutoSize = true;
+            this.label_help_check.Font = new System.Drawing.Font("Webdings", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label_help_check.ForeColor = System.Drawing.Color.LimeGreen;
+            this.label_help_check.Location = new System.Drawing.Point(151, 387);
+            this.label_help_check.Name = "label_help_check";
+            this.label_help_check.Size = new System.Drawing.Size(139, 97);
+            this.label_help_check.TabIndex = 28;
+            this.label_help_check.Text = "a";
+            this.label_help_check.Visible = false;
+            // 
             // Help
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.ClientSize = new System.Drawing.Size(442, 593);
+            this.Controls.Add(this.label_help_check);
+            this.Controls.Add(this.label_help_succesful);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label_help_3);
             this.Controls.Add(this.label_help_2);
             this.Controls.Add(this.label_help_1);
             this.Controls.Add(this.label_help_4);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label_help_email);
             this.Controls.Add(this.txtbx_help_email);
             this.Controls.Add(this.labelLoginUsername);
             this.Controls.Add(this.txtbx_help_name);
@@ -213,12 +242,14 @@
         private System.Windows.Forms.Button btn_send_message;
         private System.Windows.Forms.TextBox txtbx_help_name;
         private System.Windows.Forms.Label labelLoginUsername;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label_help_email;
         private System.Windows.Forms.TextBox txtbx_help_email;
         private System.Windows.Forms.Label label_help_4;
         private System.Windows.Forms.Label label_help_1;
         private System.Windows.Forms.Label label_help_2;
         private System.Windows.Forms.Label label_help_3;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label_help_succesful;
+        private System.Windows.Forms.Label label_help_check;
     }
 }
