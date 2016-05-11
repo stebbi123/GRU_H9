@@ -28,6 +28,30 @@
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
+    <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Skoða leik</h4>
+      </div>
+      <div class="modal-body">
+        <p class="jsleikir"></p>
+        <p class="jsdate"></p>
+        <p>Hvor heldur þú að muni vinna?</p>
+        <div>
+            <button class="btnlid1 btn btn-success"></button>
+            <button class="btnlid2 btn btn-success"></button>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Loka</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
@@ -119,7 +143,7 @@
                     if ($result->num_rows > 0) {
                         
                         while($row = $result->fetch_assoc()) {
-                            echo '<a href="#" class="list-group-item">' . $row["lid1_lid2"]. ' | ' . $row["date"]. ' | Best Of ' . $row["bo"]. '</a>';
+                            echo '<a href="#" class="list-group-item" data-toggle="modal" data-target="#myModal">' . $row["lid1_lid2"]. ' | ' . $row["date"]. ' | Best Of ' . $row["bo"]. '</a>';
                         }
                       } else {
                           echo "0 results";

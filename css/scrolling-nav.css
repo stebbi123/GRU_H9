@@ -132,3 +132,15 @@ body{
 .slidedown{
   text-align: center;
 }
+
+.modal{
+  color: black;
+  text-align: center;
+}
+
+.modal-footer{
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+
