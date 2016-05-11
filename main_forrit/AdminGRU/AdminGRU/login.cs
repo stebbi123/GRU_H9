@@ -36,6 +36,36 @@ namespace AdminGRU
             this.ActiveControl = txtbx_login_username;
         }
 
+        //DRAG FORM
+
+        protected override void WndProc(ref Message m)
+        {
+            base.WndProc(ref m);
+            if (m.Msg == WM_NCHITTEST)
+                m.Result = (IntPtr)(HT_CAPTION);
+        }
+
+        private const int WM_NCHITTEST = 0x84;
+        private const int HT_CLIENT = 0x1;
+        private const int HT_CAPTION = 0x2;
+
+        //LINK LABEL - EXIT APPLICATION
+        private void linkLabel_Exit_app_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Application.Exit();
+        }
+        //LINK LABEL - MINIMIZE APPLICATION
+        private void linkLabel_Mini_app_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        //LINK LABEL - OPEN HELP
+        private void linkLabel_Help_app_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Help help = new Help();
+            help.Show();
+        }
         //BTN login
         private void btn_login_Click(object sender, EventArgs e)
         {
@@ -279,5 +309,9 @@ namespace AdminGRU
             txtbx_login_password.BackColor = Color.Gray;
             txtbx_login_password.ForeColor = Color.White;
         }
+
+
+
+
     }
 }

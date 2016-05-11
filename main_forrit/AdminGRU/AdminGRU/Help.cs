@@ -16,5 +16,11 @@ namespace AdminGRU
         {
             InitializeComponent();
         }
+
+        //LINK LABEL - EXIT
+        private void linkLabel_Help_Exit_app_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+        }
     }
 }
