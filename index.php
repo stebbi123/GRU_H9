@@ -40,8 +40,10 @@
         <p class="jsdate"></p>
         <p>Hvor heldur þú að muni vinna?</p>
         <div>
+        <input type="checkbox" class="chcklid1"></input>
             <button class="btnlid1 btn btn-success"></button>
             <button class="btnlid2 btn btn-success"></button>
+        <input type="checkbox" class="chcklid2"></input>
         </div>
       </div>
       <div class="modal-footer">
@@ -89,7 +91,7 @@
 
 
     <section id="intro" class="intro-section">
-        <div class="container">
+        <div id="wrapper" class="container">
             <div class="row">
                 <div class="">
                     <div class="carousel slide" data-ride="carousel" id="myCarousel">
@@ -132,7 +134,7 @@
 
 
     <section id="leikir" class="leikir-section">
-        <div class="container">
+        <div id="wrapper" class="container">
             <div class="row">
 				<div class="col-lg-6 vcenter" id="leikir">
                 <h1>Uppkomandi Leikir</h1>
@@ -176,17 +178,6 @@
                     </div>
                     </div>
                     </div>
-    </section>
-
-    <section id="fela">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 slidedown">
-                    
-                </div>
-                <p>Hvor heldur þú að muni vinna</p>
-            </div>
-        </div>
     </section>
     <!-- jQuery -->
     <script src="js/jquery.js"></script>

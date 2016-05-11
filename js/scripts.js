@@ -9,10 +9,12 @@ $('document').ready(function(){
     $('.btnlid2').text(array[1]);
   });
   $('.btnlid1').click(function(){
-  	alert("Val móttekið");
+  	$('.chcklid1').trigger('click');
+  	$('.chcklid2').prop('checked', false)
   });
     $('.btnlid2').click(function(){
-  	alert("Val móttekið");
+  	$('.chcklid2').trigger('click');
+  	$('.chcklid1').prop('checked', false)
   });
 });
 

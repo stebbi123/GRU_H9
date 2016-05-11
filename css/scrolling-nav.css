@@ -121,8 +121,8 @@ body{
 }
 
 .vcenter{
- display: inline;
-
+ display: block;
+ position: relative;
 }
 
 .panel-heading{
@@ -143,4 +143,16 @@ body{
   padding-bottom: 2px;
 }
 
+#intro{
+  padding-bottom: 200px;
+}
+
+.panel{
+  position: relative;
+  bottom: 0;
+
+}
+#leikir{
+
+}
 
