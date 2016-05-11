@@ -135,8 +135,8 @@
 
     <section id="leikir" class="leikir-section">
         <div id="wrapper" class="container">
-            <div class="row">
-				<div class="col-lg-6 vcenter" id="leikir">
+            <div class="row col-lg-12">
+				<div class="col-lg-6" id="leikir">
                 <h1>Uppkomandi Leikir</h1>
 				<div class="panel panel-leikir">
 					<div class="panel-heading">
@@ -155,7 +155,7 @@
 				</div>
 	              </div><!--
                   -->
-	            <div class="col-lg-6 vcenter">
+	            <div class="col-lg-6">
                 <h1>Búnir leikir</h1>
                 <div class="panel panel-bunirleikir" id="leikir">
                     <div class="panel-heading">
@@ -191,7 +191,7 @@
     <script type="text/javascript" src="js/scripts.js">
 
     </script>
-<footer>Gert af Stebba og Hávari</footer>
-</body>
 
+</body>
+<footer>Gert af Stebba og Hávari</footer>
 </html>
