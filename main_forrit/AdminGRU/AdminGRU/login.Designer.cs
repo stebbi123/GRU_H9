@@ -42,6 +42,9 @@
             this.linkLabel_Exit_app = new System.Windows.Forms.LinkLabel();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.tabPageRecovery = new System.Windows.Forms.TabPage();
+            this.linkLabel_help_app1 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel_mini_app1 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel_exit_app1 = new System.Windows.Forms.LinkLabel();
             this.labelRecoveryFailure = new System.Windows.Forms.Label();
             this.linkLabelRecoveryFailed = new System.Windows.Forms.LinkLabel();
             this.linkLabelRecovery_back1 = new System.Windows.Forms.LinkLabel();
@@ -181,7 +184,7 @@
             this.linkLabel_Help_app.Font = new System.Drawing.Font("Webdings", 13F);
             this.linkLabel_Help_app.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel_Help_app.LinkColor = System.Drawing.Color.Ivory;
-            this.linkLabel_Help_app.Location = new System.Drawing.Point(229, 6);
+            this.linkLabel_Help_app.Location = new System.Drawing.Point(229, 3);
             this.linkLabel_Help_app.Name = "linkLabel_Help_app";
             this.linkLabel_Help_app.Size = new System.Drawing.Size(28, 21);
             this.linkLabel_Help_app.TabIndex = 14;
@@ -196,7 +199,7 @@
             this.linkLabel_Mini_app.Font = new System.Drawing.Font("Webdings", 13F);
             this.linkLabel_Mini_app.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel_Mini_app.LinkColor = System.Drawing.Color.Ivory;
-            this.linkLabel_Mini_app.Location = new System.Drawing.Point(263, 6);
+            this.linkLabel_Mini_app.Location = new System.Drawing.Point(263, 3);
             this.linkLabel_Mini_app.Name = "linkLabel_Mini_app";
             this.linkLabel_Mini_app.Size = new System.Drawing.Size(28, 21);
             this.linkLabel_Mini_app.TabIndex = 13;
@@ -211,7 +214,7 @@
             this.linkLabel_Exit_app.Font = new System.Drawing.Font("Webdings", 13F);
             this.linkLabel_Exit_app.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel_Exit_app.LinkColor = System.Drawing.Color.Ivory;
-            this.linkLabel_Exit_app.Location = new System.Drawing.Point(297, 6);
+            this.linkLabel_Exit_app.Location = new System.Drawing.Point(297, 3);
             this.linkLabel_Exit_app.Name = "linkLabel_Exit_app";
             this.linkLabel_Exit_app.Size = new System.Drawing.Size(28, 21);
             this.linkLabel_Exit_app.TabIndex = 12;
@@ -223,7 +226,7 @@
             // pictureBoxLogo
             // 
             this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
-            this.pictureBoxLogo.Location = new System.Drawing.Point(17, 38);
+            this.pictureBoxLogo.Location = new System.Drawing.Point(17, 27);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
             this.pictureBoxLogo.Size = new System.Drawing.Size(295, 215);
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -233,6 +236,9 @@
             // tabPageRecovery
             // 
             this.tabPageRecovery.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.tabPageRecovery.Controls.Add(this.linkLabel_help_app1);
+            this.tabPageRecovery.Controls.Add(this.linkLabel_mini_app1);
+            this.tabPageRecovery.Controls.Add(this.linkLabel_exit_app1);
             this.tabPageRecovery.Controls.Add(this.labelRecoveryFailure);
             this.tabPageRecovery.Controls.Add(this.linkLabelRecoveryFailed);
             this.tabPageRecovery.Controls.Add(this.linkLabelRecovery_back1);
@@ -252,12 +258,58 @@
             this.tabPageRecovery.TabIndex = 1;
             this.tabPageRecovery.Text = "tabRecovery";
             // 
+            // linkLabel_help_app1
+            // 
+            this.linkLabel_help_app1.ActiveLinkColor = System.Drawing.Color.Red;
+            this.linkLabel_help_app1.AutoSize = true;
+            this.linkLabel_help_app1.Font = new System.Drawing.Font("Webdings", 13F);
+            this.linkLabel_help_app1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.linkLabel_help_app1.LinkColor = System.Drawing.Color.Ivory;
+            this.linkLabel_help_app1.Location = new System.Drawing.Point(229, 3);
+            this.linkLabel_help_app1.Name = "linkLabel_help_app1";
+            this.linkLabel_help_app1.Size = new System.Drawing.Size(28, 21);
+            this.linkLabel_help_app1.TabIndex = 21;
+            this.linkLabel_help_app1.TabStop = true;
+            this.linkLabel_help_app1.Text = "s";
+            this.linkLabel_help_app1.VisitedLinkColor = System.Drawing.Color.Ivory;
+            this.linkLabel_help_app1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_help_app1_LinkClicked);
+            // 
+            // linkLabel_mini_app1
+            // 
+            this.linkLabel_mini_app1.AutoSize = true;
+            this.linkLabel_mini_app1.Font = new System.Drawing.Font("Webdings", 13F);
+            this.linkLabel_mini_app1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.linkLabel_mini_app1.LinkColor = System.Drawing.Color.Ivory;
+            this.linkLabel_mini_app1.Location = new System.Drawing.Point(263, 3);
+            this.linkLabel_mini_app1.Name = "linkLabel_mini_app1";
+            this.linkLabel_mini_app1.Size = new System.Drawing.Size(28, 21);
+            this.linkLabel_mini_app1.TabIndex = 20;
+            this.linkLabel_mini_app1.TabStop = true;
+            this.linkLabel_mini_app1.Text = "0";
+            this.linkLabel_mini_app1.VisitedLinkColor = System.Drawing.Color.Ivory;
+            this.linkLabel_mini_app1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_mini_app1_LinkClicked);
+            // 
+            // linkLabel_exit_app1
+            // 
+            this.linkLabel_exit_app1.AutoSize = true;
+            this.linkLabel_exit_app1.Font = new System.Drawing.Font("Webdings", 13F);
+            this.linkLabel_exit_app1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.linkLabel_exit_app1.LinkColor = System.Drawing.Color.Ivory;
+            this.linkLabel_exit_app1.Location = new System.Drawing.Point(297, 3);
+            this.linkLabel_exit_app1.Name = "linkLabel_exit_app1";
+            this.linkLabel_exit_app1.Size = new System.Drawing.Size(28, 21);
+            this.linkLabel_exit_app1.TabIndex = 19;
+            this.linkLabel_exit_app1.TabStop = true;
+            this.linkLabel_exit_app1.Text = "r";
+            this.linkLabel_exit_app1.VisitedLinkColor = System.Drawing.Color.Ivory;
+            this.linkLabel_exit_app1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_exit_app1_LinkClicked);
+            // 
             // labelRecoveryFailure
             // 
             this.labelRecoveryFailure.AutoSize = true;
             this.labelRecoveryFailure.Font = new System.Drawing.Font("Lucida Sans Unicode", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRecoveryFailure.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.labelRecoveryFailure.Location = new System.Drawing.Point(54, 273);
+            this.labelRecoveryFailure.Location = new System.Drawing.Point(57, 299);
             this.labelRecoveryFailure.Name = "labelRecoveryFailure";
             this.labelRecoveryFailure.Size = new System.Drawing.Size(229, 34);
             this.labelRecoveryFailure.TabIndex = 18;
@@ -270,7 +322,7 @@
             this.linkLabelRecoveryFailed.Font = new System.Drawing.Font("Lucida Sans Unicode", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabelRecoveryFailed.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabelRecoveryFailed.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.linkLabelRecoveryFailed.Location = new System.Drawing.Point(86, 316);
+            this.linkLabelRecoveryFailed.Location = new System.Drawing.Point(89, 342);
             this.linkLabelRecoveryFailed.Name = "linkLabelRecoveryFailed";
             this.linkLabelRecoveryFailed.Size = new System.Drawing.Size(149, 34);
             this.linkLabelRecoveryFailed.TabIndex = 17;
@@ -287,7 +339,7 @@
             this.linkLabelRecovery_back1.Font = new System.Drawing.Font("Wingdings 3", 30.25F);
             this.linkLabelRecovery_back1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabelRecovery_back1.LinkColor = System.Drawing.Color.Black;
-            this.linkLabelRecovery_back1.Location = new System.Drawing.Point(124, 328);
+            this.linkLabelRecovery_back1.Location = new System.Drawing.Point(127, 354);
             this.linkLabelRecovery_back1.Name = "linkLabelRecovery_back1";
             this.linkLabelRecovery_back1.Size = new System.Drawing.Size(59, 47);
             this.linkLabelRecovery_back1.TabIndex = 16;
@@ -304,7 +356,7 @@
             this.linkLabelRecovery_Back.Font = new System.Drawing.Font("Wingdings 3", 30.25F);
             this.linkLabelRecovery_Back.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabelRecovery_Back.LinkColor = System.Drawing.Color.Black;
-            this.linkLabelRecovery_Back.Location = new System.Drawing.Point(6, 6);
+            this.linkLabelRecovery_Back.Location = new System.Drawing.Point(3, 0);
             this.linkLabelRecovery_Back.Name = "linkLabelRecovery_Back";
             this.linkLabelRecovery_Back.Size = new System.Drawing.Size(59, 47);
             this.linkLabelRecovery_Back.TabIndex = 15;
@@ -319,7 +371,7 @@
             this.labelRecoverySuccess.BackColor = System.Drawing.Color.Transparent;
             this.labelRecoverySuccess.Font = new System.Drawing.Font("Lucida Sans Unicode", 18.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRecoverySuccess.ForeColor = System.Drawing.Color.Chartreuse;
-            this.labelRecoverySuccess.Location = new System.Drawing.Point(21, 276);
+            this.labelRecoverySuccess.Location = new System.Drawing.Point(24, 302);
             this.labelRecoverySuccess.Name = "labelRecoverySuccess";
             this.labelRecoverySuccess.Size = new System.Drawing.Size(289, 31);
             this.labelRecoverySuccess.TabIndex = 14;
@@ -334,7 +386,7 @@
             this.btn_login_recovery.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_login_recovery.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_login_recovery.ForeColor = System.Drawing.Color.White;
-            this.btn_login_recovery.Location = new System.Drawing.Point(87, 353);
+            this.btn_login_recovery.Location = new System.Drawing.Point(90, 379);
             this.btn_login_recovery.Name = "btn_login_recovery";
             this.btn_login_recovery.Size = new System.Drawing.Size(148, 26);
             this.btn_login_recovery.TabIndex = 13;
@@ -348,7 +400,7 @@
             this.txtbx_recovery_email.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtbx_recovery_email.Font = new System.Drawing.Font("Lucida Sans Unicode", 9F);
             this.txtbx_recovery_email.ForeColor = System.Drawing.Color.White;
-            this.txtbx_recovery_email.Location = new System.Drawing.Point(132, 305);
+            this.txtbx_recovery_email.Location = new System.Drawing.Point(135, 331);
             this.txtbx_recovery_email.Name = "txtbx_recovery_email";
             this.txtbx_recovery_email.Size = new System.Drawing.Size(135, 19);
             this.txtbx_recovery_email.TabIndex = 12;
@@ -362,7 +414,7 @@
             this.labelRecovery2.AutoSize = true;
             this.labelRecovery2.Font = new System.Drawing.Font("Lucida Sans Unicode", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRecovery2.ForeColor = System.Drawing.Color.White;
-            this.labelRecovery2.Location = new System.Drawing.Point(57, 308);
+            this.labelRecovery2.Location = new System.Drawing.Point(60, 334);
             this.labelRecovery2.Name = "labelRecovery2";
             this.labelRecovery2.Size = new System.Drawing.Size(39, 16);
             this.labelRecovery2.TabIndex = 11;
@@ -371,7 +423,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(15, 6);
+            this.pictureBox1.Location = new System.Drawing.Point(17, 27);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(295, 215);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -383,7 +435,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.25F);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(30, 224);
+            this.label4.Location = new System.Drawing.Point(33, 250);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(247, 36);
             this.label4.TabIndex = 2;
@@ -395,7 +447,7 @@
             this.txtbx_recovery_username.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtbx_recovery_username.Font = new System.Drawing.Font("Lucida Sans Unicode", 9F);
             this.txtbx_recovery_username.ForeColor = System.Drawing.Color.White;
-            this.txtbx_recovery_username.Location = new System.Drawing.Point(132, 273);
+            this.txtbx_recovery_username.Location = new System.Drawing.Point(135, 299);
             this.txtbx_recovery_username.Name = "txtbx_recovery_username";
             this.txtbx_recovery_username.Size = new System.Drawing.Size(135, 19);
             this.txtbx_recovery_username.TabIndex = 1;
@@ -409,7 +461,7 @@
             this.labelRecovery1.AutoSize = true;
             this.labelRecovery1.Font = new System.Drawing.Font("Lucida Sans Unicode", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRecovery1.ForeColor = System.Drawing.Color.White;
-            this.labelRecovery1.Location = new System.Drawing.Point(57, 276);
+            this.labelRecovery1.Location = new System.Drawing.Point(60, 302);
             this.labelRecovery1.Name = "labelRecovery1";
             this.labelRecovery1.Size = new System.Drawing.Size(66, 16);
             this.labelRecovery1.TabIndex = 0;
@@ -464,6 +516,9 @@
         private System.Windows.Forms.LinkLabel linkLabel_Help_app;
         private System.Windows.Forms.LinkLabel linkLabel_Mini_app;
         private System.Windows.Forms.LinkLabel linkLabel_Exit_app;
+        private System.Windows.Forms.LinkLabel linkLabel_help_app1;
+        private System.Windows.Forms.LinkLabel linkLabel_mini_app1;
+        private System.Windows.Forms.LinkLabel linkLabel_exit_app1;
     }
 }
 

@@ -96,10 +96,13 @@
             // 
             this.txtbx_help_name.BackColor = System.Drawing.Color.Gray;
             this.txtbx_help_name.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtbx_help_name.Font = new System.Drawing.Font("Lucida Sans Unicode", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbx_help_name.ForeColor = System.Drawing.Color.White;
             this.txtbx_help_name.Location = new System.Drawing.Point(29, 217);
             this.txtbx_help_name.Name = "txtbx_help_name";
-            this.txtbx_help_name.Size = new System.Drawing.Size(388, 20);
+            this.txtbx_help_name.Size = new System.Drawing.Size(388, 26);
             this.txtbx_help_name.TabIndex = 18;
+            this.txtbx_help_name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // labelLoginUsername
             // 
@@ -127,10 +130,13 @@
             // 
             this.txtbx_help_email.BackColor = System.Drawing.Color.Gray;
             this.txtbx_help_email.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtbx_help_email.Font = new System.Drawing.Font("Lucida Sans Unicode", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtbx_help_email.ForeColor = System.Drawing.Color.White;
             this.txtbx_help_email.Location = new System.Drawing.Point(29, 293);
             this.txtbx_help_email.Name = "txtbx_help_email";
-            this.txtbx_help_email.Size = new System.Drawing.Size(388, 20);
+            this.txtbx_help_email.Size = new System.Drawing.Size(388, 26);
             this.txtbx_help_email.TabIndex = 20;
+            this.txtbx_help_email.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label_help_4
             // 

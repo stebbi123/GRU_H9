@@ -29,6 +29,9 @@ namespace AdminGRU
         }
         //tenging við Connection Klasa
         Connection connection = new Connection();
+        //Tenging við Help Form
+        Help help = new Help();
+        ErrorProvider errorpro = new ErrorProvider();
 
         //LOAD
         private void login_Load(object sender, EventArgs e)
@@ -36,24 +39,12 @@ namespace AdminGRU
             this.ActiveControl = txtbx_login_username;
         }
 
-        //DRAG FORM
-
-        protected override void WndProc(ref Message m)
-        {
-            base.WndProc(ref m);
-            if (m.Msg == WM_NCHITTEST)
-                m.Result = (IntPtr)(HT_CAPTION);
-        }
-
-        private const int WM_NCHITTEST = 0x84;
-        private const int HT_CLIENT = 0x1;
-        private const int HT_CAPTION = 0x2;
-
         //LINK LABEL - EXIT APPLICATION
         private void linkLabel_Exit_app_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Application.Exit();
         }
+
         //LINK LABEL - MINIMIZE APPLICATION
         private void linkLabel_Mini_app_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -63,24 +54,49 @@ namespace AdminGRU
         //LINK LABEL - OPEN HELP
         private void linkLabel_Help_app_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Help help = new Help();
             help.Show();
         }
+
+        //LINK LABEL - EXIT APPLICATION
+        private void linkLabel_exit_app1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        //LINK LABEL - MINIMIZE APPLICATION
+        private void linkLabel_mini_app1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        //LINK LABEL - OPEN HELP
+        private void linkLabel_help_app1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            help.Show();
+        }
+
         //BTN login
         private void btn_login_Click(object sender, EventArgs e)
         {
             string login_username = txtbx_login_username.Text;
             string login_password = txtbx_login_password.Text;
 
-            if (login_username == "" || login_password == "")
+            if (login_username == "")
             {
-                MessageBox.Show("Please enter your credentials to login");
+                errorpro.SetError(txtbx_login_username, "Please enter your username");
+                txtbx_login_username.BackColor = Color.LightCoral;
+            }
+            else if (login_password == "")
+            {
+                errorpro.SetError(txtbx_login_password, "Please enter your password");
+                txtbx_login_password.BackColor = Color.LightCoral;
             }
             else
             {
                 if (connection.Authenticate_username(login_username) == false)
                 {
-                    MessageBox.Show("Username doesnt exist");
+                    errorpro.SetError(txtbx_login_username, "Username doesnt exist");
+                    txtbx_login_username.BackColor = Color.LightCoral;
                 }
                 else
                 {
@@ -95,7 +111,8 @@ namespace AdminGRU
                     }
                     else
                     {
-                        MessageBox.Show("Incorrect password!");
+                        errorpro.SetError(txtbx_login_password, "Incorrect password.");
+                        txtbx_login_password.BackColor = Color.LightCoral;
                     }
                 }
             }
@@ -180,7 +197,16 @@ namespace AdminGRU
             }
             catch (Exception)
             {
-                MessageBox.Show("Please enter your username and email.");
+                if (txtbx_recovery_username.Text == "")
+                {
+                    errorpro.SetError(txtbx_recovery_username, "Please enter your username");
+                    txtbx_recovery_username.BackColor = Color.LightCoral;
+                }
+                if (txtbx_recovery_email.Text == "")
+                {
+                    errorpro.SetError(txtbx_recovery_email, "Please enter your email");
+                    txtbx_recovery_email.BackColor = Color.LightCoral;
+                }
             }
         }
 
@@ -264,20 +290,20 @@ namespace AdminGRU
         {
             txtbx_recovery_username.BackColor = Color.LightGray;
             txtbx_recovery_username.ForeColor = Color.Black;
+            errorpro.SetError(txtbx_recovery_username, "");
         }
-
         //LEAVE EVENT - Color changes
         private void txtbx_recovery_username_Leave(object sender, EventArgs e)
         {
             txtbx_recovery_username.BackColor = Color.Gray;
             txtbx_recovery_username.ForeColor = Color.White;
         }
-
         //ENTER EVENT - Color changes
         private void txtbx_recovery_email_Enter(object sender, EventArgs e)
         {
             txtbx_recovery_email.BackColor = Color.LightGray;
             txtbx_recovery_email.ForeColor = Color.Black;
+            errorpro.SetError(txtbx_recovery_email, "");
         }
         //LEAVE EVENT - Color changes
         private void txtbx_recovery_email_Leave(object sender, EventArgs e)
@@ -290,6 +316,7 @@ namespace AdminGRU
         {
             txtbx_login_username.BackColor = Color.LightGray;
             txtbx_login_username.ForeColor = Color.Black;
+            errorpro.SetError(txtbx_login_username, "");
         }
         //LEAVE EVENT - Color changes
         private void txtbx_login_username_Leave(object sender, EventArgs e)
@@ -302,6 +329,7 @@ namespace AdminGRU
         {
             txtbx_login_password.BackColor = Color.LightGray;
             txtbx_login_password.ForeColor = Color.Black;
+            errorpro.SetError(txtbx_login_password, "");
         }
         //LEAVE EVENT - Color changes
         private void txtbx_login_password_Leave(object sender, EventArgs e)
@@ -309,9 +337,5 @@ namespace AdminGRU
             txtbx_login_password.BackColor = Color.Gray;
             txtbx_login_password.ForeColor = Color.White;
         }
-
-
-
-
     }
 }
