@@ -121,9 +121,10 @@ body{
 }
 
 .vcenter{
- display: inline;
-
+ display: inline-block;
+ position: relative;
 }
+
 
 .panel-heading{
   color: black;
@@ -143,4 +144,9 @@ body{
   padding-bottom: 2px;
 }
 
+#intro{
+}
+
+.panel{
+}
 

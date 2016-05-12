@@ -28,7 +28,7 @@
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
-    <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -40,8 +40,10 @@
         <p class="jsdate"></p>
         <p>Hvor heldur þú að muni vinna?</p>
         <div>
+        <input type="checkbox" class="chcklid1"></input>
             <button class="btnlid1 btn btn-success"></button>
             <button class="btnlid2 btn btn-success"></button>
+        <input type="checkbox" class="chcklid2"></input>
         </div>
       </div>
       <div class="modal-footer">
@@ -89,7 +91,7 @@
 
 
     <section id="intro" class="intro-section">
-        <div class="container">
+        <div id="wrapper" class="container">
             <div class="row">
                 <div class="">
                     <div class="carousel slide" data-ride="carousel" id="myCarousel">
@@ -101,7 +103,7 @@
 
                       <div class="carousel-inner" role="listbox">
                         <div class="item active">
-                          <img src="myndir/csgo1.jpg" alt="" class="myCarouselImg"/>
+                          <img src="myndir/website_background.jpg" alt="" class="myCarouselImg"/>
                           <div class="carousel-caption">
                           	<h2>CS:GO</h2>
                           </div>
@@ -123,7 +125,8 @@
 
                 </div>
                 <br>
-                <p>Hér er hægt að sjá hvernig nýlegir leikir hafa farið og uppkomandi leiki í Counter-Strike: Global Offensive.</p>
+                <p>Hér er hægt að sjá hvernig nýlegir leikir hafa farið og uppkomandi leiki í Counter-Strike: Global Offensive</p>
+                <p>og kosið um hvernig þeir munu fara.</p>
             </div>
         </div>
     </section>
@@ -131,9 +134,9 @@
 
 
     <section id="leikir" class="leikir-section">
-        <div class="container">
-            <div class="row">
-				<div class="col-lg-6 vcenter" id="leikir">
+        <div id="wrapper" class="container">
+            <div class="row col-lg-12">
+				<div class="col-lg-6" id="leikir">
                 <h1>Uppkomandi Leikir</h1>
 				<div class="panel panel-leikir">
 					<div class="panel-heading">
@@ -152,7 +155,7 @@
 				</div>
 	              </div><!--
                   -->
-	            <div class="col-lg-6 vcenter">
+	            <div class="col-lg-6">
                 <h1>Búnir leikir</h1>
                 <div class="panel panel-bunirleikir" id="leikir">
                     <div class="panel-heading">
@@ -176,17 +179,6 @@
                     </div>
                     </div>
     </section>
-
-    <section id="fela">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 slidedown">
-                    
-                </div>
-                <p>Hvor heldur þú að muni vinna</p>
-            </div>
-        </div>
-    </section>
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
@@ -199,7 +191,7 @@
     <script type="text/javascript" src="js/scripts.js">
 
     </script>
-<footer>Gert af Stebba og Hávari</footer>
-</body>
 
+</body>
+<footer>Gert af Stebba og Hávari</footer>
 </html>
