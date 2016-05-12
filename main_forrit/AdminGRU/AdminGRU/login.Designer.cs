@@ -57,6 +57,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtbx_recovery_username = new System.Windows.Forms.TextBox();
             this.labelRecovery1 = new System.Windows.Forms.Label();
+            this.panel_dragform = new System.Windows.Forms.Panel();
             this.tabControl1.SuspendLayout();
             this.tabPageLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
@@ -171,6 +172,7 @@
             this.tabPageLogin.Controls.Add(this.btn_login);
             this.tabPageLogin.Controls.Add(this.labelLoginUsername);
             this.tabPageLogin.Controls.Add(this.labelLoginPassword);
+            this.tabPageLogin.Controls.Add(this.panel_dragform);
             this.tabPageLogin.Location = new System.Drawing.Point(4, 22);
             this.tabPageLogin.Name = "tabPageLogin";
             this.tabPageLogin.Padding = new System.Windows.Forms.Padding(3);
@@ -192,6 +194,8 @@
             this.linkLabel_Help_app.Text = "s";
             this.linkLabel_Help_app.VisitedLinkColor = System.Drawing.Color.Ivory;
             this.linkLabel_Help_app.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_Help_app_LinkClicked);
+            this.linkLabel_Help_app.MouseLeave += new System.EventHandler(this.linkLabel_Help_app_MouseLeave);
+            this.linkLabel_Help_app.MouseHover += new System.EventHandler(this.linkLabel_Help_app_MouseHover);
             // 
             // linkLabel_Mini_app
             // 
@@ -207,6 +211,8 @@
             this.linkLabel_Mini_app.Text = "0";
             this.linkLabel_Mini_app.VisitedLinkColor = System.Drawing.Color.Ivory;
             this.linkLabel_Mini_app.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_Mini_app_LinkClicked);
+            this.linkLabel_Mini_app.MouseLeave += new System.EventHandler(this.linkLabel_Mini_app_MouseLeave);
+            this.linkLabel_Mini_app.MouseHover += new System.EventHandler(this.linkLabel_Mini_app_MouseHover);
             // 
             // linkLabel_Exit_app
             // 
@@ -222,6 +228,8 @@
             this.linkLabel_Exit_app.Text = "r";
             this.linkLabel_Exit_app.VisitedLinkColor = System.Drawing.Color.Ivory;
             this.linkLabel_Exit_app.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_Exit_app_LinkClicked);
+            this.linkLabel_Exit_app.MouseLeave += new System.EventHandler(this.linkLabel_Exit_app_MouseLeave);
+            this.linkLabel_Exit_app.MouseHover += new System.EventHandler(this.linkLabel_Exit_app_MouseHover);
             // 
             // pictureBoxLogo
             // 
@@ -273,6 +281,8 @@
             this.linkLabel_help_app1.Text = "s";
             this.linkLabel_help_app1.VisitedLinkColor = System.Drawing.Color.Ivory;
             this.linkLabel_help_app1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_help_app1_LinkClicked);
+            this.linkLabel_help_app1.MouseLeave += new System.EventHandler(this.linkLabel_help_app1_MouseLeave);
+            this.linkLabel_help_app1.MouseHover += new System.EventHandler(this.linkLabel_help_app1_MouseHover);
             // 
             // linkLabel_mini_app1
             // 
@@ -288,6 +298,8 @@
             this.linkLabel_mini_app1.Text = "0";
             this.linkLabel_mini_app1.VisitedLinkColor = System.Drawing.Color.Ivory;
             this.linkLabel_mini_app1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_mini_app1_LinkClicked);
+            this.linkLabel_mini_app1.MouseLeave += new System.EventHandler(this.linkLabel_mini_app1_MouseLeave);
+            this.linkLabel_mini_app1.MouseHover += new System.EventHandler(this.linkLabel_mini_app1_MouseHover);
             // 
             // linkLabel_exit_app1
             // 
@@ -303,6 +315,8 @@
             this.linkLabel_exit_app1.Text = "r";
             this.linkLabel_exit_app1.VisitedLinkColor = System.Drawing.Color.Ivory;
             this.linkLabel_exit_app1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_exit_app1_LinkClicked);
+            this.linkLabel_exit_app1.MouseLeave += new System.EventHandler(this.linkLabel_exit_app1_MouseLeave);
+            this.linkLabel_exit_app1.MouseHover += new System.EventHandler(this.linkLabel_exit_app1_MouseHover);
             // 
             // labelRecoveryFailure
             // 
@@ -338,7 +352,7 @@
             this.linkLabelRecovery_back1.AutoSize = true;
             this.linkLabelRecovery_back1.Font = new System.Drawing.Font("Wingdings 3", 30.25F);
             this.linkLabelRecovery_back1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.linkLabelRecovery_back1.LinkColor = System.Drawing.Color.Black;
+            this.linkLabelRecovery_back1.LinkColor = System.Drawing.Color.Ivory;
             this.linkLabelRecovery_back1.Location = new System.Drawing.Point(127, 354);
             this.linkLabelRecovery_back1.Name = "linkLabelRecovery_back1";
             this.linkLabelRecovery_back1.Size = new System.Drawing.Size(59, 47);
@@ -348,6 +362,8 @@
             this.linkLabelRecovery_back1.Visible = false;
             this.linkLabelRecovery_back1.VisitedLinkColor = System.Drawing.Color.Black;
             this.linkLabelRecovery_back1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelRecovery_back1_LinkClicked);
+            this.linkLabelRecovery_back1.MouseLeave += new System.EventHandler(this.linkLabelRecovery_back1_MouseLeave);
+            this.linkLabelRecovery_back1.MouseHover += new System.EventHandler(this.linkLabelRecovery_back1_MouseHover);
             // 
             // linkLabelRecovery_Back
             // 
@@ -355,7 +371,7 @@
             this.linkLabelRecovery_Back.AutoSize = true;
             this.linkLabelRecovery_Back.Font = new System.Drawing.Font("Wingdings 3", 30.25F);
             this.linkLabelRecovery_Back.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.linkLabelRecovery_Back.LinkColor = System.Drawing.Color.Black;
+            this.linkLabelRecovery_Back.LinkColor = System.Drawing.Color.Ivory;
             this.linkLabelRecovery_Back.Location = new System.Drawing.Point(3, 0);
             this.linkLabelRecovery_Back.Name = "linkLabelRecovery_Back";
             this.linkLabelRecovery_Back.Size = new System.Drawing.Size(59, 47);
@@ -364,6 +380,8 @@
             this.linkLabelRecovery_Back.Text = "\\";
             this.linkLabelRecovery_Back.VisitedLinkColor = System.Drawing.Color.Black;
             this.linkLabelRecovery_Back.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelRecovery_Back_LinkClicked);
+            this.linkLabelRecovery_Back.MouseLeave += new System.EventHandler(this.linkLabelRecovery_Back_MouseLeave);
+            this.linkLabelRecovery_Back.MouseHover += new System.EventHandler(this.linkLabelRecovery_Back_MouseHover);
             // 
             // labelRecoverySuccess
             // 
@@ -467,6 +485,14 @@
             this.labelRecovery1.TabIndex = 0;
             this.labelRecovery1.Text = "Username";
             // 
+            // panel_dragform
+            // 
+            this.panel_dragform.Location = new System.Drawing.Point(6, 6);
+            this.panel_dragform.Name = "panel_dragform";
+            this.panel_dragform.Size = new System.Drawing.Size(319, 30);
+            this.panel_dragform.TabIndex = 13;
+            this.panel_dragform.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_dragform_MouseMove);
+            // 
             // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -519,6 +545,7 @@
         private System.Windows.Forms.LinkLabel linkLabel_help_app1;
         private System.Windows.Forms.LinkLabel linkLabel_mini_app1;
         private System.Windows.Forms.LinkLabel linkLabel_exit_app1;
+        private System.Windows.Forms.Panel panel_dragform;
     }
 }
 

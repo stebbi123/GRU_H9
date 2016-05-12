@@ -46,6 +46,7 @@
             this.label_help_failure = new System.Windows.Forms.Label();
             this.linkLabel_retry_1 = new System.Windows.Forms.LinkLabel();
             this.linkLabel_retry = new System.Windows.Forms.LinkLabel();
+            this.panel_dragform = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,6 +64,8 @@
             this.linkLabel_Help_Exit_app.Text = "r";
             this.linkLabel_Help_Exit_app.VisitedLinkColor = System.Drawing.Color.Ivory;
             this.linkLabel_Help_Exit_app.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_Help_Exit_app_LinkClicked);
+            this.linkLabel_Help_Exit_app.MouseLeave += new System.EventHandler(this.linkLabel_Help_Exit_app_MouseLeave);
+            this.linkLabel_Help_Exit_app.MouseHover += new System.EventHandler(this.linkLabel_Help_Exit_app_MouseHover);
             // 
             // richtxtbx_help_message
             // 
@@ -233,7 +236,7 @@
             this.linkLabel_retry_1.Font = new System.Drawing.Font("Webdings", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.linkLabel_retry_1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel_retry_1.LinkColor = System.Drawing.Color.Red;
-            this.linkLabel_retry_1.Location = new System.Drawing.Point(152, 387);
+            this.linkLabel_retry_1.Location = new System.Drawing.Point(151, 387);
             this.linkLabel_retry_1.Name = "linkLabel_retry_1";
             this.linkLabel_retry_1.Size = new System.Drawing.Size(138, 97);
             this.linkLabel_retry_1.TabIndex = 31;
@@ -241,7 +244,6 @@
             this.linkLabel_retry_1.Text = "q";
             this.linkLabel_retry_1.Visible = false;
             this.linkLabel_retry_1.VisitedLinkColor = System.Drawing.Color.Red;
-            this.linkLabel_retry_1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_retry_1_LinkClicked);
             // 
             // linkLabel_retry
             // 
@@ -258,6 +260,14 @@
             this.linkLabel_retry.Visible = false;
             this.linkLabel_retry.VisitedLinkColor = System.Drawing.Color.Red;
             this.linkLabel_retry.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_retry_LinkClicked);
+            // 
+            // panel_dragform
+            // 
+            this.panel_dragform.Location = new System.Drawing.Point(3, 3);
+            this.panel_dragform.Name = "panel_dragform";
+            this.panel_dragform.Size = new System.Drawing.Size(436, 34);
+            this.panel_dragform.TabIndex = 33;
+            this.panel_dragform.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_dragform_MouseMove);
             // 
             // Help
             // 
@@ -282,6 +292,7 @@
             this.Controls.Add(this.btn_send_message);
             this.Controls.Add(this.richtxtbx_help_message);
             this.Controls.Add(this.linkLabel_Help_Exit_app);
+            this.Controls.Add(this.panel_dragform);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Help";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -310,5 +321,6 @@
         private System.Windows.Forms.Label label_help_failure;
         private System.Windows.Forms.LinkLabel linkLabel_retry_1;
         private System.Windows.Forms.LinkLabel linkLabel_retry;
+        private System.Windows.Forms.Panel panel_dragform;
     }
 }

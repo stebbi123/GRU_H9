@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net.Mail;
 using System.Net;
+using System.Runtime.InteropServices;
 
 namespace AdminGRU
 {
@@ -32,6 +33,23 @@ namespace AdminGRU
         //Tenging við Help Form
         Help help = new Help();
         ErrorProvider errorpro = new ErrorProvider();
+        //Dót til að færa formið
+        public const int WM_NCLBUTTONDOWN = 0xA1;
+        public const int HT_CAPTION = 0x2;
+        [DllImportAttribute("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        [DllImportAttribute("user32.dll")]
+        public static extern bool ReleaseCapture();
+
+        //MOVE FORM - PANEL
+        private void panel_dragform_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
+        }
 
         //LOAD
         private void login_Load(object sender, EventArgs e)
@@ -337,5 +355,87 @@ namespace AdminGRU
             txtbx_login_password.BackColor = Color.Gray;
             txtbx_login_password.ForeColor = Color.White;
         }
+
+        private void linkLabel_Exit_app_MouseHover(object sender, EventArgs e)
+        {
+            linkLabel_Exit_app.LinkColor = Color.ForestGreen;
+        }
+
+        private void linkLabel_Exit_app_MouseLeave(object sender, EventArgs e)
+        {
+            linkLabel_Exit_app.LinkColor = Color.White;
+        }
+
+        private void linkLabel_Mini_app_MouseHover(object sender, EventArgs e)
+        {
+            linkLabel_Mini_app.LinkColor = Color.ForestGreen;
+        }
+
+        private void linkLabel_Mini_app_MouseLeave(object sender, EventArgs e)
+        {
+            linkLabel_Mini_app.LinkColor = Color.White;
+        }
+
+        private void linkLabel_Help_app_MouseHover(object sender, EventArgs e)
+        {
+            linkLabel_Help_app.LinkColor = Color.ForestGreen;
+        }
+
+        private void linkLabel_Help_app_MouseLeave(object sender, EventArgs e)
+        {
+            linkLabel_Help_app.LinkColor = Color.White;
+        }
+
+        private void linkLabel_exit_app1_MouseHover(object sender, EventArgs e)
+        {
+            linkLabel_exit_app1.LinkColor = Color.ForestGreen;
+        }
+
+        private void linkLabel_exit_app1_MouseLeave(object sender, EventArgs e)
+        {
+            linkLabel_exit_app1.LinkColor = Color.White;
+        }
+
+        private void linkLabel_mini_app1_MouseHover(object sender, EventArgs e)
+        {
+            linkLabel_mini_app1.LinkColor = Color.ForestGreen;
+        }
+
+        private void linkLabel_mini_app1_MouseLeave(object sender, EventArgs e)
+        {
+            linkLabel_mini_app1.LinkColor = Color.White;
+        }
+
+        private void linkLabel_help_app1_MouseHover(object sender, EventArgs e)
+        {
+            linkLabel_help_app1.LinkColor = Color.ForestGreen;
+        }
+
+        private void linkLabel_help_app1_MouseLeave(object sender, EventArgs e)
+        {
+            linkLabel_help_app1.LinkColor = Color.White;
+        }
+
+        private void linkLabelRecovery_Back_MouseHover(object sender, EventArgs e)
+        {
+            linkLabelRecovery_Back.LinkColor = Color.ForestGreen;
+        }
+
+        private void linkLabelRecovery_Back_MouseLeave(object sender, EventArgs e)
+        {
+            linkLabelRecovery_Back.LinkColor = Color.White;
+        }
+
+        private void linkLabelRecovery_back1_MouseHover(object sender, EventArgs e)
+        {
+            linkLabelRecovery_back1.LinkColor = Color.ForestGreen;
+        }
+
+        private void linkLabelRecovery_back1_MouseLeave(object sender, EventArgs e)
+        {
+            linkLabelRecovery_back1.LinkColor = Color.White;
+        }
+
+
     }
 }

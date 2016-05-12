@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Adalform));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControlAdalform = new System.Windows.Forms.TabControl();
             this.tabPageLeikir = new System.Windows.Forms.TabPage();
             this.dataGridLeikir = new System.Windows.Forms.DataGridView();
@@ -88,6 +88,9 @@
             this.txtbx_leikir_update_winner = new System.Windows.Forms.TextBox();
             this.label_Leikir_Update_Winner = new System.Windows.Forms.Label();
             this.tabPage_Matches_delete = new System.Windows.Forms.TabPage();
+            this.btn_delete_match = new System.Windows.Forms.Button();
+            this.label_matches_delete = new System.Windows.Forms.Label();
+            this.txtbx_matches_delete = new System.Windows.Forms.TextBox();
             this.linkLabel_Matches_Back2 = new System.Windows.Forms.LinkLabel();
             this.tabPageNotendur = new System.Windows.Forms.TabPage();
             this.tabControlNotendur = new System.Windows.Forms.TabControl();
@@ -107,17 +110,20 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.tabPage_Notendur_update = new System.Windows.Forms.TabPage();
-            this.linkLabel_Users_Back1 = new System.Windows.Forms.LinkLabel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.btn_notendur_update = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
-            this.txtbx_notendur_update_user = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
+            this.linkLabel_Users_Back1 = new System.Windows.Forms.LinkLabel();
+            this.txtbx_notendur_update_user = new System.Windows.Forms.TextBox();
             this.txtbx_notendur_update_password = new System.Windows.Forms.TextBox();
             this.txtbx_notendur_update_balance = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
             this.txtbx_notendur_update_email = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
             this.tabPage_Notendur_delete = new System.Windows.Forms.TabPage();
+            this.label_notendur_delete = new System.Windows.Forms.Label();
+            this.txtbx_notendur_delete = new System.Windows.Forms.TextBox();
+            this.btn_notendur_delete = new System.Windows.Forms.Button();
             this.linkLabel_Users_Back2 = new System.Windows.Forms.LinkLabel();
             this.dataGridNotendur = new System.Windows.Forms.DataGridView();
             this.ColumnNotendurUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -127,38 +133,32 @@
             this.tabPageBets = new System.Windows.Forms.TabPage();
             this.tabControlBets = new System.Windows.Forms.TabControl();
             this.tabPage_Bets_Main = new System.Windows.Forms.TabPage();
-            this.pictureBox_delete_bet = new System.Windows.Forms.PictureBox();
-            this.pictureBox_update_bet = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.tabPage_Bets_Add = new System.Windows.Forms.TabPage();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.tabPage_Bets_Update = new System.Windows.Forms.TabPage();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.tabPage_Bets_Delete = new System.Windows.Forms.TabPage();
-            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
+            this.groupBox_see_bets = new System.Windows.Forms.GroupBox();
+            this.btn_back_to_bets = new System.Windows.Forms.Button();
+            this.btn_view_bets_by_user = new System.Windows.Forms.Button();
+            this.label_view_bet_by_user = new System.Windows.Forms.Label();
+            this.txtbx_view_bet_by_user = new System.Windows.Forms.TextBox();
+            this.groupBox_delete = new System.Windows.Forms.GroupBox();
+            this.btn_delete_bet = new System.Windows.Forms.Button();
+            this.label_delete_bet = new System.Windows.Forms.Label();
+            this.txtbx_delete_bet = new System.Windows.Forms.TextBox();
             this.dataGridBets = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnBetsID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnBetsUser = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnBetsGameID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnBetAmmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnBetChoice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPageAddClient = new System.Windows.Forms.TabPage();
+            this.label_client_user_success1 = new System.Windows.Forms.Label();
+            this.label_client_user_success = new System.Windows.Forms.Label();
+            this.label_add_new_client_user = new System.Windows.Forms.Label();
+            this.txtbx_add_client_email = new System.Windows.Forms.TextBox();
+            this.label_add_new_client_user2 = new System.Windows.Forms.Label();
+            this.txtbx_add_client_username = new System.Windows.Forms.TextBox();
+            this.txtbx_add_client_password = new System.Windows.Forms.TextBox();
+            this.label_add_new_client_user1 = new System.Windows.Forms.Label();
+            this.label_add_new_client_user4 = new System.Windows.Forms.Label();
+            this.btn_add_client_user = new System.Windows.Forms.Button();
             this.pictureBoxCSGOJungle = new System.Windows.Forms.PictureBox();
             this.pictureBoxLogoff = new System.Windows.Forms.PictureBox();
             this.label_signed_in_as = new System.Windows.Forms.Label();
@@ -168,6 +168,7 @@
             this.linkLabel_Exit_app = new System.Windows.Forms.LinkLabel();
             this.linkLabel_Mini_app = new System.Windows.Forms.LinkLabel();
             this.linkLabel_Help_app = new System.Windows.Forms.LinkLabel();
+            this.panel_dragform = new System.Windows.Forms.Panel();
             this.tabControlAdalform.SuspendLayout();
             this.tabPageLeikir.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridLeikir)).BeginInit();
@@ -192,13 +193,10 @@
             this.tabPageBets.SuspendLayout();
             this.tabControlBets.SuspendLayout();
             this.tabPage_Bets_Main.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_delete_bet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_update_bet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.tabPage_Bets_Add.SuspendLayout();
-            this.tabPage_Bets_Update.SuspendLayout();
-            this.tabPage_Bets_Delete.SuspendLayout();
+            this.groupBox_see_bets.SuspendLayout();
+            this.groupBox_delete.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridBets)).BeginInit();
+            this.tabPageAddClient.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCSGOJungle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogoff)).BeginInit();
             this.SuspendLayout();
@@ -208,11 +206,12 @@
             this.tabControlAdalform.Controls.Add(this.tabPageLeikir);
             this.tabControlAdalform.Controls.Add(this.tabPageNotendur);
             this.tabControlAdalform.Controls.Add(this.tabPageBets);
-            this.tabControlAdalform.Location = new System.Drawing.Point(1, 53);
+            this.tabControlAdalform.Controls.Add(this.tabPageAddClient);
+            this.tabControlAdalform.Location = new System.Drawing.Point(-4, 53);
             this.tabControlAdalform.Name = "tabControlAdalform";
             this.tabControlAdalform.SelectedIndex = 0;
             this.tabControlAdalform.ShowToolTips = true;
-            this.tabControlAdalform.Size = new System.Drawing.Size(771, 510);
+            this.tabControlAdalform.Size = new System.Drawing.Size(776, 546);
             this.tabControlAdalform.TabIndex = 1;
             // 
             // tabPageLeikir
@@ -223,9 +222,9 @@
             this.tabPageLeikir.Location = new System.Drawing.Point(4, 22);
             this.tabPageLeikir.Name = "tabPageLeikir";
             this.tabPageLeikir.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageLeikir.Size = new System.Drawing.Size(763, 484);
+            this.tabPageLeikir.Size = new System.Drawing.Size(768, 520);
             this.tabPageLeikir.TabIndex = 0;
-            this.tabPageLeikir.Text = "Leikir";
+            this.tabPageLeikir.Text = "Matches";
             // 
             // dataGridLeikir
             // 
@@ -236,14 +235,14 @@
             this.dataGridLeikir.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.dataGridLeikir.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridLeikir.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle25.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridLeikir.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridLeikir.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridLeikir.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridLeikir.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnID,
@@ -253,14 +252,14 @@
             this.ColumnBO,
             this.ColumnRidill,
             this.ColumnWinner});
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle26.BackColor = System.Drawing.Color.LightGreen;
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.25F);
-            dataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.Firebrick;
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridLeikir.DefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightGreen;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.25F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Firebrick;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridLeikir.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridLeikir.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.dataGridLeikir.Location = new System.Drawing.Point(0, 0);
             this.dataGridLeikir.Name = "dataGridLeikir";
@@ -329,7 +328,7 @@
             this.tabControlMatches.Location = new System.Drawing.Point(-13, 279);
             this.tabControlMatches.Name = "tabControlMatches";
             this.tabControlMatches.SelectedIndex = 0;
-            this.tabControlMatches.Size = new System.Drawing.Size(773, 214);
+            this.tabControlMatches.Size = new System.Drawing.Size(773, 235);
             this.tabControlMatches.TabIndex = 44;
             // 
             // tabPage_Matches_main
@@ -341,7 +340,7 @@
             this.tabPage_Matches_main.Location = new System.Drawing.Point(4, 22);
             this.tabPage_Matches_main.Name = "tabPage_Matches_main";
             this.tabPage_Matches_main.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Matches_main.Size = new System.Drawing.Size(765, 188);
+            this.tabPage_Matches_main.Size = new System.Drawing.Size(765, 209);
             this.tabPage_Matches_main.TabIndex = 0;
             this.tabPage_Matches_main.Text = "tabPage1";
             // 
@@ -402,7 +401,7 @@
             this.tabPage_Matches_new.Location = new System.Drawing.Point(4, 22);
             this.tabPage_Matches_new.Name = "tabPage_Matches_new";
             this.tabPage_Matches_new.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Matches_new.Size = new System.Drawing.Size(765, 188);
+            this.tabPage_Matches_new.Size = new System.Drawing.Size(765, 209);
             this.tabPage_Matches_new.TabIndex = 1;
             this.tabPage_Matches_new.Text = "tabPage2";
             // 
@@ -413,7 +412,7 @@
             this.linkLabel_Matches_Back.Font = new System.Drawing.Font("Wingdings 3", 30.25F);
             this.linkLabel_Matches_Back.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel_Matches_Back.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel_Matches_Back.Location = new System.Drawing.Point(12, 121);
+            this.linkLabel_Matches_Back.Location = new System.Drawing.Point(15, 143);
             this.linkLabel_Matches_Back.Name = "linkLabel_Matches_Back";
             this.linkLabel_Matches_Back.Size = new System.Drawing.Size(59, 47);
             this.linkLabel_Matches_Back.TabIndex = 44;
@@ -426,7 +425,7 @@
             // 
             this.txtbx_leikir_skra_lid.BackColor = System.Drawing.SystemColors.Window;
             this.txtbx_leikir_skra_lid.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtbx_leikir_skra_lid.Location = new System.Drawing.Point(152, 87);
+            this.txtbx_leikir_skra_lid.Location = new System.Drawing.Point(160, 86);
             this.txtbx_leikir_skra_lid.Name = "txtbx_leikir_skra_lid";
             this.txtbx_leikir_skra_lid.Size = new System.Drawing.Size(59, 20);
             this.txtbx_leikir_skra_lid.TabIndex = 19;
@@ -436,7 +435,7 @@
             this.label_Leikir_skra_lid2.AutoSize = true;
             this.label_Leikir_skra_lid2.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Leikir_skra_lid2.ForeColor = System.Drawing.Color.White;
-            this.label_Leikir_skra_lid2.Location = new System.Drawing.Point(237, 66);
+            this.label_Leikir_skra_lid2.Location = new System.Drawing.Point(245, 65);
             this.label_Leikir_skra_lid2.Name = "label_Leikir_skra_lid2";
             this.label_Leikir_skra_lid2.Size = new System.Drawing.Size(29, 18);
             this.label_Leikir_skra_lid2.TabIndex = 43;
@@ -448,7 +447,7 @@
             this.btn_leikir_skra.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_leikir_skra.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_leikir_skra.ForeColor = System.Drawing.Color.White;
-            this.btn_leikir_skra.Location = new System.Drawing.Point(283, 133);
+            this.btn_leikir_skra.Location = new System.Drawing.Point(581, 156);
             this.btn_leikir_skra.Name = "btn_leikir_skra";
             this.btn_leikir_skra.Size = new System.Drawing.Size(178, 35);
             this.btn_leikir_skra.TabIndex = 9;
@@ -460,7 +459,7 @@
             // 
             this.txtbx_leikir_skra_time.BackColor = System.Drawing.SystemColors.Window;
             this.txtbx_leikir_skra_time.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtbx_leikir_skra_time.Location = new System.Drawing.Point(443, 87);
+            this.txtbx_leikir_skra_time.Location = new System.Drawing.Point(451, 86);
             this.txtbx_leikir_skra_time.Name = "txtbx_leikir_skra_time";
             this.txtbx_leikir_skra_time.Size = new System.Drawing.Size(66, 20);
             this.txtbx_leikir_skra_time.TabIndex = 20;
@@ -469,7 +468,7 @@
             // 
             this.txtbx_leikir_skra_bo.BackColor = System.Drawing.SystemColors.Window;
             this.txtbx_leikir_skra_bo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtbx_leikir_skra_bo.Location = new System.Drawing.Point(515, 87);
+            this.txtbx_leikir_skra_bo.Location = new System.Drawing.Point(523, 86);
             this.txtbx_leikir_skra_bo.Name = "txtbx_leikir_skra_bo";
             this.txtbx_leikir_skra_bo.Size = new System.Drawing.Size(39, 20);
             this.txtbx_leikir_skra_bo.TabIndex = 21;
@@ -479,7 +478,7 @@
             this.txtbx_leikir_skra_versus.BackColor = System.Drawing.SystemColors.Window;
             this.txtbx_leikir_skra_versus.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtbx_leikir_skra_versus.Enabled = false;
-            this.txtbx_leikir_skra_versus.Location = new System.Drawing.Point(217, 87);
+            this.txtbx_leikir_skra_versus.Location = new System.Drawing.Point(225, 86);
             this.txtbx_leikir_skra_versus.Name = "txtbx_leikir_skra_versus";
             this.txtbx_leikir_skra_versus.Size = new System.Drawing.Size(19, 20);
             this.txtbx_leikir_skra_versus.TabIndex = 40;
@@ -490,7 +489,7 @@
             this.label_Leikir_Skra_Lid.AutoSize = true;
             this.label_Leikir_Skra_Lid.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Leikir_Skra_Lid.ForeColor = System.Drawing.Color.White;
-            this.label_Leikir_Skra_Lid.Location = new System.Drawing.Point(149, 66);
+            this.label_Leikir_Skra_Lid.Location = new System.Drawing.Point(157, 65);
             this.label_Leikir_Skra_Lid.Name = "label_Leikir_Skra_Lid";
             this.label_Leikir_Skra_Lid.Size = new System.Drawing.Size(29, 18);
             this.label_Leikir_Skra_Lid.TabIndex = 22;
@@ -501,7 +500,7 @@
             this.label_Leikir_Skra_Date.AutoSize = true;
             this.label_Leikir_Skra_Date.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Leikir_Skra_Date.ForeColor = System.Drawing.Color.White;
-            this.label_Leikir_Skra_Date.Location = new System.Drawing.Point(304, 66);
+            this.label_Leikir_Skra_Date.Location = new System.Drawing.Point(312, 65);
             this.label_Leikir_Skra_Date.Name = "label_Leikir_Skra_Date";
             this.label_Leikir_Skra_Date.Size = new System.Drawing.Size(42, 18);
             this.label_Leikir_Skra_Date.TabIndex = 23;
@@ -512,7 +511,7 @@
             this.label_Leikir_Skra_BO.AutoSize = true;
             this.label_Leikir_Skra_BO.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Leikir_Skra_BO.ForeColor = System.Drawing.Color.White;
-            this.label_Leikir_Skra_BO.Location = new System.Drawing.Point(512, 66);
+            this.label_Leikir_Skra_BO.Location = new System.Drawing.Point(520, 65);
             this.label_Leikir_Skra_BO.Name = "label_Leikir_Skra_BO";
             this.label_Leikir_Skra_BO.Size = new System.Drawing.Size(29, 18);
             this.label_Leikir_Skra_BO.TabIndex = 24;
@@ -523,7 +522,7 @@
             this.label_Leikir_Skra_Ridill.AutoSize = true;
             this.label_Leikir_Skra_Ridill.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Leikir_Skra_Ridill.ForeColor = System.Drawing.Color.White;
-            this.label_Leikir_Skra_Ridill.Location = new System.Drawing.Point(557, 66);
+            this.label_Leikir_Skra_Ridill.Location = new System.Drawing.Point(565, 65);
             this.label_Leikir_Skra_Ridill.Name = "label_Leikir_Skra_Ridill";
             this.label_Leikir_Skra_Ridill.Size = new System.Drawing.Size(43, 18);
             this.label_Leikir_Skra_Ridill.TabIndex = 25;
@@ -533,7 +532,7 @@
             // 
             this.txtbx_leikir_skra_lid2.BackColor = System.Drawing.SystemColors.Window;
             this.txtbx_leikir_skra_lid2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtbx_leikir_skra_lid2.Location = new System.Drawing.Point(240, 87);
+            this.txtbx_leikir_skra_lid2.Location = new System.Drawing.Point(248, 86);
             this.txtbx_leikir_skra_lid2.Name = "txtbx_leikir_skra_lid2";
             this.txtbx_leikir_skra_lid2.Size = new System.Drawing.Size(61, 20);
             this.txtbx_leikir_skra_lid2.TabIndex = 35;
@@ -542,7 +541,7 @@
             // 
             this.txtbx_leikir_skra_ridill.BackColor = System.Drawing.SystemColors.Window;
             this.txtbx_leikir_skra_ridill.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtbx_leikir_skra_ridill.Location = new System.Drawing.Point(560, 87);
+            this.txtbx_leikir_skra_ridill.Location = new System.Drawing.Point(568, 86);
             this.txtbx_leikir_skra_ridill.Name = "txtbx_leikir_skra_ridill";
             this.txtbx_leikir_skra_ridill.Size = new System.Drawing.Size(39, 20);
             this.txtbx_leikir_skra_ridill.TabIndex = 26;
@@ -550,7 +549,7 @@
             // dateTime_leikir_skra
             // 
             this.dateTime_leikir_skra.CalendarMonthBackground = System.Drawing.Color.Gray;
-            this.dateTime_leikir_skra.Location = new System.Drawing.Point(307, 87);
+            this.dateTime_leikir_skra.Location = new System.Drawing.Point(315, 86);
             this.dateTime_leikir_skra.Name = "dateTime_leikir_skra";
             this.dateTime_leikir_skra.Size = new System.Drawing.Size(130, 20);
             this.dateTime_leikir_skra.TabIndex = 30;
@@ -560,7 +559,7 @@
             this.label_Leikir_Skra_Time.AutoSize = true;
             this.label_Leikir_Skra_Time.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Leikir_Skra_Time.ForeColor = System.Drawing.Color.White;
-            this.label_Leikir_Skra_Time.Location = new System.Drawing.Point(440, 66);
+            this.label_Leikir_Skra_Time.Location = new System.Drawing.Point(448, 65);
             this.label_Leikir_Skra_Time.Name = "label_Leikir_Skra_Time";
             this.label_Leikir_Skra_Time.Size = new System.Drawing.Size(45, 18);
             this.label_Leikir_Skra_Time.TabIndex = 32;
@@ -591,7 +590,7 @@
             this.tabPage_Matches_update.Location = new System.Drawing.Point(4, 22);
             this.tabPage_Matches_update.Name = "tabPage_Matches_update";
             this.tabPage_Matches_update.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Matches_update.Size = new System.Drawing.Size(765, 188);
+            this.tabPage_Matches_update.Size = new System.Drawing.Size(765, 209);
             this.tabPage_Matches_update.TabIndex = 2;
             this.tabPage_Matches_update.Text = "tabPage1";
             // 
@@ -602,7 +601,7 @@
             this.linkLabel_Matches_Back1.Font = new System.Drawing.Font("Wingdings 3", 30.25F);
             this.linkLabel_Matches_Back1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel_Matches_Back1.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel_Matches_Back1.Location = new System.Drawing.Point(12, 125);
+            this.linkLabel_Matches_Back1.Location = new System.Drawing.Point(15, 143);
             this.linkLabel_Matches_Back1.Name = "linkLabel_Matches_Back1";
             this.linkLabel_Matches_Back1.Size = new System.Drawing.Size(59, 47);
             this.linkLabel_Matches_Back1.TabIndex = 45;
@@ -613,7 +612,7 @@
             // 
             // txtbx_leikir_update_lid
             // 
-            this.txtbx_leikir_update_lid.Location = new System.Drawing.Point(154, 90);
+            this.txtbx_leikir_update_lid.Location = new System.Drawing.Point(162, 91);
             this.txtbx_leikir_update_lid.Name = "txtbx_leikir_update_lid";
             this.txtbx_leikir_update_lid.Size = new System.Drawing.Size(59, 20);
             this.txtbx_leikir_update_lid.TabIndex = 10;
@@ -623,7 +622,7 @@
             this.label_leikir_update_lid2.AutoSize = true;
             this.label_leikir_update_lid2.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_leikir_update_lid2.ForeColor = System.Drawing.Color.White;
-            this.label_leikir_update_lid2.Location = new System.Drawing.Point(239, 69);
+            this.label_leikir_update_lid2.Location = new System.Drawing.Point(247, 70);
             this.label_leikir_update_lid2.Name = "label_leikir_update_lid2";
             this.label_leikir_update_lid2.Size = new System.Drawing.Size(29, 18);
             this.label_leikir_update_lid2.TabIndex = 42;
@@ -631,7 +630,7 @@
             // 
             // txtbx_leikir_update_time
             // 
-            this.txtbx_leikir_update_time.Location = new System.Drawing.Point(443, 90);
+            this.txtbx_leikir_update_time.Location = new System.Drawing.Point(451, 91);
             this.txtbx_leikir_update_time.Name = "txtbx_leikir_update_time";
             this.txtbx_leikir_update_time.Size = new System.Drawing.Size(62, 20);
             this.txtbx_leikir_update_time.TabIndex = 11;
@@ -641,7 +640,7 @@
             this.label_leikir_update_id.AutoSize = true;
             this.label_leikir_update_id.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_leikir_update_id.ForeColor = System.Drawing.Color.White;
-            this.label_leikir_update_id.Location = new System.Drawing.Point(120, 69);
+            this.label_leikir_update_id.Location = new System.Drawing.Point(128, 70);
             this.label_leikir_update_id.Name = "label_leikir_update_id";
             this.label_leikir_update_id.Size = new System.Drawing.Size(23, 18);
             this.label_leikir_update_id.TabIndex = 41;
@@ -649,7 +648,7 @@
             // 
             // txtbx_leikir_update_bo
             // 
-            this.txtbx_leikir_update_bo.Location = new System.Drawing.Point(511, 90);
+            this.txtbx_leikir_update_bo.Location = new System.Drawing.Point(519, 91);
             this.txtbx_leikir_update_bo.Name = "txtbx_leikir_update_bo";
             this.txtbx_leikir_update_bo.Size = new System.Drawing.Size(39, 20);
             this.txtbx_leikir_update_bo.TabIndex = 13;
@@ -657,7 +656,7 @@
             // txtbx_leikir_update_versus
             // 
             this.txtbx_leikir_update_versus.Enabled = false;
-            this.txtbx_leikir_update_versus.Location = new System.Drawing.Point(219, 90);
+            this.txtbx_leikir_update_versus.Location = new System.Drawing.Point(227, 91);
             this.txtbx_leikir_update_versus.Name = "txtbx_leikir_update_versus";
             this.txtbx_leikir_update_versus.Size = new System.Drawing.Size(19, 20);
             this.txtbx_leikir_update_versus.TabIndex = 39;
@@ -668,7 +667,7 @@
             this.label_Leikir_Update_Lid.AutoSize = true;
             this.label_Leikir_Update_Lid.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Leikir_Update_Lid.ForeColor = System.Drawing.Color.White;
-            this.label_Leikir_Update_Lid.Location = new System.Drawing.Point(151, 69);
+            this.label_Leikir_Update_Lid.Location = new System.Drawing.Point(159, 70);
             this.label_Leikir_Update_Lid.Name = "label_Leikir_Update_Lid";
             this.label_Leikir_Update_Lid.Size = new System.Drawing.Size(29, 18);
             this.label_Leikir_Update_Lid.TabIndex = 14;
@@ -677,7 +676,7 @@
             // txtbx_leikir_update_ID
             // 
             this.txtbx_leikir_update_ID.Enabled = false;
-            this.txtbx_leikir_update_ID.Location = new System.Drawing.Point(122, 90);
+            this.txtbx_leikir_update_ID.Location = new System.Drawing.Point(130, 91);
             this.txtbx_leikir_update_ID.Name = "txtbx_leikir_update_ID";
             this.txtbx_leikir_update_ID.Size = new System.Drawing.Size(26, 20);
             this.txtbx_leikir_update_ID.TabIndex = 37;
@@ -687,7 +686,7 @@
             this.label_Leikir_Update_Date.AutoSize = true;
             this.label_Leikir_Update_Date.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Leikir_Update_Date.ForeColor = System.Drawing.Color.White;
-            this.label_Leikir_Update_Date.Location = new System.Drawing.Point(304, 69);
+            this.label_Leikir_Update_Date.Location = new System.Drawing.Point(312, 70);
             this.label_Leikir_Update_Date.Name = "label_Leikir_Update_Date";
             this.label_Leikir_Update_Date.Size = new System.Drawing.Size(42, 18);
             this.label_Leikir_Update_Date.TabIndex = 15;
@@ -695,7 +694,7 @@
             // 
             // txtbx_leikir_update_lid2
             // 
-            this.txtbx_leikir_update_lid2.Location = new System.Drawing.Point(242, 90);
+            this.txtbx_leikir_update_lid2.Location = new System.Drawing.Point(250, 91);
             this.txtbx_leikir_update_lid2.Name = "txtbx_leikir_update_lid2";
             this.txtbx_leikir_update_lid2.Size = new System.Drawing.Size(59, 20);
             this.txtbx_leikir_update_lid2.TabIndex = 36;
@@ -705,7 +704,7 @@
             this.label_Leikir_Update_BO.AutoSize = true;
             this.label_Leikir_Update_BO.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Leikir_Update_BO.ForeColor = System.Drawing.Color.White;
-            this.label_Leikir_Update_BO.Location = new System.Drawing.Point(508, 69);
+            this.label_Leikir_Update_BO.Location = new System.Drawing.Point(516, 70);
             this.label_Leikir_Update_BO.Name = "label_Leikir_Update_BO";
             this.label_Leikir_Update_BO.Size = new System.Drawing.Size(29, 18);
             this.label_Leikir_Update_BO.TabIndex = 16;
@@ -716,7 +715,7 @@
             this.label_Leikir_Update_Time.AutoSize = true;
             this.label_Leikir_Update_Time.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Leikir_Update_Time.ForeColor = System.Drawing.Color.White;
-            this.label_Leikir_Update_Time.Location = new System.Drawing.Point(440, 69);
+            this.label_Leikir_Update_Time.Location = new System.Drawing.Point(448, 70);
             this.label_Leikir_Update_Time.Name = "label_Leikir_Update_Time";
             this.label_Leikir_Update_Time.Size = new System.Drawing.Size(45, 18);
             this.label_Leikir_Update_Time.TabIndex = 34;
@@ -727,7 +726,7 @@
             this.label_Leikir_Update_Ridill.AutoSize = true;
             this.label_Leikir_Update_Ridill.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Leikir_Update_Ridill.ForeColor = System.Drawing.Color.White;
-            this.label_Leikir_Update_Ridill.Location = new System.Drawing.Point(553, 69);
+            this.label_Leikir_Update_Ridill.Location = new System.Drawing.Point(561, 70);
             this.label_Leikir_Update_Ridill.Name = "label_Leikir_Update_Ridill";
             this.label_Leikir_Update_Ridill.Size = new System.Drawing.Size(43, 18);
             this.label_Leikir_Update_Ridill.TabIndex = 17;
@@ -735,14 +734,14 @@
             // 
             // dateTime_leikir_update
             // 
-            this.dateTime_leikir_update.Location = new System.Drawing.Point(307, 90);
+            this.dateTime_leikir_update.Location = new System.Drawing.Point(315, 91);
             this.dateTime_leikir_update.Name = "dateTime_leikir_update";
             this.dateTime_leikir_update.Size = new System.Drawing.Size(130, 20);
             this.dateTime_leikir_update.TabIndex = 33;
             // 
             // txtbx_leikir_update_ridill
             // 
-            this.txtbx_leikir_update_ridill.Location = new System.Drawing.Point(556, 90);
+            this.txtbx_leikir_update_ridill.Location = new System.Drawing.Point(564, 91);
             this.txtbx_leikir_update_ridill.Name = "txtbx_leikir_update_ridill";
             this.txtbx_leikir_update_ridill.Size = new System.Drawing.Size(39, 20);
             this.txtbx_leikir_update_ridill.TabIndex = 18;
@@ -753,7 +752,7 @@
             this.btn_leikir_update.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_leikir_update.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_leikir_update.ForeColor = System.Drawing.Color.White;
-            this.btn_leikir_update.Location = new System.Drawing.Point(283, 133);
+            this.btn_leikir_update.Location = new System.Drawing.Point(581, 156);
             this.btn_leikir_update.Name = "btn_leikir_update";
             this.btn_leikir_update.Size = new System.Drawing.Size(178, 35);
             this.btn_leikir_update.TabIndex = 29;
@@ -763,9 +762,9 @@
             // 
             // txtbx_leikir_update_winner
             // 
-            this.txtbx_leikir_update_winner.Location = new System.Drawing.Point(601, 90);
+            this.txtbx_leikir_update_winner.Location = new System.Drawing.Point(609, 91);
             this.txtbx_leikir_update_winner.Name = "txtbx_leikir_update_winner";
-            this.txtbx_leikir_update_winner.Size = new System.Drawing.Size(39, 20);
+            this.txtbx_leikir_update_winner.Size = new System.Drawing.Size(55, 20);
             this.txtbx_leikir_update_winner.TabIndex = 27;
             // 
             // label_Leikir_Update_Winner
@@ -773,7 +772,7 @@
             this.label_Leikir_Update_Winner.AutoSize = true;
             this.label_Leikir_Update_Winner.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Leikir_Update_Winner.ForeColor = System.Drawing.Color.White;
-            this.label_Leikir_Update_Winner.Location = new System.Drawing.Point(598, 69);
+            this.label_Leikir_Update_Winner.Location = new System.Drawing.Point(606, 70);
             this.label_Leikir_Update_Winner.Name = "label_Leikir_Update_Winner";
             this.label_Leikir_Update_Winner.Size = new System.Drawing.Size(58, 18);
             this.label_Leikir_Update_Winner.TabIndex = 28;
@@ -782,13 +781,50 @@
             // tabPage_Matches_delete
             // 
             this.tabPage_Matches_delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.tabPage_Matches_delete.Controls.Add(this.btn_delete_match);
+            this.tabPage_Matches_delete.Controls.Add(this.label_matches_delete);
+            this.tabPage_Matches_delete.Controls.Add(this.txtbx_matches_delete);
             this.tabPage_Matches_delete.Controls.Add(this.linkLabel_Matches_Back2);
             this.tabPage_Matches_delete.Location = new System.Drawing.Point(4, 22);
             this.tabPage_Matches_delete.Name = "tabPage_Matches_delete";
             this.tabPage_Matches_delete.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Matches_delete.Size = new System.Drawing.Size(765, 188);
+            this.tabPage_Matches_delete.Size = new System.Drawing.Size(765, 209);
             this.tabPage_Matches_delete.TabIndex = 3;
             this.tabPage_Matches_delete.Text = "tabPage2";
+            // 
+            // btn_delete_match
+            // 
+            this.btn_delete_match.BackColor = System.Drawing.Color.ForestGreen;
+            this.btn_delete_match.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_delete_match.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_delete_match.ForeColor = System.Drawing.Color.White;
+            this.btn_delete_match.Location = new System.Drawing.Point(581, 156);
+            this.btn_delete_match.Name = "btn_delete_match";
+            this.btn_delete_match.Size = new System.Drawing.Size(178, 35);
+            this.btn_delete_match.TabIndex = 46;
+            this.btn_delete_match.Text = "Delete Match";
+            this.btn_delete_match.UseVisualStyleBackColor = false;
+            this.btn_delete_match.Click += new System.EventHandler(this.btn_delete_match_Click);
+            // 
+            // label_matches_delete
+            // 
+            this.label_matches_delete.AutoSize = true;
+            this.label_matches_delete.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_matches_delete.ForeColor = System.Drawing.Color.White;
+            this.label_matches_delete.Location = new System.Drawing.Point(317, 90);
+            this.label_matches_delete.Name = "label_matches_delete";
+            this.label_matches_delete.Size = new System.Drawing.Size(72, 18);
+            this.label_matches_delete.TabIndex = 47;
+            this.label_matches_delete.Text = "Match ID";
+            // 
+            // txtbx_matches_delete
+            // 
+            this.txtbx_matches_delete.BackColor = System.Drawing.SystemColors.Window;
+            this.txtbx_matches_delete.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtbx_matches_delete.Location = new System.Drawing.Point(395, 90);
+            this.txtbx_matches_delete.Name = "txtbx_matches_delete";
+            this.txtbx_matches_delete.Size = new System.Drawing.Size(39, 20);
+            this.txtbx_matches_delete.TabIndex = 48;
             // 
             // linkLabel_Matches_Back2
             // 
@@ -797,7 +833,7 @@
             this.linkLabel_Matches_Back2.Font = new System.Drawing.Font("Wingdings 3", 30.25F);
             this.linkLabel_Matches_Back2.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel_Matches_Back2.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel_Matches_Back2.Location = new System.Drawing.Point(16, 121);
+            this.linkLabel_Matches_Back2.Location = new System.Drawing.Point(15, 143);
             this.linkLabel_Matches_Back2.Name = "linkLabel_Matches_Back2";
             this.linkLabel_Matches_Back2.Size = new System.Drawing.Size(59, 47);
             this.linkLabel_Matches_Back2.TabIndex = 45;
@@ -813,9 +849,9 @@
             this.tabPageNotendur.Location = new System.Drawing.Point(4, 22);
             this.tabPageNotendur.Name = "tabPageNotendur";
             this.tabPageNotendur.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageNotendur.Size = new System.Drawing.Size(763, 484);
+            this.tabPageNotendur.Size = new System.Drawing.Size(768, 520);
             this.tabPageNotendur.TabIndex = 1;
-            this.tabPageNotendur.Text = "Notendur";
+            this.tabPageNotendur.Text = "Users";
             this.tabPageNotendur.UseVisualStyleBackColor = true;
             // 
             // tabControlNotendur
@@ -827,7 +863,7 @@
             this.tabControlNotendur.Location = new System.Drawing.Point(-13, 279);
             this.tabControlNotendur.Name = "tabControlNotendur";
             this.tabControlNotendur.SelectedIndex = 0;
-            this.tabControlNotendur.Size = new System.Drawing.Size(780, 214);
+            this.tabControlNotendur.Size = new System.Drawing.Size(780, 238);
             this.tabControlNotendur.TabIndex = 45;
             // 
             // tabPage_Notendur_Main
@@ -839,7 +875,7 @@
             this.tabPage_Notendur_Main.Location = new System.Drawing.Point(4, 22);
             this.tabPage_Notendur_Main.Name = "tabPage_Notendur_Main";
             this.tabPage_Notendur_Main.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Notendur_Main.Size = new System.Drawing.Size(772, 188);
+            this.tabPage_Notendur_Main.Size = new System.Drawing.Size(772, 212);
             this.tabPage_Notendur_Main.TabIndex = 0;
             this.tabPage_Notendur_Main.Text = "tabPage1";
             // 
@@ -852,6 +888,8 @@
             this.pictureBox_delete_user.TabIndex = 2;
             this.pictureBox_delete_user.TabStop = false;
             this.pictureBox_delete_user.Click += new System.EventHandler(this.pictureBox_delete_user_Click);
+            this.pictureBox_delete_user.MouseLeave += new System.EventHandler(this.pictureBox_delete_user_MouseLeave);
+            this.pictureBox_delete_user.MouseHover += new System.EventHandler(this.pictureBox_delete_user_MouseHover);
             // 
             // pictureBox_update_user
             // 
@@ -862,6 +900,8 @@
             this.pictureBox_update_user.TabIndex = 1;
             this.pictureBox_update_user.TabStop = false;
             this.pictureBox_update_user.Click += new System.EventHandler(this.pictureBox_update_user_Click);
+            this.pictureBox_update_user.MouseLeave += new System.EventHandler(this.pictureBox_update_user_MouseLeave);
+            this.pictureBox_update_user.MouseHover += new System.EventHandler(this.pictureBox_update_user_MouseHover);
             // 
             // pictureBox_add_user
             // 
@@ -872,6 +912,8 @@
             this.pictureBox_add_user.TabIndex = 0;
             this.pictureBox_add_user.TabStop = false;
             this.pictureBox_add_user.Click += new System.EventHandler(this.pictureBox_add_user_Click);
+            this.pictureBox_add_user.MouseLeave += new System.EventHandler(this.pictureBox_add_user_MouseLeave);
+            this.pictureBox_add_user.MouseHover += new System.EventHandler(this.pictureBox_add_user_MouseHover);
             // 
             // tabPage_Notendur_add
             // 
@@ -889,7 +931,7 @@
             this.tabPage_Notendur_add.Location = new System.Drawing.Point(4, 22);
             this.tabPage_Notendur_add.Name = "tabPage_Notendur_add";
             this.tabPage_Notendur_add.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Notendur_add.Size = new System.Drawing.Size(772, 188);
+            this.tabPage_Notendur_add.Size = new System.Drawing.Size(772, 212);
             this.tabPage_Notendur_add.TabIndex = 1;
             this.tabPage_Notendur_add.Text = "tabPage2";
             // 
@@ -900,7 +942,7 @@
             this.linkLabel_Users_Back.Font = new System.Drawing.Font("Wingdings 3", 30.25F);
             this.linkLabel_Users_Back.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel_Users_Back.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel_Users_Back.Location = new System.Drawing.Point(12, 121);
+            this.linkLabel_Users_Back.Location = new System.Drawing.Point(12, 143);
             this.linkLabel_Users_Back.Name = "linkLabel_Users_Back";
             this.linkLabel_Users_Back.Size = new System.Drawing.Size(59, 47);
             this.linkLabel_Users_Back.TabIndex = 44;
@@ -911,14 +953,14 @@
             // 
             // txtbx_notendur_skra_email
             // 
-            this.txtbx_notendur_skra_email.Location = new System.Drawing.Point(439, 64);
+            this.txtbx_notendur_skra_email.Location = new System.Drawing.Point(468, 73);
             this.txtbx_notendur_skra_email.Name = "txtbx_notendur_skra_email";
             this.txtbx_notendur_skra_email.Size = new System.Drawing.Size(161, 20);
             this.txtbx_notendur_skra_email.TabIndex = 22;
             // 
             // txtbx_notendur_skra_balance
             // 
-            this.txtbx_notendur_skra_balance.Location = new System.Drawing.Point(439, 90);
+            this.txtbx_notendur_skra_balance.Location = new System.Drawing.Point(468, 99);
             this.txtbx_notendur_skra_balance.Name = "txtbx_notendur_skra_balance";
             this.txtbx_notendur_skra_balance.Size = new System.Drawing.Size(161, 20);
             this.txtbx_notendur_skra_balance.TabIndex = 23;
@@ -926,40 +968,49 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(376, 67);
+            this.label13.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(401, 73);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(32, 13);
+            this.label13.Size = new System.Drawing.Size(46, 18);
             this.label13.TabIndex = 26;
             this.label13.Text = "Email";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(376, 93);
+            this.label14.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(401, 99);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(46, 13);
+            this.label14.Size = new System.Drawing.Size(63, 18);
             this.label14.TabIndex = 27;
             this.label14.Text = "Balance";
             // 
             // btn_notendur_skra
             // 
-            this.btn_notendur_skra.Location = new System.Drawing.Point(313, 133);
+            this.btn_notendur_skra.BackColor = System.Drawing.Color.ForestGreen;
+            this.btn_notendur_skra.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_notendur_skra.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_notendur_skra.ForeColor = System.Drawing.Color.White;
+            this.btn_notendur_skra.Location = new System.Drawing.Point(572, 158);
             this.btn_notendur_skra.Name = "btn_notendur_skra";
-            this.btn_notendur_skra.Size = new System.Drawing.Size(161, 35);
+            this.btn_notendur_skra.Size = new System.Drawing.Size(178, 35);
             this.btn_notendur_skra.TabIndex = 28;
-            this.btn_notendur_skra.Text = "Nýskrá";
-            this.btn_notendur_skra.UseVisualStyleBackColor = true;
+            this.btn_notendur_skra.Text = "Add user";
+            this.btn_notendur_skra.UseVisualStyleBackColor = false;
+            this.btn_notendur_skra.Click += new System.EventHandler(this.btn_notendur_skra_Click);
             // 
             // txtbx_notendur_skra_user
             // 
-            this.txtbx_notendur_skra_user.Location = new System.Drawing.Point(192, 64);
+            this.txtbx_notendur_skra_user.Location = new System.Drawing.Point(233, 73);
             this.txtbx_notendur_skra_user.Name = "txtbx_notendur_skra_user";
             this.txtbx_notendur_skra_user.Size = new System.Drawing.Size(161, 20);
             this.txtbx_notendur_skra_user.TabIndex = 20;
             // 
             // txtbx_notendur_skra_password
             // 
-            this.txtbx_notendur_skra_password.Location = new System.Drawing.Point(192, 90);
+            this.txtbx_notendur_skra_password.Location = new System.Drawing.Point(233, 99);
             this.txtbx_notendur_skra_password.Name = "txtbx_notendur_skra_password";
             this.txtbx_notendur_skra_password.Size = new System.Drawing.Size(161, 20);
             this.txtbx_notendur_skra_password.TabIndex = 21;
@@ -967,40 +1018,102 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(129, 67);
+            this.label11.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(150, 75);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(29, 13);
+            this.label11.Size = new System.Drawing.Size(40, 18);
             this.label11.TabIndex = 24;
             this.label11.Text = "User";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(129, 93);
+            this.label12.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(150, 101);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(53, 13);
+            this.label12.Size = new System.Drawing.Size(77, 18);
             this.label12.TabIndex = 25;
             this.label12.Text = "Password";
             // 
             // tabPage_Notendur_update
             // 
             this.tabPage_Notendur_update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.tabPage_Notendur_update.Controls.Add(this.linkLabel_Users_Back1);
+            this.tabPage_Notendur_update.Controls.Add(this.label9);
+            this.tabPage_Notendur_update.Controls.Add(this.label10);
             this.tabPage_Notendur_update.Controls.Add(this.btn_notendur_update);
             this.tabPage_Notendur_update.Controls.Add(this.label15);
-            this.tabPage_Notendur_update.Controls.Add(this.txtbx_notendur_update_user);
             this.tabPage_Notendur_update.Controls.Add(this.label16);
+            this.tabPage_Notendur_update.Controls.Add(this.linkLabel_Users_Back1);
+            this.tabPage_Notendur_update.Controls.Add(this.txtbx_notendur_update_user);
             this.tabPage_Notendur_update.Controls.Add(this.txtbx_notendur_update_password);
             this.tabPage_Notendur_update.Controls.Add(this.txtbx_notendur_update_balance);
-            this.tabPage_Notendur_update.Controls.Add(this.label17);
             this.tabPage_Notendur_update.Controls.Add(this.txtbx_notendur_update_email);
-            this.tabPage_Notendur_update.Controls.Add(this.label18);
             this.tabPage_Notendur_update.Location = new System.Drawing.Point(4, 22);
             this.tabPage_Notendur_update.Name = "tabPage_Notendur_update";
             this.tabPage_Notendur_update.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Notendur_update.Size = new System.Drawing.Size(772, 188);
+            this.tabPage_Notendur_update.Size = new System.Drawing.Size(772, 212);
             this.tabPage_Notendur_update.TabIndex = 2;
             this.tabPage_Notendur_update.Text = "tabPage1";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(400, 72);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(46, 18);
+            this.label9.TabIndex = 48;
+            this.label9.Text = "Email";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(400, 98);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(63, 18);
+            this.label10.TabIndex = 49;
+            this.label10.Text = "Balance";
+            // 
+            // btn_notendur_update
+            // 
+            this.btn_notendur_update.BackColor = System.Drawing.Color.ForestGreen;
+            this.btn_notendur_update.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_notendur_update.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_notendur_update.ForeColor = System.Drawing.Color.White;
+            this.btn_notendur_update.Location = new System.Drawing.Point(572, 158);
+            this.btn_notendur_update.Name = "btn_notendur_update";
+            this.btn_notendur_update.Size = new System.Drawing.Size(178, 35);
+            this.btn_notendur_update.TabIndex = 29;
+            this.btn_notendur_update.Text = "Update";
+            this.btn_notendur_update.UseVisualStyleBackColor = false;
+            this.btn_notendur_update.Click += new System.EventHandler(this.btn_notendur_update_Click);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(150, 74);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(40, 18);
+            this.label15.TabIndex = 46;
+            this.label15.Text = "User";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Location = new System.Drawing.Point(150, 100);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(77, 18);
+            this.label16.TabIndex = 47;
+            this.label16.Text = "Password";
             // 
             // linkLabel_Users_Back1
             // 
@@ -1009,7 +1122,7 @@
             this.linkLabel_Users_Back1.Font = new System.Drawing.Font("Wingdings 3", 30.25F);
             this.linkLabel_Users_Back1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel_Users_Back1.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel_Users_Back1.Location = new System.Drawing.Point(12, 125);
+            this.linkLabel_Users_Back1.Location = new System.Drawing.Point(12, 143);
             this.linkLabel_Users_Back1.Name = "linkLabel_Users_Back1";
             this.linkLabel_Users_Back1.Size = new System.Drawing.Size(59, 47);
             this.linkLabel_Users_Back1.TabIndex = 45;
@@ -1018,89 +1131,80 @@
             this.linkLabel_Users_Back1.VisitedLinkColor = System.Drawing.Color.Black;
             this.linkLabel_Users_Back1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel_Users_Back1_LinkClicked);
             // 
-            // btn_notendur_update
-            // 
-            this.btn_notendur_update.Location = new System.Drawing.Point(305, 125);
-            this.btn_notendur_update.Name = "btn_notendur_update";
-            this.btn_notendur_update.Size = new System.Drawing.Size(161, 35);
-            this.btn_notendur_update.TabIndex = 29;
-            this.btn_notendur_update.Text = "Uppfæra";
-            this.btn_notendur_update.UseVisualStyleBackColor = true;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(379, 96);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(46, 13);
-            this.label15.TabIndex = 37;
-            this.label15.Text = "Balance";
-            // 
             // txtbx_notendur_update_user
             // 
-            this.txtbx_notendur_update_user.Location = new System.Drawing.Point(214, 67);
+            this.txtbx_notendur_update_user.Enabled = false;
+            this.txtbx_notendur_update_user.Location = new System.Drawing.Point(233, 72);
             this.txtbx_notendur_update_user.Name = "txtbx_notendur_update_user";
             this.txtbx_notendur_update_user.Size = new System.Drawing.Size(161, 20);
             this.txtbx_notendur_update_user.TabIndex = 30;
             // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(379, 70);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(32, 13);
-            this.label16.TabIndex = 36;
-            this.label16.Text = "Email";
-            // 
             // txtbx_notendur_update_password
             // 
-            this.txtbx_notendur_update_password.Location = new System.Drawing.Point(214, 93);
+            this.txtbx_notendur_update_password.Location = new System.Drawing.Point(233, 98);
             this.txtbx_notendur_update_password.Name = "txtbx_notendur_update_password";
             this.txtbx_notendur_update_password.Size = new System.Drawing.Size(161, 20);
             this.txtbx_notendur_update_password.TabIndex = 31;
             // 
             // txtbx_notendur_update_balance
             // 
-            this.txtbx_notendur_update_balance.Location = new System.Drawing.Point(442, 93);
+            this.txtbx_notendur_update_balance.Location = new System.Drawing.Point(469, 98);
             this.txtbx_notendur_update_balance.Name = "txtbx_notendur_update_balance";
             this.txtbx_notendur_update_balance.Size = new System.Drawing.Size(161, 20);
             this.txtbx_notendur_update_balance.TabIndex = 33;
             // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(151, 96);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(53, 13);
-            this.label17.TabIndex = 35;
-            this.label17.Text = "Password";
-            // 
             // txtbx_notendur_update_email
             // 
-            this.txtbx_notendur_update_email.Location = new System.Drawing.Point(442, 67);
+            this.txtbx_notendur_update_email.Location = new System.Drawing.Point(469, 72);
             this.txtbx_notendur_update_email.Name = "txtbx_notendur_update_email";
             this.txtbx_notendur_update_email.Size = new System.Drawing.Size(161, 20);
             this.txtbx_notendur_update_email.TabIndex = 32;
             // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(151, 70);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(29, 13);
-            this.label18.TabIndex = 34;
-            this.label18.Text = "User";
-            // 
             // tabPage_Notendur_delete
             // 
             this.tabPage_Notendur_delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.tabPage_Notendur_delete.Controls.Add(this.label_notendur_delete);
+            this.tabPage_Notendur_delete.Controls.Add(this.txtbx_notendur_delete);
+            this.tabPage_Notendur_delete.Controls.Add(this.btn_notendur_delete);
             this.tabPage_Notendur_delete.Controls.Add(this.linkLabel_Users_Back2);
             this.tabPage_Notendur_delete.Location = new System.Drawing.Point(4, 22);
             this.tabPage_Notendur_delete.Name = "tabPage_Notendur_delete";
             this.tabPage_Notendur_delete.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Notendur_delete.Size = new System.Drawing.Size(772, 188);
+            this.tabPage_Notendur_delete.Size = new System.Drawing.Size(772, 212);
             this.tabPage_Notendur_delete.TabIndex = 3;
             this.tabPage_Notendur_delete.Text = "tabPage2";
+            // 
+            // label_notendur_delete
+            // 
+            this.label_notendur_delete.AutoSize = true;
+            this.label_notendur_delete.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_notendur_delete.ForeColor = System.Drawing.Color.White;
+            this.label_notendur_delete.Location = new System.Drawing.Point(262, 96);
+            this.label_notendur_delete.Name = "label_notendur_delete";
+            this.label_notendur_delete.Size = new System.Drawing.Size(40, 18);
+            this.label_notendur_delete.TabIndex = 50;
+            this.label_notendur_delete.Text = "User";
+            // 
+            // txtbx_notendur_delete
+            // 
+            this.txtbx_notendur_delete.Location = new System.Drawing.Point(331, 96);
+            this.txtbx_notendur_delete.Name = "txtbx_notendur_delete";
+            this.txtbx_notendur_delete.Size = new System.Drawing.Size(161, 20);
+            this.txtbx_notendur_delete.TabIndex = 49;
+            // 
+            // btn_notendur_delete
+            // 
+            this.btn_notendur_delete.BackColor = System.Drawing.Color.ForestGreen;
+            this.btn_notendur_delete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_notendur_delete.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_notendur_delete.ForeColor = System.Drawing.Color.White;
+            this.btn_notendur_delete.Location = new System.Drawing.Point(572, 156);
+            this.btn_notendur_delete.Name = "btn_notendur_delete";
+            this.btn_notendur_delete.Size = new System.Drawing.Size(178, 35);
+            this.btn_notendur_delete.TabIndex = 46;
+            this.btn_notendur_delete.Text = "Delete";
+            this.btn_notendur_delete.UseVisualStyleBackColor = false;
+            this.btn_notendur_delete.Click += new System.EventHandler(this.btn_notendur_delete_Click);
             // 
             // linkLabel_Users_Back2
             // 
@@ -1109,7 +1213,7 @@
             this.linkLabel_Users_Back2.Font = new System.Drawing.Font("Wingdings 3", 30.25F);
             this.linkLabel_Users_Back2.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.linkLabel_Users_Back2.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel_Users_Back2.Location = new System.Drawing.Point(16, 121);
+            this.linkLabel_Users_Back2.Location = new System.Drawing.Point(12, 143);
             this.linkLabel_Users_Back2.Name = "linkLabel_Users_Back2";
             this.linkLabel_Users_Back2.Size = new System.Drawing.Size(59, 47);
             this.linkLabel_Users_Back2.TabIndex = 45;
@@ -1127,36 +1231,37 @@
             this.dataGridNotendur.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.dataGridNotendur.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridNotendur.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle27.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F);
-            dataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridNotendur.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridNotendur.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridNotendur.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridNotendur.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnNotendurUser,
             this.ColumnNotendurPassword,
             this.ColumnNotendurEmail,
             this.ColumnNotendurBalance});
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle28.BackColor = System.Drawing.Color.LightGreen;
-            dataGridViewCellStyle28.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.25F);
-            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.Firebrick;
-            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridNotendur.DefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.LightGreen;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.25F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Firebrick;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridNotendur.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridNotendur.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.dataGridNotendur.Location = new System.Drawing.Point(0, 0);
             this.dataGridNotendur.Name = "dataGridNotendur";
             this.dataGridNotendur.ReadOnly = true;
-            this.dataGridNotendur.RowHeadersWidth = 30;
+            this.dataGridNotendur.RowHeadersWidth = 35;
             this.dataGridNotendur.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridNotendur.Size = new System.Drawing.Size(756, 312);
             this.dataGridNotendur.TabIndex = 2;
+            this.dataGridNotendur.SelectionChanged += new System.EventHandler(this.dataGridNotendur_SelectionChanged);
             // 
             // ColumnNotendurUser
             // 
@@ -1193,7 +1298,7 @@
             this.tabPageBets.Location = new System.Drawing.Point(4, 22);
             this.tabPageBets.Name = "tabPageBets";
             this.tabPageBets.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageBets.Size = new System.Drawing.Size(763, 484);
+            this.tabPageBets.Size = new System.Drawing.Size(768, 520);
             this.tabPageBets.TabIndex = 2;
             this.tabPageBets.Text = "Bets";
             this.tabPageBets.UseVisualStyleBackColor = true;
@@ -1201,296 +1306,131 @@
             // tabControlBets
             // 
             this.tabControlBets.Controls.Add(this.tabPage_Bets_Main);
-            this.tabControlBets.Controls.Add(this.tabPage_Bets_Add);
-            this.tabControlBets.Controls.Add(this.tabPage_Bets_Update);
-            this.tabControlBets.Controls.Add(this.tabPage_Bets_Delete);
             this.tabControlBets.Location = new System.Drawing.Point(-13, 279);
             this.tabControlBets.Name = "tabControlBets";
             this.tabControlBets.SelectedIndex = 0;
-            this.tabControlBets.Size = new System.Drawing.Size(780, 212);
+            this.tabControlBets.Size = new System.Drawing.Size(780, 238);
             this.tabControlBets.TabIndex = 46;
             // 
             // tabPage_Bets_Main
             // 
             this.tabPage_Bets_Main.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.tabPage_Bets_Main.Controls.Add(this.pictureBox_delete_bet);
-            this.tabPage_Bets_Main.Controls.Add(this.pictureBox_update_bet);
-            this.tabPage_Bets_Main.Controls.Add(this.pictureBox3);
+            this.tabPage_Bets_Main.Controls.Add(this.groupBox_see_bets);
+            this.tabPage_Bets_Main.Controls.Add(this.groupBox_delete);
             this.tabPage_Bets_Main.Location = new System.Drawing.Point(4, 22);
             this.tabPage_Bets_Main.Name = "tabPage_Bets_Main";
             this.tabPage_Bets_Main.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Bets_Main.Size = new System.Drawing.Size(772, 186);
+            this.tabPage_Bets_Main.Size = new System.Drawing.Size(772, 212);
             this.tabPage_Bets_Main.TabIndex = 0;
             this.tabPage_Bets_Main.Text = "tabPage1";
             // 
-            // pictureBox_delete_bet
+            // groupBox_see_bets
             // 
-            this.pictureBox_delete_bet.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_delete_bet.Image")));
-            this.pictureBox_delete_bet.Location = new System.Drawing.Point(465, 43);
-            this.pictureBox_delete_bet.Name = "pictureBox_delete_bet";
-            this.pictureBox_delete_bet.Size = new System.Drawing.Size(176, 125);
-            this.pictureBox_delete_bet.TabIndex = 2;
-            this.pictureBox_delete_bet.TabStop = false;
+            this.groupBox_see_bets.Controls.Add(this.btn_back_to_bets);
+            this.groupBox_see_bets.Controls.Add(this.btn_view_bets_by_user);
+            this.groupBox_see_bets.Controls.Add(this.label_view_bet_by_user);
+            this.groupBox_see_bets.Controls.Add(this.txtbx_view_bet_by_user);
+            this.groupBox_see_bets.Font = new System.Drawing.Font("Lucida Sans Unicode", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox_see_bets.ForeColor = System.Drawing.Color.White;
+            this.groupBox_see_bets.Location = new System.Drawing.Point(21, 17);
+            this.groupBox_see_bets.Name = "groupBox_see_bets";
+            this.groupBox_see_bets.Size = new System.Drawing.Size(368, 176);
+            this.groupBox_see_bets.TabIndex = 58;
+            this.groupBox_see_bets.TabStop = false;
+            this.groupBox_see_bets.Text = "View bets by user";
             // 
-            // pictureBox_update_bet
+            // btn_back_to_bets
             // 
-            this.pictureBox_update_bet.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_update_bet.Image")));
-            this.pictureBox_update_bet.Location = new System.Drawing.Point(283, 43);
-            this.pictureBox_update_bet.Name = "pictureBox_update_bet";
-            this.pictureBox_update_bet.Size = new System.Drawing.Size(176, 125);
-            this.pictureBox_update_bet.TabIndex = 1;
-            this.pictureBox_update_bet.TabStop = false;
+            this.btn_back_to_bets.BackColor = System.Drawing.Color.OrangeRed;
+            this.btn_back_to_bets.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_back_to_bets.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_back_to_bets.ForeColor = System.Drawing.Color.White;
+            this.btn_back_to_bets.Location = new System.Drawing.Point(124, 112);
+            this.btn_back_to_bets.Name = "btn_back_to_bets";
+            this.btn_back_to_bets.Size = new System.Drawing.Size(156, 27);
+            this.btn_back_to_bets.TabIndex = 57;
+            this.btn_back_to_bets.Text = "Back to bets";
+            this.btn_back_to_bets.UseVisualStyleBackColor = false;
+            this.btn_back_to_bets.Visible = false;
+            this.btn_back_to_bets.Click += new System.EventHandler(this.btn_back_to_bets_Click);
             // 
-            // pictureBox3
+            // btn_view_bets_by_user
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(101, 43);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(176, 125);
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
+            this.btn_view_bets_by_user.BackColor = System.Drawing.Color.ForestGreen;
+            this.btn_view_bets_by_user.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_view_bets_by_user.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_view_bets_by_user.ForeColor = System.Drawing.Color.White;
+            this.btn_view_bets_by_user.Location = new System.Drawing.Point(124, 112);
+            this.btn_view_bets_by_user.Name = "btn_view_bets_by_user";
+            this.btn_view_bets_by_user.Size = new System.Drawing.Size(156, 27);
+            this.btn_view_bets_by_user.TabIndex = 56;
+            this.btn_view_bets_by_user.Text = "View";
+            this.btn_view_bets_by_user.UseVisualStyleBackColor = false;
+            this.btn_view_bets_by_user.Click += new System.EventHandler(this.btn_view_bets_by_user_Click);
             // 
-            // tabPage_Bets_Add
+            // label_view_bet_by_user
             // 
-            this.tabPage_Bets_Add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.tabPage_Bets_Add.Controls.Add(this.linkLabel1);
-            this.tabPage_Bets_Add.Controls.Add(this.textBox1);
-            this.tabPage_Bets_Add.Controls.Add(this.textBox2);
-            this.tabPage_Bets_Add.Controls.Add(this.label1);
-            this.tabPage_Bets_Add.Controls.Add(this.label2);
-            this.tabPage_Bets_Add.Controls.Add(this.button1);
-            this.tabPage_Bets_Add.Controls.Add(this.textBox3);
-            this.tabPage_Bets_Add.Controls.Add(this.textBox4);
-            this.tabPage_Bets_Add.Controls.Add(this.label3);
-            this.tabPage_Bets_Add.Controls.Add(this.label4);
-            this.tabPage_Bets_Add.Location = new System.Drawing.Point(4, 22);
-            this.tabPage_Bets_Add.Name = "tabPage_Bets_Add";
-            this.tabPage_Bets_Add.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Bets_Add.Size = new System.Drawing.Size(772, 186);
-            this.tabPage_Bets_Add.TabIndex = 1;
-            this.tabPage_Bets_Add.Text = "tabPage2";
+            this.label_view_bet_by_user.AutoSize = true;
+            this.label_view_bet_by_user.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_view_bet_by_user.ForeColor = System.Drawing.Color.White;
+            this.label_view_bet_by_user.Location = new System.Drawing.Point(78, 71);
+            this.label_view_bet_by_user.Name = "label_view_bet_by_user";
+            this.label_view_bet_by_user.Size = new System.Drawing.Size(40, 18);
+            this.label_view_bet_by_user.TabIndex = 55;
+            this.label_view_bet_by_user.Text = "User";
             // 
-            // linkLabel1
+            // txtbx_view_bet_by_user
             // 
-            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.ForestGreen;
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Wingdings 3", 30.25F);
-            this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.linkLabel1.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel1.Location = new System.Drawing.Point(12, 121);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(59, 47);
-            this.linkLabel1.TabIndex = 44;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "\\";
-            this.linkLabel1.VisitedLinkColor = System.Drawing.Color.Black;
+            this.txtbx_view_bet_by_user.Location = new System.Drawing.Point(124, 69);
+            this.txtbx_view_bet_by_user.Name = "txtbx_view_bet_by_user";
+            this.txtbx_view_bet_by_user.Size = new System.Drawing.Size(156, 24);
+            this.txtbx_view_bet_by_user.TabIndex = 54;
             // 
-            // textBox1
+            // groupBox_delete
             // 
-            this.textBox1.Location = new System.Drawing.Point(439, 64);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(161, 20);
-            this.textBox1.TabIndex = 22;
+            this.groupBox_delete.Controls.Add(this.btn_delete_bet);
+            this.groupBox_delete.Controls.Add(this.label_delete_bet);
+            this.groupBox_delete.Controls.Add(this.txtbx_delete_bet);
+            this.groupBox_delete.Font = new System.Drawing.Font("Lucida Sans Unicode", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox_delete.ForeColor = System.Drawing.Color.White;
+            this.groupBox_delete.Location = new System.Drawing.Point(395, 17);
+            this.groupBox_delete.Name = "groupBox_delete";
+            this.groupBox_delete.Size = new System.Drawing.Size(355, 176);
+            this.groupBox_delete.TabIndex = 57;
+            this.groupBox_delete.TabStop = false;
+            this.groupBox_delete.Text = "Delete a bet";
             // 
-            // textBox2
+            // btn_delete_bet
             // 
-            this.textBox2.Location = new System.Drawing.Point(439, 90);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(161, 20);
-            this.textBox2.TabIndex = 23;
+            this.btn_delete_bet.BackColor = System.Drawing.Color.ForestGreen;
+            this.btn_delete_bet.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_delete_bet.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_delete_bet.ForeColor = System.Drawing.Color.White;
+            this.btn_delete_bet.Location = new System.Drawing.Point(145, 112);
+            this.btn_delete_bet.Name = "btn_delete_bet";
+            this.btn_delete_bet.Size = new System.Drawing.Size(121, 27);
+            this.btn_delete_bet.TabIndex = 56;
+            this.btn_delete_bet.Text = "Delete";
+            this.btn_delete_bet.UseVisualStyleBackColor = false;
+            this.btn_delete_bet.Click += new System.EventHandler(this.btn_delete_bet_Click);
             // 
-            // label1
+            // label_delete_bet
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(376, 67);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 13);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "Email";
+            this.label_delete_bet.AutoSize = true;
+            this.label_delete_bet.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_delete_bet.ForeColor = System.Drawing.Color.White;
+            this.label_delete_bet.Location = new System.Drawing.Point(139, 75);
+            this.label_delete_bet.Name = "label_delete_bet";
+            this.label_delete_bet.Size = new System.Drawing.Size(52, 18);
+            this.label_delete_bet.TabIndex = 55;
+            this.label_delete_bet.Text = "Bet ID";
             // 
-            // label2
+            // txtbx_delete_bet
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(376, 93);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 13);
-            this.label2.TabIndex = 27;
-            this.label2.Text = "Balance";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(313, 133);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(161, 35);
-            this.button1.TabIndex = 28;
-            this.button1.Text = "Nýskrá";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(192, 64);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(161, 20);
-            this.textBox3.TabIndex = 20;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(192, 90);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(161, 20);
-            this.textBox4.TabIndex = 21;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(129, 67);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(29, 13);
-            this.label3.TabIndex = 24;
-            this.label3.Text = "User";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(129, 93);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 13);
-            this.label4.TabIndex = 25;
-            this.label4.Text = "Password";
-            // 
-            // tabPage_Bets_Update
-            // 
-            this.tabPage_Bets_Update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.tabPage_Bets_Update.Controls.Add(this.linkLabel2);
-            this.tabPage_Bets_Update.Controls.Add(this.button2);
-            this.tabPage_Bets_Update.Controls.Add(this.label5);
-            this.tabPage_Bets_Update.Controls.Add(this.textBox5);
-            this.tabPage_Bets_Update.Controls.Add(this.label6);
-            this.tabPage_Bets_Update.Controls.Add(this.textBox6);
-            this.tabPage_Bets_Update.Controls.Add(this.textBox7);
-            this.tabPage_Bets_Update.Controls.Add(this.label7);
-            this.tabPage_Bets_Update.Controls.Add(this.textBox8);
-            this.tabPage_Bets_Update.Controls.Add(this.label8);
-            this.tabPage_Bets_Update.Location = new System.Drawing.Point(4, 22);
-            this.tabPage_Bets_Update.Name = "tabPage_Bets_Update";
-            this.tabPage_Bets_Update.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Bets_Update.Size = new System.Drawing.Size(772, 186);
-            this.tabPage_Bets_Update.TabIndex = 2;
-            this.tabPage_Bets_Update.Text = "tabPage1";
-            // 
-            // linkLabel2
-            // 
-            this.linkLabel2.ActiveLinkColor = System.Drawing.Color.ForestGreen;
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Font = new System.Drawing.Font("Wingdings 3", 30.25F);
-            this.linkLabel2.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.linkLabel2.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel2.Location = new System.Drawing.Point(12, 125);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(59, 47);
-            this.linkLabel2.TabIndex = 45;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "\\";
-            this.linkLabel2.VisitedLinkColor = System.Drawing.Color.Black;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(305, 125);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(161, 35);
-            this.button2.TabIndex = 29;
-            this.button2.Text = "Uppfæra";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(379, 96);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 13);
-            this.label5.TabIndex = 37;
-            this.label5.Text = "Balance";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(214, 67);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(161, 20);
-            this.textBox5.TabIndex = 30;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(379, 70);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(32, 13);
-            this.label6.TabIndex = 36;
-            this.label6.Text = "Email";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(214, 93);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(161, 20);
-            this.textBox6.TabIndex = 31;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(442, 93);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(161, 20);
-            this.textBox7.TabIndex = 33;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(151, 96);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(53, 13);
-            this.label7.TabIndex = 35;
-            this.label7.Text = "Password";
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(442, 67);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(161, 20);
-            this.textBox8.TabIndex = 32;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(151, 70);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(29, 13);
-            this.label8.TabIndex = 34;
-            this.label8.Text = "User";
-            // 
-            // tabPage_Bets_Delete
-            // 
-            this.tabPage_Bets_Delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.tabPage_Bets_Delete.Controls.Add(this.linkLabel3);
-            this.tabPage_Bets_Delete.Location = new System.Drawing.Point(4, 22);
-            this.tabPage_Bets_Delete.Name = "tabPage_Bets_Delete";
-            this.tabPage_Bets_Delete.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage_Bets_Delete.Size = new System.Drawing.Size(772, 186);
-            this.tabPage_Bets_Delete.TabIndex = 3;
-            this.tabPage_Bets_Delete.Text = "tabPage2";
-            // 
-            // linkLabel3
-            // 
-            this.linkLabel3.ActiveLinkColor = System.Drawing.Color.ForestGreen;
-            this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Font = new System.Drawing.Font("Wingdings 3", 30.25F);
-            this.linkLabel3.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
-            this.linkLabel3.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel3.Location = new System.Drawing.Point(16, 121);
-            this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(59, 47);
-            this.linkLabel3.TabIndex = 45;
-            this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "\\";
-            this.linkLabel3.VisitedLinkColor = System.Drawing.Color.Black;
+            this.txtbx_delete_bet.Location = new System.Drawing.Point(194, 71);
+            this.txtbx_delete_bet.Name = "txtbx_delete_bet";
+            this.txtbx_delete_bet.Size = new System.Drawing.Size(58, 24);
+            this.txtbx_delete_bet.TabIndex = 54;
             // 
             // dataGridBets
             // 
@@ -1501,64 +1441,202 @@
             this.dataGridBets.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.dataGridBets.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridBets.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F);
-            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridBets.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridBets.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridBets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridBets.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4});
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle30.BackColor = System.Drawing.Color.LightGreen;
-            dataGridViewCellStyle30.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.25F);
-            dataGridViewCellStyle30.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.Firebrick;
-            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridBets.DefaultCellStyle = dataGridViewCellStyle30;
+            this.ColumnBetsID,
+            this.ColumnBetsUser,
+            this.ColumnBetsGameID,
+            this.ColumnBetAmmount,
+            this.ColumnBetChoice});
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.LightGreen;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Lucida Sans Unicode", 9.25F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Firebrick;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridBets.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridBets.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.dataGridBets.Location = new System.Drawing.Point(0, 0);
             this.dataGridBets.Name = "dataGridBets";
             this.dataGridBets.ReadOnly = true;
-            this.dataGridBets.RowHeadersWidth = 53;
+            this.dataGridBets.RowHeadersWidth = 35;
             this.dataGridBets.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dataGridBets.Size = new System.Drawing.Size(756, 312);
             this.dataGridBets.TabIndex = 3;
             // 
-            // dataGridViewTextBoxColumn1
+            // ColumnBetsID
             // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "User";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 170;
+            this.ColumnBetsID.Frozen = true;
+            this.ColumnBetsID.HeaderText = "Bet ID";
+            this.ColumnBetsID.Name = "ColumnBetsID";
+            this.ColumnBetsID.ReadOnly = true;
+            this.ColumnBetsID.Width = 77;
             // 
-            // dataGridViewTextBoxColumn2
+            // ColumnBetsUser
             // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Password";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 170;
+            this.ColumnBetsUser.Frozen = true;
+            this.ColumnBetsUser.HeaderText = "User";
+            this.ColumnBetsUser.Name = "ColumnBetsUser";
+            this.ColumnBetsUser.ReadOnly = true;
+            this.ColumnBetsUser.Width = 65;
             // 
-            // dataGridViewTextBoxColumn3
+            // ColumnBetsGameID
             // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Email";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 185;
+            this.ColumnBetsGameID.Frozen = true;
+            this.ColumnBetsGameID.HeaderText = "Match ID";
+            this.ColumnBetsGameID.Name = "ColumnBetsGameID";
+            this.ColumnBetsGameID.ReadOnly = true;
+            this.ColumnBetsGameID.Width = 97;
             // 
-            // dataGridViewTextBoxColumn4
+            // ColumnBetAmmount
             // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Balance";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 170;
+            this.ColumnBetAmmount.Frozen = true;
+            this.ColumnBetAmmount.HeaderText = "$$$";
+            this.ColumnBetAmmount.Name = "ColumnBetAmmount";
+            this.ColumnBetAmmount.ReadOnly = true;
+            this.ColumnBetAmmount.Width = 60;
+            // 
+            // ColumnBetChoice
+            // 
+            this.ColumnBetChoice.Frozen = true;
+            this.ColumnBetChoice.HeaderText = "1x2";
+            this.ColumnBetChoice.Name = "ColumnBetChoice";
+            this.ColumnBetChoice.ReadOnly = true;
+            this.ColumnBetChoice.Width = 61;
+            // 
+            // tabPageAddClient
+            // 
+            this.tabPageAddClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.tabPageAddClient.Controls.Add(this.label_client_user_success1);
+            this.tabPageAddClient.Controls.Add(this.label_client_user_success);
+            this.tabPageAddClient.Controls.Add(this.label_add_new_client_user);
+            this.tabPageAddClient.Controls.Add(this.txtbx_add_client_email);
+            this.tabPageAddClient.Controls.Add(this.label_add_new_client_user2);
+            this.tabPageAddClient.Controls.Add(this.txtbx_add_client_username);
+            this.tabPageAddClient.Controls.Add(this.txtbx_add_client_password);
+            this.tabPageAddClient.Controls.Add(this.label_add_new_client_user1);
+            this.tabPageAddClient.Controls.Add(this.label_add_new_client_user4);
+            this.tabPageAddClient.Controls.Add(this.btn_add_client_user);
+            this.tabPageAddClient.Location = new System.Drawing.Point(4, 22);
+            this.tabPageAddClient.Name = "tabPageAddClient";
+            this.tabPageAddClient.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageAddClient.Size = new System.Drawing.Size(768, 520);
+            this.tabPageAddClient.TabIndex = 3;
+            this.tabPageAddClient.Text = "Add client user";
+            this.tabPageAddClient.Enter += new System.EventHandler(this.tabPageAddClient_Enter);
+            // 
+            // label_client_user_success1
+            // 
+            this.label_client_user_success1.AutoSize = true;
+            this.label_client_user_success1.Font = new System.Drawing.Font("Lucida Sans Unicode", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_client_user_success1.ForeColor = System.Drawing.Color.LimeGreen;
+            this.label_client_user_success1.Location = new System.Drawing.Point(212, 143);
+            this.label_client_user_success1.Name = "label_client_user_success1";
+            this.label_client_user_success1.Size = new System.Drawing.Size(314, 59);
+            this.label_client_user_success1.TabIndex = 38;
+            this.label_client_user_success1.Text = "User added!";
+            this.label_client_user_success1.Visible = false;
+            // 
+            // label_client_user_success
+            // 
+            this.label_client_user_success.AutoSize = true;
+            this.label_client_user_success.Font = new System.Drawing.Font("Webdings", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.label_client_user_success.ForeColor = System.Drawing.Color.LimeGreen;
+            this.label_client_user_success.Location = new System.Drawing.Point(498, 115);
+            this.label_client_user_success.Name = "label_client_user_success";
+            this.label_client_user_success.Size = new System.Drawing.Size(139, 97);
+            this.label_client_user_success.TabIndex = 37;
+            this.label_client_user_success.Text = "a";
+            this.label_client_user_success.Visible = false;
+            // 
+            // label_add_new_client_user
+            // 
+            this.label_add_new_client_user.AutoSize = true;
+            this.label_add_new_client_user.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_add_new_client_user.ForeColor = System.Drawing.Color.White;
+            this.label_add_new_client_user.Location = new System.Drawing.Point(152, 46);
+            this.label_add_new_client_user.Name = "label_add_new_client_user";
+            this.label_add_new_client_user.Size = new System.Drawing.Size(469, 69);
+            this.label_add_new_client_user.TabIndex = 36;
+            this.label_add_new_client_user.Text = "Add a user to use the CS:GO Jungle admin client.\r\nUsers created here can log into" +
+    " the client,\r\nedit and view information about users and bet.\r\n";
+            // 
+            // txtbx_add_client_email
+            // 
+            this.txtbx_add_client_email.Location = new System.Drawing.Point(352, 283);
+            this.txtbx_add_client_email.Name = "txtbx_add_client_email";
+            this.txtbx_add_client_email.Size = new System.Drawing.Size(157, 20);
+            this.txtbx_add_client_email.TabIndex = 32;
+            // 
+            // label_add_new_client_user2
+            // 
+            this.label_add_new_client_user2.AutoSize = true;
+            this.label_add_new_client_user2.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_add_new_client_user2.ForeColor = System.Drawing.Color.White;
+            this.label_add_new_client_user2.Location = new System.Drawing.Point(254, 282);
+            this.label_add_new_client_user2.Name = "label_add_new_client_user2";
+            this.label_add_new_client_user2.Size = new System.Drawing.Size(46, 18);
+            this.label_add_new_client_user2.TabIndex = 35;
+            this.label_add_new_client_user2.Text = "Email";
+            // 
+            // txtbx_add_client_username
+            // 
+            this.txtbx_add_client_username.Location = new System.Drawing.Point(352, 206);
+            this.txtbx_add_client_username.Name = "txtbx_add_client_username";
+            this.txtbx_add_client_username.Size = new System.Drawing.Size(157, 20);
+            this.txtbx_add_client_username.TabIndex = 30;
+            // 
+            // txtbx_add_client_password
+            // 
+            this.txtbx_add_client_password.Location = new System.Drawing.Point(350, 245);
+            this.txtbx_add_client_password.Name = "txtbx_add_client_password";
+            this.txtbx_add_client_password.Size = new System.Drawing.Size(158, 20);
+            this.txtbx_add_client_password.TabIndex = 31;
+            // 
+            // label_add_new_client_user1
+            // 
+            this.label_add_new_client_user1.AutoSize = true;
+            this.label_add_new_client_user1.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_add_new_client_user1.ForeColor = System.Drawing.Color.White;
+            this.label_add_new_client_user1.Location = new System.Drawing.Point(253, 206);
+            this.label_add_new_client_user1.Name = "label_add_new_client_user1";
+            this.label_add_new_client_user1.Size = new System.Drawing.Size(40, 18);
+            this.label_add_new_client_user1.TabIndex = 33;
+            this.label_add_new_client_user1.Text = "User";
+            // 
+            // label_add_new_client_user4
+            // 
+            this.label_add_new_client_user4.AutoSize = true;
+            this.label_add_new_client_user4.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_add_new_client_user4.ForeColor = System.Drawing.Color.White;
+            this.label_add_new_client_user4.Location = new System.Drawing.Point(252, 244);
+            this.label_add_new_client_user4.Name = "label_add_new_client_user4";
+            this.label_add_new_client_user4.Size = new System.Drawing.Size(77, 18);
+            this.label_add_new_client_user4.TabIndex = 34;
+            this.label_add_new_client_user4.Text = "Password";
+            // 
+            // btn_add_client_user
+            // 
+            this.btn_add_client_user.BackColor = System.Drawing.Color.ForestGreen;
+            this.btn_add_client_user.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_add_client_user.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_add_client_user.ForeColor = System.Drawing.Color.White;
+            this.btn_add_client_user.Location = new System.Drawing.Point(292, 335);
+            this.btn_add_client_user.Name = "btn_add_client_user";
+            this.btn_add_client_user.Size = new System.Drawing.Size(178, 35);
+            this.btn_add_client_user.TabIndex = 29;
+            this.btn_add_client_user.Text = "Add user";
+            this.btn_add_client_user.UseVisualStyleBackColor = false;
+            this.btn_add_client_user.Click += new System.EventHandler(this.btn_add_client_user_Click);
             // 
             // pictureBoxCSGOJungle
             // 
@@ -1671,6 +1749,14 @@
             this.linkLabel_Help_app.MouseLeave += new System.EventHandler(this.linkLabel_Help_app_MouseLeave);
             this.linkLabel_Help_app.MouseHover += new System.EventHandler(this.linkLabel_Help_app_MouseHover);
             // 
+            // panel_dragform
+            // 
+            this.panel_dragform.Location = new System.Drawing.Point(0, 2);
+            this.panel_dragform.Name = "panel_dragform";
+            this.panel_dragform.Size = new System.Drawing.Size(756, 30);
+            this.panel_dragform.TabIndex = 12;
+            this.panel_dragform.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_dragform_MouseMove);
+            // 
             // Adalform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1686,6 +1772,7 @@
             this.Controls.Add(this.pictureBoxLogoff);
             this.Controls.Add(this.pictureBoxCSGOJungle);
             this.Controls.Add(this.tabControlAdalform);
+            this.Controls.Add(this.panel_dragform);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Adalform";
@@ -1722,16 +1809,13 @@
             this.tabPageBets.ResumeLayout(false);
             this.tabControlBets.ResumeLayout(false);
             this.tabPage_Bets_Main.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_delete_bet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_update_bet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.tabPage_Bets_Add.ResumeLayout(false);
-            this.tabPage_Bets_Add.PerformLayout();
-            this.tabPage_Bets_Update.ResumeLayout(false);
-            this.tabPage_Bets_Update.PerformLayout();
-            this.tabPage_Bets_Delete.ResumeLayout(false);
-            this.tabPage_Bets_Delete.PerformLayout();
+            this.groupBox_see_bets.ResumeLayout(false);
+            this.groupBox_see_bets.PerformLayout();
+            this.groupBox_delete.ResumeLayout(false);
+            this.groupBox_delete.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridBets)).EndInit();
+            this.tabPageAddClient.ResumeLayout(false);
+            this.tabPageAddClient.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCSGOJungle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogoff)).EndInit();
             this.ResumeLayout(false);
@@ -1767,10 +1851,6 @@
         private System.Windows.Forms.TextBox txtbx_leikir_update_lid;
         private System.Windows.Forms.Button btn_leikir_skra;
         private System.Windows.Forms.TabPage tabPageNotendur;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox txtbx_notendur_update_balance;
         private System.Windows.Forms.TextBox txtbx_notendur_update_email;
         private System.Windows.Forms.TextBox txtbx_notendur_update_password;
@@ -1836,42 +1916,47 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnBO;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnRidill;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnWinner;
-        private System.Windows.Forms.TabControl tabControlBets;
-        private System.Windows.Forms.TabPage tabPage_Bets_Main;
-        private System.Windows.Forms.PictureBox pictureBox_delete_bet;
-        private System.Windows.Forms.PictureBox pictureBox_update_bet;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.TabPage tabPage_Bets_Add;
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TabPage tabPage_Bets_Update;
-        private System.Windows.Forms.LinkLabel linkLabel2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TabPage tabPage_Bets_Delete;
-        private System.Windows.Forms.LinkLabel linkLabel3;
         private System.Windows.Forms.DataGridView dataGridBets;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.LinkLabel linkLabel_Exit_app;
         private System.Windows.Forms.LinkLabel linkLabel_Mini_app;
         private System.Windows.Forms.LinkLabel linkLabel_Help_app;
+        private System.Windows.Forms.Button btn_delete_match;
+        private System.Windows.Forms.Label label_matches_delete;
+        private System.Windows.Forms.TextBox txtbx_matches_delete;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button btn_notendur_delete;
+        private System.Windows.Forms.Label label_notendur_delete;
+        private System.Windows.Forms.TextBox txtbx_notendur_delete;
+        private System.Windows.Forms.TabControl tabControlBets;
+        private System.Windows.Forms.TabPage tabPage_Bets_Main;
+        private System.Windows.Forms.GroupBox groupBox_see_bets;
+        private System.Windows.Forms.Button btn_view_bets_by_user;
+        private System.Windows.Forms.Label label_view_bet_by_user;
+        private System.Windows.Forms.TextBox txtbx_view_bet_by_user;
+        private System.Windows.Forms.GroupBox groupBox_delete;
+        private System.Windows.Forms.Button btn_delete_bet;
+        private System.Windows.Forms.Label label_delete_bet;
+        private System.Windows.Forms.TextBox txtbx_delete_bet;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnBetsID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnBetsUser;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnBetsGameID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnBetAmmount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnBetChoice;
+        private System.Windows.Forms.Button btn_back_to_bets;
+        private System.Windows.Forms.TabPage tabPageAddClient;
+        private System.Windows.Forms.Label label_add_new_client_user;
+        private System.Windows.Forms.TextBox txtbx_add_client_email;
+        private System.Windows.Forms.Label label_add_new_client_user2;
+        private System.Windows.Forms.TextBox txtbx_add_client_username;
+        private System.Windows.Forms.TextBox txtbx_add_client_password;
+        private System.Windows.Forms.Label label_add_new_client_user1;
+        private System.Windows.Forms.Label label_add_new_client_user4;
+        private System.Windows.Forms.Button btn_add_client_user;
+        private System.Windows.Forms.Label label_client_user_success1;
+        private System.Windows.Forms.Label label_client_user_success;
+        private System.Windows.Forms.Panel panel_dragform;
     }
 }
