@@ -17,8 +17,8 @@ $('document').ready(function(){
     $('.check2').hide();
     $('.jsdate').hide();
     $('.jsleikir').hide();
-    $('.jspick').text("Val Móttekið");
-    $('.jspick2').text("Þú hefur valið " + index);
+    $('.jspick').text("Vote recieved");
+    $('.jspick2').text("You have picked " + index);
     $(".check1").show();
   	//$('.chcklid1').trigger('click');
   	//$('.chcklid2').prop('checked', false)
@@ -28,8 +28,8 @@ $('document').ready(function(){
     $('.check1').hide();
     $('.jsdate').hide();
     $('.jsleikir').hide();
-    $('.jspick').text("Val Móttekið");
-    $('.jspick2').text("Þú hefur valið " + index);
+    $('.jspick').text("Vote receieved");
+    $('.jspick2').text("You have picked " + index);
     $(".check2").show();
   	//$('.chcklid2').trigger('click');
   	//$('.chcklid1').prop('checked', false)
