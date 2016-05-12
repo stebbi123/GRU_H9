@@ -25,6 +25,6 @@ $split_to_string = (string)$result3;
 $winner_loser = explode(" v ", $split_to_string);
 */
 
-$nafn = $row['lid1_lid2'];
+
 $conn->close();
 ?>
