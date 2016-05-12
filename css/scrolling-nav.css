@@ -123,6 +123,7 @@ body{
 .vcenter{
  display: inline-block;
  position: relative;
+ margin-top: 20%;
 }
 
 
@@ -155,3 +156,6 @@ body{
 
 .check2{
 }
+
+
+
