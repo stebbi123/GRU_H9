@@ -78,6 +78,7 @@
             this.richtxtbx_help_message.Size = new System.Drawing.Size(388, 155);
             this.richtxtbx_help_message.TabIndex = 16;
             this.richtxtbx_help_message.Text = "";
+            this.richtxtbx_help_message.Enter += new System.EventHandler(this.richtxtbx_help_message_Enter);
             // 
             // btn_send_message
             // 
@@ -106,6 +107,7 @@
             this.txtbx_help_name.Size = new System.Drawing.Size(388, 26);
             this.txtbx_help_name.TabIndex = 18;
             this.txtbx_help_name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtbx_help_name.Enter += new System.EventHandler(this.txtbx_help_name_Enter);
             // 
             // labelLoginUsername
             // 
@@ -140,6 +142,7 @@
             this.txtbx_help_email.Size = new System.Drawing.Size(388, 26);
             this.txtbx_help_email.TabIndex = 20;
             this.txtbx_help_email.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtbx_help_email.TextChanged += new System.EventHandler(this.txtbx_help_email_TextChanged);
             // 
             // label_help_4
             // 

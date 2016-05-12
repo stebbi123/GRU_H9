@@ -34,6 +34,8 @@ namespace AdminGRU
         ToolTip tooltip = new ToolTip();
         //Login object
         login log = new login();
+        //Error object
+        ErrorProvider errorprov = new ErrorProvider();
         //Nota þetta til að passa username sem notandi loggaði sig inn með til Adalformsins(Fyrir labelið "you are signed in as...")
         public string Pass_username_to_adalform { get; set; }
         //Þarf að geyma þetta hérna :P
@@ -50,6 +52,7 @@ namespace AdminGRU
         private void Adalform_Load(object sender, EventArgs e)
         {
             //Sækir upplýisngar
+            
             LoadLeikir();
             LoadNotendur();
             LoadBets();
@@ -484,25 +487,44 @@ namespace AdminGRU
         {
             try
             {
-                string client_user_username = txtbx_add_client_username.Text;
-                string client_user_password = txtbx_add_client_password.Text;
-                string client_user_email = txtbx_add_client_email.Text;
+                if (txtbx_add_client_username.Text == "")
+                {
+                    errorprov.SetError(txtbx_add_client_username, "Please enter a username");
+                    txtbx_add_client_username.BackColor = Color.LightCoral;
+                }
+                if (txtbx_add_client_password.Text == "")
+                {
+                    errorprov.SetError(txtbx_add_client_password, "Please enter a password");
+                    txtbx_add_client_password.BackColor = Color.LightCoral;
+                }
+                if (txtbx_add_client_email.Text == "")
+                {
+                    errorprov.SetError(txtbx_add_client_email, "Please enter an email");
+                    txtbx_add_client_email.BackColor = Color.LightCoral;
+                }
+                else
+                {
+                    string client_user_username = txtbx_add_client_username.Text;
+                    string client_user_password = txtbx_add_client_password.Text;
+                    string client_user_email = txtbx_add_client_email.Text;
 
-                connection.AddNewClientUser(client_user_username, client_user_password, client_user_email);
+                    connection.AddNewClientUser(client_user_username, client_user_password, client_user_email);
 
-                label_client_user_success.Show();
-                label_client_user_success1.Show();
-                txtbx_add_client_email.Clear();
-                txtbx_add_client_password.Clear();
-                txtbx_add_client_username.Clear();
-                txtbx_add_client_username.Hide();
-                txtbx_add_client_password.Hide();
-                txtbx_add_client_email.Hide();
-                label_add_new_client_user.Hide();
-                label_add_new_client_user1.Hide();
-                label_add_new_client_user2.Hide();
-                label_add_new_client_user4.Hide();
-                btn_add_client_user.Hide();
+                    label_client_user_success.Show();
+                    label_client_user_success1.Show();
+                    txtbx_add_client_email.Clear();
+                    txtbx_add_client_password.Clear();
+                    txtbx_add_client_username.Clear();
+                    txtbx_add_client_username.Hide();
+                    txtbx_add_client_password.Hide();
+                    txtbx_add_client_email.Hide();
+                    label_add_new_client_user.Hide();
+                    label_add_new_client_user1.Hide();
+                    label_add_new_client_user2.Hide();
+                    label_add_new_client_user4.Hide();
+                    btn_add_client_user.Hide();
+                }
+
             }
             catch (Exception)
             {
@@ -767,6 +789,23 @@ namespace AdminGRU
             btn_add_client_user.Show();
         }
 
-
+        //ENTER EVENT - CLEAR TEXTBOX
+        private void txtbx_add_client_password_Enter(object sender, EventArgs e)
+        {
+            txtbx_add_client_password.BackColor = Color.DarkGray;
+            errorprov.SetError(txtbx_add_client_password, "");
+        }
+        //ENTER EVENT - CLEAR TEXTBOX
+        private void txtbx_add_client_username_Enter(object sender, EventArgs e)
+        {
+            txtbx_add_client_username.BackColor = Color.DarkGray;
+            errorprov.SetError(txtbx_add_client_username, "");
+        }
+        //ENTER EVENT - CLEAR TEXTBOX
+        private void txtbx_add_client_email_Enter(object sender, EventArgs e)
+        {
+            txtbx_add_client_email.BackColor = Color.DarkGray;
+            errorprov.SetError(txtbx_add_client_email, "");
+        }
     }
 }

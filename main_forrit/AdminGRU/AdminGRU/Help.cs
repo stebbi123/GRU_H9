@@ -44,14 +44,17 @@ namespace AdminGRU
                 if (txtbx_help_name.Text == "")
                 {
                     errorpro.SetError(txtbx_help_name, "Please enter your name");
+                    txtbx_help_name.BackColor = Color.LightCoral;
                 }
-                else if (txtbx_help_email.Text == "")
+                else if(txtbx_help_email.Text == "")
                 {
                     errorpro.SetError(txtbx_help_email, "Please enter your email");
+                    txtbx_help_email.BackColor = Color.LightCoral;
                 }
-                else if (richtxtbx_help_message.Text == "")
+                else if(richtxtbx_help_message.Text == "")
                 {
                     errorpro.SetError(richtxtbx_help_message, "Please include a message");
+                    richtxtbx_help_message.BackColor = Color.LightCoral;
                 }
                 else
                 {
@@ -153,6 +156,25 @@ namespace AdminGRU
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
+        }
+
+        //ENTER - REMOVE RED AND ERROR
+        private void txtbx_help_name_Enter(object sender, EventArgs e)
+        {
+            txtbx_help_name.BackColor = Color.Gray;
+            errorpro.SetError(txtbx_help_name, "");
+        }
+        //ENTER - REMOVE RED AND ERROR
+        private void txtbx_help_email_TextChanged(object sender, EventArgs e)
+        {
+            txtbx_help_email.BackColor = Color.Gray;
+            errorpro.SetError(txtbx_help_email, "");
+        }
+        //ENTER - REMOVE RED AND ERROR
+        private void richtxtbx_help_message_Enter(object sender, EventArgs e)
+        {
+            richtxtbx_help_message.BackColor = Color.Gray;
+            errorpro.SetError(richtxtbx_help_message, "");
         }
     }
 }

@@ -154,6 +154,9 @@ namespace AdminGRU
             labelRecoverySuccess.Hide();
             linkLabelRecovery_Back.Show();
             linkLabelRecovery_back1.Hide();
+            errorpro.SetError(txtbx_recovery_email, "");
+            errorpro.SetError(txtbx_recovery_username, "");
+            txtbx_recovery_email.BackColor = Color.Gray;
         }
 
 
