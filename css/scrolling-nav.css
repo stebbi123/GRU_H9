@@ -123,6 +123,7 @@ body{
 .vcenter{
  display: inline-block;
  position: relative;
+ margin-top: 20%;
 }
 
 
@@ -149,4 +150,12 @@ body{
 
 .panel{
 }
+
+.check1{
+}
+
+.check2{
+}
+
+
 

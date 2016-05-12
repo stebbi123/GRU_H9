@@ -33,21 +33,23 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Skoða leik</h4>
+        <h4 class="modal-title" id="myModalLabel">View Game</h4>
       </div>
       <div class="modal-body">
         <p class="jsleikir"></p>
         <p class="jsdate"></p>
-        <p>Hvor heldur þú að muni vinna?</p>
+        <p>Who do you think will win?</p>
+        <p class="jspick"></p>
+        <p class="jspick2"></p>
         <div>
-        <input type="checkbox" class="chcklid1"></input>
+        <i class="check1 fa fa-check"></i>
             <button class="btnlid1 btn btn-success"></button>
             <button class="btnlid2 btn btn-success"></button>
-        <input type="checkbox" class="chcklid2"></input>
+        <i class="check2 fa fa-check"></i>
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Loka</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
@@ -66,7 +68,7 @@
                     <span class="icon-bar"></span>
                 </button>
               <!--  <a href="#" class="pull-left logo"><img src="csgojungle.png" alt="" /></a>-->
-                <a class="navbar-brand page-scroll pull-right" href="#page-top">  Heim</a>
+                <a class="navbar-brand page-scroll pull-right" href="#page-top">Home</a>
                 <img class="collogo img-responsive" src="csgojungle.png" alt="" />
             </div>
 
@@ -79,7 +81,7 @@
                         <a class="page-scroll" href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#leikir">Leikir</a>
+                        <a class="page-scroll" href="#leikir">Matches</a>
                     </li>
 
                 </ul>
@@ -125,8 +127,8 @@
 
                 </div>
                 <br>
-                <p>Hér er hægt að sjá hvernig nýlegir leikir hafa farið og uppkomandi leiki í Counter-Strike: Global Offensive</p>
-                <p>og kosið um hvernig þeir munu fara.</p>
+                <p>Here you can see recent matches and upcoming matches in Counter-Strike: Global Offensive</p>
+                <p>and vote on who you think will win.</p>
             </div>
         </div>
     </section>
@@ -137,10 +139,10 @@
         <div id="wrapper" class="container">
             <div class="row col-lg-12">
 				<div class="col-lg-6" id="leikir">
-                <h1>Uppkomandi Leikir</h1>
+                <h1>Upcoming Matches</h1>
 				<div class="panel panel-leikir">
 					<div class="panel-heading">
-						Leikir
+						Matches
 					</div>
                     <?php
                     if ($result->num_rows > 0) {
@@ -156,17 +158,17 @@
 	              </div><!--
                   -->
 	            <div class="col-lg-6">
-                <h1>Búnir leikir</h1>
+                <h1>Finished Matches</h1>
                 <div class="panel panel-bunirleikir" id="leikir">
                     <div class="panel-heading">
-                        Leikir
+                        Matches
                     </div>
 
                     <?php
                     if ($result2->num_rows > 0) {
                         
                         while($row = $result2->fetch_assoc()) {
-                            echo '<a href="#" class="list-group-item">'. "<i class='fa fa-check'>  </i>" . $row["lid1_lid2"]. ' | ' . $row["date"]. ' | Best Of ' . $row["bo"]. ' | Sigurvegarar ' . $row["winner"].  '</a>';
+                            echo '<a href="#" class="list-group-item">'. "<i class='fa fa-check'>  </i>" . $row["lid1_lid2"]. ' | ' . $row["date"]. ' | Best Of ' . $row["bo"]. ' | Winners: ' . $row["winner"].  '</a>';
                         }
                       } else {
                           echo "0 results";
