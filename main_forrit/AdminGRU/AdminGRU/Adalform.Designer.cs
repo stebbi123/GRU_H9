@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Adalform));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControlAdalform = new System.Windows.Forms.TabControl();
             this.tabPageLeikir = new System.Windows.Forms.TabPage();
             this.dataGridLeikir = new System.Windows.Forms.DataGridView();
@@ -169,6 +169,11 @@
             this.linkLabel_Mini_app = new System.Windows.Forms.LinkLabel();
             this.linkLabel_Help_app = new System.Windows.Forms.LinkLabel();
             this.panel_dragform = new System.Windows.Forms.Panel();
+            this.groupBox_see_matches = new System.Windows.Forms.GroupBox();
+            this.btn_back_to_bets1 = new System.Windows.Forms.Button();
+            this.btn_view_bets_by_match = new System.Windows.Forms.Button();
+            this.label_view_bets_matches = new System.Windows.Forms.Label();
+            this.txtbx_view_bets_by_match = new System.Windows.Forms.TextBox();
             this.tabControlAdalform.SuspendLayout();
             this.tabPageLeikir.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridLeikir)).BeginInit();
@@ -200,6 +205,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCSGOJungle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogoff)).BeginInit();
             this.panel_dragform.SuspendLayout();
+            this.groupBox_see_matches.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControlAdalform
@@ -236,8 +242,8 @@
             this.dataGridLeikir.AllowUserToDeleteRows = false;
             this.dataGridLeikir.AllowUserToResizeColumns = false;
             this.dataGridLeikir.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dataGridLeikir.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.White;
+            this.dataGridLeikir.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
             this.dataGridLeikir.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.dataGridLeikir.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridLeikir.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -250,14 +256,14 @@
             this.ColumnBO,
             this.ColumnRidill,
             this.ColumnWinner});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Ivory;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LimeGreen;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridLeikir.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle22.BackColor = System.Drawing.Color.Ivory;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.LimeGreen;
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridLeikir.DefaultCellStyle = dataGridViewCellStyle22;
             this.dataGridLeikir.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.dataGridLeikir.Location = new System.Drawing.Point(0, 0);
             this.dataGridLeikir.Name = "dataGridLeikir";
@@ -1226,8 +1232,8 @@
             this.dataGridNotendur.AllowUserToDeleteRows = false;
             this.dataGridNotendur.AllowUserToResizeColumns = false;
             this.dataGridNotendur.AllowUserToResizeRows = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            this.dataGridNotendur.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle23.BackColor = System.Drawing.Color.White;
+            this.dataGridNotendur.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle23;
             this.dataGridNotendur.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.dataGridNotendur.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridNotendur.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -1237,14 +1243,14 @@
             this.ColumnNotendurPassword,
             this.ColumnNotendurEmail,
             this.ColumnNotendurBalance});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Ivory;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LimeGreen;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridNotendur.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle24.BackColor = System.Drawing.Color.Ivory;
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.LimeGreen;
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridNotendur.DefaultCellStyle = dataGridViewCellStyle24;
             this.dataGridNotendur.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.dataGridNotendur.Location = new System.Drawing.Point(0, 0);
             this.dataGridNotendur.Name = "dataGridNotendur";
@@ -1307,6 +1313,7 @@
             // tabPage_Bets_Main
             // 
             this.tabPage_Bets_Main.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.tabPage_Bets_Main.Controls.Add(this.groupBox_see_matches);
             this.tabPage_Bets_Main.Controls.Add(this.groupBox_see_bets);
             this.tabPage_Bets_Main.Controls.Add(this.groupBox_delete);
             this.tabPage_Bets_Main.Location = new System.Drawing.Point(4, 25);
@@ -1326,7 +1333,7 @@
             this.groupBox_see_bets.ForeColor = System.Drawing.Color.White;
             this.groupBox_see_bets.Location = new System.Drawing.Point(21, 17);
             this.groupBox_see_bets.Name = "groupBox_see_bets";
-            this.groupBox_see_bets.Size = new System.Drawing.Size(368, 161);
+            this.groupBox_see_bets.Size = new System.Drawing.Size(280, 161);
             this.groupBox_see_bets.TabIndex = 58;
             this.groupBox_see_bets.TabStop = false;
             this.groupBox_see_bets.Text = "View bets by user";
@@ -1337,7 +1344,7 @@
             this.btn_back_to_bets.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_back_to_bets.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_back_to_bets.ForeColor = System.Drawing.Color.White;
-            this.btn_back_to_bets.Location = new System.Drawing.Point(124, 112);
+            this.btn_back_to_bets.Location = new System.Drawing.Point(73, 112);
             this.btn_back_to_bets.Name = "btn_back_to_bets";
             this.btn_back_to_bets.Size = new System.Drawing.Size(156, 27);
             this.btn_back_to_bets.TabIndex = 57;
@@ -1352,7 +1359,7 @@
             this.btn_view_bets_by_user.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_view_bets_by_user.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_view_bets_by_user.ForeColor = System.Drawing.Color.White;
-            this.btn_view_bets_by_user.Location = new System.Drawing.Point(124, 112);
+            this.btn_view_bets_by_user.Location = new System.Drawing.Point(73, 112);
             this.btn_view_bets_by_user.Name = "btn_view_bets_by_user";
             this.btn_view_bets_by_user.Size = new System.Drawing.Size(156, 27);
             this.btn_view_bets_by_user.TabIndex = 56;
@@ -1365,7 +1372,7 @@
             this.label_view_bet_by_user.AutoSize = true;
             this.label_view_bet_by_user.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_view_bet_by_user.ForeColor = System.Drawing.Color.White;
-            this.label_view_bet_by_user.Location = new System.Drawing.Point(78, 71);
+            this.label_view_bet_by_user.Location = new System.Drawing.Point(27, 71);
             this.label_view_bet_by_user.Name = "label_view_bet_by_user";
             this.label_view_bet_by_user.Size = new System.Drawing.Size(40, 18);
             this.label_view_bet_by_user.TabIndex = 55;
@@ -1373,7 +1380,7 @@
             // 
             // txtbx_view_bet_by_user
             // 
-            this.txtbx_view_bet_by_user.Location = new System.Drawing.Point(124, 69);
+            this.txtbx_view_bet_by_user.Location = new System.Drawing.Point(73, 69);
             this.txtbx_view_bet_by_user.Name = "txtbx_view_bet_by_user";
             this.txtbx_view_bet_by_user.Size = new System.Drawing.Size(156, 24);
             this.txtbx_view_bet_by_user.TabIndex = 54;
@@ -1385,9 +1392,9 @@
             this.groupBox_delete.Controls.Add(this.txtbx_delete_bet);
             this.groupBox_delete.Font = new System.Drawing.Font("Lucida Sans Unicode", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox_delete.ForeColor = System.Drawing.Color.White;
-            this.groupBox_delete.Location = new System.Drawing.Point(395, 17);
+            this.groupBox_delete.Location = new System.Drawing.Point(596, 17);
             this.groupBox_delete.Name = "groupBox_delete";
-            this.groupBox_delete.Size = new System.Drawing.Size(355, 161);
+            this.groupBox_delete.Size = new System.Drawing.Size(154, 161);
             this.groupBox_delete.TabIndex = 57;
             this.groupBox_delete.TabStop = false;
             this.groupBox_delete.Text = "Delete a bet";
@@ -1398,7 +1405,7 @@
             this.btn_delete_bet.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_delete_bet.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_delete_bet.ForeColor = System.Drawing.Color.White;
-            this.btn_delete_bet.Location = new System.Drawing.Point(145, 112);
+            this.btn_delete_bet.Location = new System.Drawing.Point(19, 112);
             this.btn_delete_bet.Name = "btn_delete_bet";
             this.btn_delete_bet.Size = new System.Drawing.Size(121, 27);
             this.btn_delete_bet.TabIndex = 56;
@@ -1411,7 +1418,7 @@
             this.label_delete_bet.AutoSize = true;
             this.label_delete_bet.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_delete_bet.ForeColor = System.Drawing.Color.White;
-            this.label_delete_bet.Location = new System.Drawing.Point(139, 75);
+            this.label_delete_bet.Location = new System.Drawing.Point(13, 75);
             this.label_delete_bet.Name = "label_delete_bet";
             this.label_delete_bet.Size = new System.Drawing.Size(52, 18);
             this.label_delete_bet.TabIndex = 55;
@@ -1419,7 +1426,7 @@
             // 
             // txtbx_delete_bet
             // 
-            this.txtbx_delete_bet.Location = new System.Drawing.Point(194, 71);
+            this.txtbx_delete_bet.Location = new System.Drawing.Point(68, 71);
             this.txtbx_delete_bet.Name = "txtbx_delete_bet";
             this.txtbx_delete_bet.Size = new System.Drawing.Size(58, 24);
             this.txtbx_delete_bet.TabIndex = 54;
@@ -1430,8 +1437,8 @@
             this.dataGridBets.AllowUserToDeleteRows = false;
             this.dataGridBets.AllowUserToResizeColumns = false;
             this.dataGridBets.AllowUserToResizeRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            this.dataGridBets.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
+            this.dataGridBets.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
             this.dataGridBets.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.dataGridBets.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridBets.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -1442,14 +1449,14 @@
             this.ColumnBetsGameID,
             this.ColumnBetAmmount,
             this.ColumnBetChoice});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Ivory;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.LimeGreen;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridBets.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.Ivory;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.LimeGreen;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridBets.DefaultCellStyle = dataGridViewCellStyle20;
             this.dataGridBets.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.dataGridBets.Location = new System.Drawing.Point(0, 0);
             this.dataGridBets.Name = "dataGridBets";
@@ -1754,6 +1761,68 @@
             this.panel_dragform.TabIndex = 12;
             this.panel_dragform.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_dragform_MouseMove);
             // 
+            // groupBox_see_matches
+            // 
+            this.groupBox_see_matches.Controls.Add(this.btn_back_to_bets1);
+            this.groupBox_see_matches.Controls.Add(this.btn_view_bets_by_match);
+            this.groupBox_see_matches.Controls.Add(this.label_view_bets_matches);
+            this.groupBox_see_matches.Controls.Add(this.txtbx_view_bets_by_match);
+            this.groupBox_see_matches.Font = new System.Drawing.Font("Lucida Sans Unicode", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox_see_matches.ForeColor = System.Drawing.Color.White;
+            this.groupBox_see_matches.Location = new System.Drawing.Point(307, 17);
+            this.groupBox_see_matches.Name = "groupBox_see_matches";
+            this.groupBox_see_matches.Size = new System.Drawing.Size(283, 161);
+            this.groupBox_see_matches.TabIndex = 59;
+            this.groupBox_see_matches.TabStop = false;
+            this.groupBox_see_matches.Text = "View bets by match";
+            // 
+            // btn_back_to_bets1
+            // 
+            this.btn_back_to_bets1.BackColor = System.Drawing.Color.OrangeRed;
+            this.btn_back_to_bets1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_back_to_bets1.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_back_to_bets1.ForeColor = System.Drawing.Color.White;
+            this.btn_back_to_bets1.Location = new System.Drawing.Point(88, 112);
+            this.btn_back_to_bets1.Name = "btn_back_to_bets1";
+            this.btn_back_to_bets1.Size = new System.Drawing.Size(156, 27);
+            this.btn_back_to_bets1.TabIndex = 57;
+            this.btn_back_to_bets1.Text = "Back to bets";
+            this.btn_back_to_bets1.UseVisualStyleBackColor = false;
+            this.btn_back_to_bets1.Visible = false;
+            this.btn_back_to_bets1.Click += new System.EventHandler(this.btn_back_to_bets1_Click);
+            // 
+            // btn_view_bets_by_match
+            // 
+            this.btn_view_bets_by_match.BackColor = System.Drawing.Color.ForestGreen;
+            this.btn_view_bets_by_match.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_view_bets_by_match.Font = new System.Drawing.Font("Lucida Sans Unicode", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_view_bets_by_match.ForeColor = System.Drawing.Color.White;
+            this.btn_view_bets_by_match.Location = new System.Drawing.Point(88, 112);
+            this.btn_view_bets_by_match.Name = "btn_view_bets_by_match";
+            this.btn_view_bets_by_match.Size = new System.Drawing.Size(156, 27);
+            this.btn_view_bets_by_match.TabIndex = 56;
+            this.btn_view_bets_by_match.Text = "View";
+            this.btn_view_bets_by_match.UseVisualStyleBackColor = false;
+            this.btn_view_bets_by_match.Click += new System.EventHandler(this.btn_view_bets_by_match_Click);
+            // 
+            // label_view_bets_matches
+            // 
+            this.label_view_bets_matches.AutoSize = true;
+            this.label_view_bets_matches.Font = new System.Drawing.Font("Lucida Sans Unicode", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_view_bets_matches.ForeColor = System.Drawing.Color.White;
+            this.label_view_bets_matches.Location = new System.Drawing.Point(10, 71);
+            this.label_view_bets_matches.Name = "label_view_bets_matches";
+            this.label_view_bets_matches.Size = new System.Drawing.Size(72, 18);
+            this.label_view_bets_matches.TabIndex = 55;
+            this.label_view_bets_matches.Text = "Match ID";
+            // 
+            // txtbx_view_bets_by_match
+            // 
+            this.txtbx_view_bets_by_match.Location = new System.Drawing.Point(88, 69);
+            this.txtbx_view_bets_by_match.Name = "txtbx_view_bets_by_match";
+            this.txtbx_view_bets_by_match.Size = new System.Drawing.Size(156, 24);
+            this.txtbx_view_bets_by_match.TabIndex = 54;
+            // 
             // Adalform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1816,6 +1885,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogoff)).EndInit();
             this.panel_dragform.ResumeLayout(false);
             this.panel_dragform.PerformLayout();
+            this.groupBox_see_matches.ResumeLayout(false);
+            this.groupBox_see_matches.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1956,5 +2027,10 @@
         private System.Windows.Forms.Label label_client_user_success1;
         private System.Windows.Forms.Label label_client_user_success;
         private System.Windows.Forms.Panel panel_dragform;
+        private System.Windows.Forms.GroupBox groupBox_see_matches;
+        private System.Windows.Forms.Button btn_back_to_bets1;
+        private System.Windows.Forms.Button btn_view_bets_by_match;
+        private System.Windows.Forms.Label label_view_bets_matches;
+        private System.Windows.Forms.TextBox txtbx_view_bets_by_match;
     }
 }

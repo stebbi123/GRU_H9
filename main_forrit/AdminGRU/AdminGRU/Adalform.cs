@@ -40,6 +40,7 @@ namespace AdminGRU
         public string Pass_username_to_adalform { get; set; }
         //Þarf að geyma þetta hérna :P
         string username_to_see_bets;
+        string matchid_to_see_matches;
         //Dót til að færa formið
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
@@ -61,6 +62,7 @@ namespace AdminGRU
             tabPageLeikir.ToolTipText = "Here you can add upcomming matches or update past ones. Winners of matches are registered here aswell.";
             tabPageNotendur.ToolTipText = "Here you can add new users or update information about current users.";
             tabPageBets.ToolTipText = "Here you can view information about bets that users have placed on certain matches. Or delete them.";
+            tabPageAddClient.ToolTipText = "Here you can add new users for the CS:GO Jungle client";
 
             //Setur label "you are signed in as"
             label_signed_in_as.Text = Pass_username_to_adalform;
@@ -237,6 +239,44 @@ namespace AdminGRU
                 dataGridBets.Rows.Clear();
                 //dataGridBets.Refresh();
                 linur = connection.LesaBetsByUser(username_to_see_bets);
+                string[] data;
+                int tala = 0;
+                foreach (string lin in linur)
+                {
+                    dataGridBets.Rows.Add();
+                    data = lin.Split('#');
+                    dataGridBets.Rows[tala].Cells[0].Value = data[0];
+                    dataGridBets.Rows[tala].Cells[1].Value = data[1];
+                    dataGridBets.Rows[tala].Cells[2].Value = data[2];
+                    dataGridBets.Rows[tala].Cells[3].Value = data[3];
+                    dataGridBets.Rows[tala].Cells[4].Value = data[4];
+                    this.dataGridBets.ColumnHeadersHeight = 25;
+                    tala++;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+            //set width of columns
+            ColumnBetsID.Width = 75;
+            ColumnBetsUser.Width = 225;
+            ColumnBetsGameID.Width = 150;
+            ColumnBetAmmount.Width = 150;
+            ColumnBetChoice.Width = 150;
+        }
+        //LOAD BETS BY MATCH - INNÍ DATAGRID
+        public void LoadBetsByMatch()
+        {
+            //listinn sem er lesinn úr gagnagrunninum
+            List<string> linur = new List<string>();
+
+            try
+            {
+                dataGridBets.Rows.Clear();
+                //dataGridBets.Refresh();
+                linur = connection.LesaBetsByMatch(matchid_to_see_matches);
                 string[] data;
                 int tala = 0;
                 foreach (string lin in linur)
@@ -481,6 +521,31 @@ namespace AdminGRU
             LoadBets();
             btn_view_bets_by_user.Show();
             btn_back_to_bets.Hide();
+        }
+        //BTN VIEW BETS BY MATCH
+        private void btn_view_bets_by_match_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                matchid_to_see_matches = txtbx_view_bets_by_match.Text;
+                connection.LesaBetsByMatch(matchid_to_see_matches);
+                LoadBetsByMatch();
+                btn_view_bets_by_match.Hide();
+                btn_back_to_bets1.Show();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error loading bets by match. Check your connection and try again.");
+            }
+            LoadBetsByMatch();
+        }
+        //BTN BACK TO BETS
+        private void btn_back_to_bets1_Click(object sender, EventArgs e)
+        {
+            dataGridBets.Rows.Clear();
+            LoadBets();
+            btn_view_bets_by_match.Show();
+            btn_back_to_bets1.Hide();
         }
         //BTN ADD CLIENT USER
         private void btn_add_client_user_Click(object sender, EventArgs e)

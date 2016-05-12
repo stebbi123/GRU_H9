@@ -454,6 +454,36 @@ namespace AdminGRU
             return faerslur;
         }
 
+        //LESA BETS BY MATCH
+        public List<string> LesaBetsByMatch(string matchid)
+        {
+            List<string> faerslur = new List<string>();
+            string line = null;
+            if (OpenConnection() == true)
+            {
+
+                fyrirspurn = "SELECT ID, notendur_user, leikir_ID, bet, OneTwo FROM leikir_has_bets WHERE leikir_ID = " + matchid;
+                nySQLskipun = new MySqlCommand(fyrirspurn, SQLtenging);
+
+                //fær til sín feedback frá gagnagrunninum
+                SQLlesari = nySQLskipun.ExecuteReader();
+
+                while (SQLlesari.Read())
+                {
+                    for (int i = 0; i < SQLlesari.FieldCount; i++)
+                    {
+                        line += (SQLlesari.GetValue(i).ToString()) + "#";
+                    }
+
+                    faerslur.Add(line);
+                    line = null;
+                }
+                CloseConnection();
+                return faerslur;
+            }
+            return faerslur;
+        }
+
         //Finnur info um ákveðinn leik
         public string[] FinnaInfoUmLeik(string ID)
         {

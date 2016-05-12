@@ -76,7 +76,7 @@
             this.richtxtbx_help_message.Location = new System.Drawing.Point(29, 362);
             this.richtxtbx_help_message.Name = "richtxtbx_help_message";
             this.richtxtbx_help_message.Size = new System.Drawing.Size(388, 155);
-            this.richtxtbx_help_message.TabIndex = 16;
+            this.richtxtbx_help_message.TabIndex = 3;
             this.richtxtbx_help_message.Text = "";
             this.richtxtbx_help_message.Enter += new System.EventHandler(this.richtxtbx_help_message_Enter);
             // 
@@ -91,7 +91,7 @@
             this.btn_send_message.Location = new System.Drawing.Point(29, 548);
             this.btn_send_message.Name = "btn_send_message";
             this.btn_send_message.Size = new System.Drawing.Size(388, 41);
-            this.btn_send_message.TabIndex = 17;
+            this.btn_send_message.TabIndex = 4;
             this.btn_send_message.Text = "Send";
             this.btn_send_message.UseVisualStyleBackColor = false;
             this.btn_send_message.Click += new System.EventHandler(this.btn_send_message_Click);
@@ -105,7 +105,7 @@
             this.txtbx_help_name.Location = new System.Drawing.Point(29, 217);
             this.txtbx_help_name.Name = "txtbx_help_name";
             this.txtbx_help_name.Size = new System.Drawing.Size(388, 26);
-            this.txtbx_help_name.TabIndex = 18;
+            this.txtbx_help_name.TabIndex = 1;
             this.txtbx_help_name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtbx_help_name.Enter += new System.EventHandler(this.txtbx_help_name_Enter);
             // 
@@ -140,7 +140,7 @@
             this.txtbx_help_email.Location = new System.Drawing.Point(29, 293);
             this.txtbx_help_email.Name = "txtbx_help_email";
             this.txtbx_help_email.Size = new System.Drawing.Size(388, 26);
-            this.txtbx_help_email.TabIndex = 20;
+            this.txtbx_help_email.TabIndex = 2;
             this.txtbx_help_email.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtbx_help_email.TextChanged += new System.EventHandler(this.txtbx_help_email_TextChanged);
             // 
